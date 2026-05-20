@@ -16,11 +16,11 @@
                 {{#if (ne item.type "biomod")}}
                 <div class="resource">
                     <label class="resource-label">Cost</label>
-                    <input type="number" name="system.cost" value="{{system.cost}}" placeholder="0"/>
+                    <input type="text" name="system.cost" value="{{system.cost}}" placeholder="e.g. 15,000cs"/>
                 </div>
                 <div class="resource">
                     <label class="resource-label">Weight</label>
-                    <input type="number" name="system.weight" value="{{system.weight}}" placeholder="0"/>
+                    <input type="text" name="system.weight" value="{{system.weight}}" placeholder="e.g. 2 kg"/>
                 </div>
                 {{/if}}
             </div>
@@ -124,10 +124,6 @@
                 <label>Function Summary</label>
                 <input type="text" name="system.function" value="{{system.function}}"/>
             </div>
-            <div class="form-group">
-                <label>Test Modifier <span style="font-size:0.8em;font-weight:normal;font-style:italic;">(TN bonus when equipped)</span></label>
-                <input type="number" name="system.testMod" value="{{system.testMod}}" placeholder="0"/>
-            </div>
         </div>
         {{/if}}
         
@@ -194,7 +190,7 @@
         {{!-- DESCRIPTION (Global) --}}
         <h2 class="section-header">Description</h2>
         <div class="description-editor">
-            {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+            <textarea name="system.description" style="width:100%;min-height:160px;font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;padding:8px;border:1px solid #d8d2c4;border-radius:3px;background:#f8f6f2;color:#222;resize:vertical;box-sizing:border-box;">{{system.description}}</textarea>
         </div>
 
     </div>
