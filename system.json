@@ -89,8 +89,6 @@
       "system": "blue-planet-recontact"
     }
   ],
-  "manifest": "https://raw.githubusercontent.com/artchallenger/blue-planet-recontact/main/system.json",
-"download": "https://github.com/artchallenger/blue-planet-recontact/releases/download/1.6.0/blue-planet-recontact.zip"
   "languages": [
     {
       "lang": "en",
@@ -99,5 +97,14 @@
     }
   ],
   "primaryTokenAttribute": "strain.physical",
-  "secondaryTokenAttribute": "wounds.minor"
+  "secondaryTokenAttribute": "wounds.minor",
+  "manifest": "https://raw.githubusercontent.com/artchallenger/blue-planet-recontact/main/system.json",
+  "download": "https://github.com/artchallenger/blue-planet-recontact/releases/download/1.6.0/blue-planet-recontact.zip",
+  "authors": [
+    {
+      "name": "artchallenger"
+    }
+  ],
+  "description": "Blue Planet: Recontact \u2014 an unofficial Foundry VTT implementation of the Blue Planet tabletop RPG system.",
+  "url": "https://github.com/artchallenger/blue-planet-recontact"
 }
