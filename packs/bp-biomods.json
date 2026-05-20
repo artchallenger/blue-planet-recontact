@@ -3,7 +3,7 @@
     "_id": "bpb001",
     "name": "Amplified Hearing",
     "type": "biomod",
-    "img": "icons/magic/nature/wolf-paw-glowing-teal.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Significantly enhances the subject's sense of hearing. Offers a +4 bonus to all hearing rolls.",
       "availability": "Uncommon",
@@ -20,7 +20,7 @@
     "_id": "bpb002",
     "name": "Echolocation (Standard)",
     "type": "biomod",
-    "img": "icons/magic/sonic/wave-rings-teal.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "User bounces ultrasonic pulses off their environment, forming images by interpreting echoes. Functions only underwater with an effective range of about 100m. Doesn't require light but cannot distinguish colors. Can reveal interiors of thin-walled objects and detect cetacean/mechanical ultrasonic sounds.",
       "availability": "Uncommon",
@@ -37,7 +37,7 @@
     "_id": "bpb003",
     "name": "Echolocation (Improved)",
     "type": "biomod",
-    "img": "icons/magic/sonic/wave-rings-teal.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Can be used in both air and water. Range of 40m in air and 400m underwater. Doesn't require light but cannot distinguish colors. Can reveal interiors of thin-walled objects. Allows hearing ultrasonic sounds.",
       "availability": "Uncommon",
@@ -54,7 +54,7 @@
     "_id": "bpb004",
     "name": "Enhanced Olfactory Sense",
     "type": "biomod",
-    "img": "icons/magic/nature/leaf-wind-pink.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Gives user a sense of smell equal to the average canine. Can identify individuals by scent and track by smell if trail was made within the past 30 hours and hasn't been obscured. +4 to tests based on odors.",
       "availability": "Rare",
@@ -71,7 +71,7 @@
     "_id": "bpb005",
     "name": "Extrasensory Perception Enhancement",
     "type": "biomod",
-    "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Boosts neurotransmitter levels associated with ESP activity. Combined with training, makes subjects more empathic. +2 to Cognition in instances where intuition or association are key. Includes Danger Sense (secret Cognition test at -4 when about to enter peril) and Empathic Connection (sense target emotional state).",
       "availability": "Rare",
@@ -88,7 +88,7 @@
     "_id": "bpb006",
     "name": "Magnetic Orientation",
     "type": "biomod",
-    "img": "icons/magic/earth/orb-cluster-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Increased sensitivity to a planet's electromagnetic field, permitting orientation toward magnetic north. Can be confounded by strong magnetic fields and susceptible to local variations in planetary magnetism. A lifesaver in wilderness navigation.",
       "availability": "Rare",
@@ -105,7 +105,7 @@
     "_id": "bpb007",
     "name": "Night Vision",
     "type": "biomod",
-    "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "User can see in low-light conditions like nocturnal predators. Pupils are slit like a cat's and extremely variable in size. Removes all vision penalties caused by poor lighting. Useless in complete darkness.",
       "availability": "Common",
@@ -122,7 +122,7 @@
     "_id": "bpb008",
     "name": "Telescopic Vision",
     "type": "biomod",
-    "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Gives subject's eyes variable magnification up to 10X. Provides +4 bonus on distance-hampered Cognition tests for vision.",
       "availability": "Uncommon",
@@ -139,7 +139,7 @@
     "_id": "bpb009",
     "name": "Improved Blood Clotting",
     "type": "biomod",
-    "img": "icons/magic/life/heart-cross-red.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Enhanced blood clotting response. +1 bonus on trauma rolls when suffering major or mortal wounds. +2 bonus to characters attempting first aid on the user. Slightly elevated incidence of embolism and stroke.",
       "availability": "Uncommon",
@@ -156,7 +156,7 @@
     "_id": "bpb010",
     "name": "Improved Blood Oxygenation",
     "type": "biomod",
-    "img": "icons/magic/life/heart-cross-red.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Increases oxygen delivery capability of the subject's blood. Increased stamina and ability to hold breath for up to 10 minutes even while physically active. +2 to Physique when cardiovascular conditioning or endurance is relevant.",
       "availability": "Common",
@@ -173,7 +173,7 @@
     "_id": "bpb011",
     "name": "Longevity Therapy",
     "type": "biomod",
-    "img": "icons/magic/life/heart-glowing-green.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Xenosilicate-based process that arrests the aging process by restoring telomeres in DNA. Dials back senescence of cellular function. Must be renewed every 10\u201312 months. Extended life spans of regular users could be indefinite.",
       "availability": "Common",
@@ -190,7 +190,7 @@
     "_id": "bpb012",
     "name": "Pheromone Control",
     "type": "biomod",
-    "img": "icons/magic/nature/plant-spirit-flower-pink.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Enables user to control and concentrate their body's pheromone production. Provides +1 bonus to any social maneuvers in close physical proximity with target. Can also inhibit emission of normal pheromones.",
       "availability": "Restricted",
@@ -207,7 +207,7 @@
     "_id": "bpb013",
     "name": "Respiratory Filter",
     "type": "biomod",
-    "img": "icons/magic/air/air-burst-spiral-teal.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Allows user to breathe highly contaminated atmospheres without harm, as long as sufficient oxygen is present and there are no corrosive compounds. Generally purchased by emergency workers and others in regular contact with polluted air.",
       "availability": "Rare",
@@ -224,7 +224,7 @@
     "_id": "bpb014",
     "name": "Tissue Regeneration",
     "type": "biomod",
-    "img": "icons/magic/life/crosses-trio-green.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Allows doctors to heal and repair almost any disease or injury. Damaged limbs and malfunctioning organs can be fully, perfectly regenerated. Skin, muscles, bones, glands, nerves \u2014 everything can be regenerated or replaced.",
       "availability": "Common",
@@ -241,7 +241,7 @@
     "_id": "bpb015",
     "name": "Accelerated Neurons",
     "type": "biomod",
-    "img": "icons/magic/lightning/bolt-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Hardwires major neural pathways so nerve impulses travel faster and with greater coordination. Permanent +1 to Coordination attribute and one additional reaction during action rounds. Raises metabolic energy demands \u2014 user must consume about 50% more calories than previously.",
       "availability": "Common",
@@ -258,7 +258,7 @@
     "_id": "bpb016",
     "name": "Dexterity Enhancement",
     "type": "biomod",
-    "img": "icons/magic/lightning/bolt-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Complex enhancement of motor nerves, muscle groups, joints, tendons, and ligaments, with a dedicated processor that refines commonly repeated actions via digital memory and motor neuron filters. +1 permanent bonus to Coordination for tests based on manual dexterity.",
       "availability": "Rare",
@@ -275,7 +275,7 @@
     "_id": "bpb017",
     "name": "Double Joints",
     "type": "biomod",
-    "img": "icons/skills/movement/figure-running-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Makes tendons capable of stretching further without damage across major joints. +1 bonus to Coordination in situations where body flexibility is important (e.g., cramped spaces, escaping restraints). At moderator's discretion.",
       "availability": "Rare",
@@ -292,7 +292,7 @@
     "_id": "bpb018",
     "name": "Nictitating Membranes",
     "type": "biomod",
-    "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Thick, retractable, transparent eye covers that protect eyes without impairing vision. Most often used underwater to protect eyes from exposure and normalize refraction for clear vision. Also useful in dusty or contaminated environments.",
       "availability": "Common",
@@ -309,7 +309,7 @@
     "_id": "bpb019",
     "name": "Organ Composite",
     "type": "biomod",
-    "img": "icons/magic/life/heart-cross-red.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Replaces many internal organs with a spongy complex of multifunction tissues that decentralizes glandular, renal, hematic, and hepatic functions. Even after significant damage, body retains vital capabilities. +1 Physique (permanent) and +2 on trauma tests. Imposes -4 on first aid and medical care rolls for the user's internal injuries.",
       "availability": "Rare",
@@ -326,7 +326,7 @@
     "_id": "bpb020",
     "name": "Glider",
     "type": "biomod",
-    "img": "icons/skills/movement/figure-running-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Subject develops patagia \u2014 large membranous flaps of skin \u2014 stretched between upper and lower extremities. Allows controlled glides and aerial maneuvers in pressurized microgravity. +2 bonus to Coordination-based tests in freefall. Can stay aloft in low-G environments indefinitely using air currents. Not effective in higher gravity environments.",
       "availability": "Rare",
@@ -343,7 +343,7 @@
     "_id": "bpb021",
     "name": "Aquaform (Light)",
     "type": "biomod",
-    "img": "icons/magic/water/wave-foam-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Transforms adult human into a light aquaform. Elongated feet with long webbed toes. Adapted for aquatic environments with enhanced underwater movement. Includes improved blood oxygenation equivalent.",
       "availability": "Rare",
@@ -360,7 +360,7 @@
     "_id": "bpb022",
     "name": "Aquaform (Full)",
     "type": "biomod",
-    "img": "icons/magic/water/wave-foam-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Full aquatic transformation with gill system, streamlined body, and extensive aquatic capabilities. Can breathe underwater indefinitely. Significantly enhanced underwater speed and endurance.",
       "availability": "Rare",
@@ -377,7 +377,7 @@
     "_id": "bpb023",
     "name": "Consensual Psychiatric Intervention",
     "type": "biomod",
-    "img": "icons/magic/perception/orb-eye-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Prescribed by licensed psychiatrists to help patients permanently compensate for chemical irregularities. Can cure a wide variety of minor or major neuroses or psychoses. People often react negatively to anyone known to have had one.",
       "availability": "Common",
@@ -394,7 +394,7 @@
     "_id": "bpb024",
     "name": "Alpha Transhuman Package",
     "type": "biomod",
-    "img": "icons/magic/life/heart-glowing-green.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "No anatomical vestiges, no genetic defects, requires only 4 hours of sleep per night. Equivalent of improved blood oxygenation. Natural lifespan more than 120 years. +1 to any two attributes (player's choice), +2 to social maneuvers where appearance and gracefulness are influential.",
       "availability": "Rare",
@@ -411,7 +411,7 @@
     "_id": "bpb025",
     "name": "Supertrooper Package",
     "type": "biomod",
-    "img": "icons/magic/body/shield-barrier-glowing-blue.webp",
+    "img": "icons/svg/aura.svg",
     "system": {
       "description": "Military biomod package. Improved blood oxygenation plus bioplastic-reinforced bones. +1 permanent Physique, +2 when using Physique to reduce incoming damage ratings. Adds up to 25kg body mass, +1 on intimidate maneuvers. 35% increased metabolic demands.",
       "availability": "Restricted",
@@ -423,5 +423,421 @@
       "equipped": false,
       "testMod": 1
     }
+  },
+  {
+    "_id": "bpb026",
+    "name": "Agility Chip",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This NIC (page 144) and processor complex is a hardwired version of the programmed reflex commonly called Balance (page 150). Like the program, the chip attempts to moderate the cognitive component of the user\u2019s motor control system to improve overall coordination. Unlike the program, the chip is a permanent neural implant, and is continually active. As a result, the user\u2019s response is notably faster and slightly more effective than with the programmed reflex version. Users who enter zero-G environments without deactivating the chip risk seizures and potential injuries. A character with an agility chip receives a permanent +1 bonus to their Coordination. In circumstances where the response in question is primarily a matter of balance, the bonus is +2.",
+      "availability": "Rare",
+      "cost": "9,000cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "+1 Coordination (permanent, always active)",
+      "installCost": 9000,
+      "strainImpact": 0,
+      "testMod": 1
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb027",
+    "name": "Ambidexterity Filter",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This dedicated processor is inserted on the user\u2019s brainstem along with a complex of supplementary motor interconnections. The biomod first models and then simulates the neural pathways and activity of the user\u2019s strong hand, facilitating complementary abilities in their off hand. The end result is that the user receives the full benefits of natural ambidexterity, avoiding all penalties associated with use of their off hand.",
+      "availability": "Rare",
+      "cost": "6,300cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Eliminates off-hand penalties; full ambidexterity",
+      "installCost": 6300,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb028",
+    "name": "Neural Jacks",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "A neural jack is a small, shallow socket usually mounted in the base of the user\u2019s skull, but it can be installed anywhere near a nerve trunk. A jack allows users to access or operate a device as if it were part of their own bodies. Users experience data received from the device as if they were their own sensory stimuli or memories, allowing them to give movement commands as if they were simple acts of muscular conditioning. Neural jacks allow for bio-digital integration of even the most sophisticated hardware. The jack\u2019s port is used to directly interface with external devices. Operating programs may be part of the device\u2019s software, or the user may run programs stored in their vee. Most electronics and vehicles are equipped with neural control ports, and direct interfacing is accomplished through standardized optical cables. Interfacing through a neural jack provides a +2 bonus to all associated tests. This represents the improved nimbleness, detailed sensory input, and refined control a user gains through mental integration with a device. Since neural jacks eliminate the need for physical action on the part of the user, all actions initiated through a jack are essentially instantaneous. In game terms, this means that a character acting by a jack also receives a +2 bonus to initiative. This bonus is limited to actions conducted through the neural jack, and by the physical capabilities of the device being controlled. Uplink neural jacks\u2014or links\u2014include integrated",
+      "availability": "Common",
+      "cost": "Varies",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Direct neural interface with devices and virtual systems",
+      "installCost": 0,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb029",
+    "name": "Pain Inhibitor",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "Pain inhibitors, or PIs, are bio-digital switches that do just what their name implies. These relatively simple devices intercept input from pain receptors, eliminating the sensation of pain. PIs are integrated within the neural pathways that deliver impulses to the pain processing centers of the thalamus. When stimulus exceeds preset levels, the implant shunts the excess impulses. This results in the user feeling only minor discomfort, regardless of the level of stimulus. Because pain is an evolutionary adaptation against bodily harm, elimination of the stimulus is inherently dangerous. Therefore, the shunted signal is interfaced with tactile or even auditory centers, that allow the excess nerve impulses to be perceived in an alternate form. This allows the user to sense and react to the magnitude of possible injury without having to deal with the potentially debilitating effects of the pain itself. Learning to gauge the severity of an injury based on this alternate perception requires specific training. Shunting the impulses at the point of the thalamus also eliminates the autonomic responses associated with pain, such as hormone release and metabolic shock. The elimination of incapacitating pain and the body\u2019s physiological responses to it can be a lifesaving advantage. Traumatic injury can be temporarily ignored, allowing the user to perform first aid on themselves, to move to safety, or even to continue fighting after suffering horrendous wounds. Pain",
+      "availability": "Restricted",
+      "cost": "17,000cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Suppresses pain on demand; eliminates wound penalties (masks injury)",
+      "installCost": 17000,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb030",
+    "name": "RAS Modulator",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This relatively simple NIC complex artificially stimulates and inhibits the reticulating activating system of the midbrain, allowing the user to consciously control the mechanisms that prevent and induce sleep. With biofeedback, the user of this biomod can remain awake and alert for up to 60 hours with negligible physiological effects. Subsequently, for each additional 5 hours (or portion thereof) the user remains awake, they suffer a cumulative -1 penalty to all their attributes. With a corollary command, the user can also induce a deep and restful sleep in seconds. This induced sleep is no deeper or longer than normal, the onset is simply immediate. The implant can also be used to bring the sleeper instantly from a state of groggy semiconsciousness to one of immediate alertness, eliminating any potential penalties associated with waking. An internal timer can be set as an alarm clock, waking the user at a specified time.",
+      "availability": "Rare",
+      "cost": "6,200cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Control sleep/wake cycle; stay awake 60 hrs without penalty",
+      "installCost": 6200,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb031",
+    "name": "Sensory Recorder",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This implant is essentially peripheral wetware for virtual interfaces and is tied directly into the sensory nerves of the user. Everything the user experiences can be recorded through this device. The device may be activated at will, and the user can play back, edit, and share these recordings through their virt. A recording implant can also be used to experience sensory recordings made by others. Remember that such devices capture sensory information only\u2014 emotions and thoughts aren\u2019t recorded. Playback only versions of this device have become increasingly popular, and are a growing part of the entertainment industry. Production of commercial stimulus recordings is huge business, and \u201cstims\u201d for all subjects and preferences account for a surprising percentage of storage space and bandwidth on CommCore.",
+      "availability": "Rare",
+      "cost": "20,000cs (8,000cs playback only)",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Record and play back full sensory experiences via virt",
+      "installCost": 20000,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb032",
+    "name": "Facial Transformers",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This collection of small subcutaneous bladders is able to shift the underlying contours of the user\u2019s face to a variety of preset configurations: raising cheekbones, enlarging the nose, thickening brow ridges, or weakening the chin. This implant makes it virtually impossible for even friends to recognize a person, and applies a +4 bonus when trying to fool facial recognition software. The standard face transformer isn\u2019t practical at making someone look like a specific person; however, purpose-built implants combined with cosmetic surgery does allow individuals to effectively switch between a specific person\u2019s appearance and their own. These systems are very expensive and typically the purview of those involved in espionage. Various types of sonic, infrared, microwave, and X-ray scanning technology can readily detect such facial implants, and cetacean echolocation is never fooled.",
+      "availability": "Restricted",
+      "cost": "Part of Anti-Recognition Suite (105,000cs complete)",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "+4 to fool facial recognition; shift facial contours to preset configurations",
+      "installCost": 0,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb033",
+    "name": "Complexion Modulator",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This biomod uses a combination of transform viruses and interface chips to give the user the ability to change the color and saturation of their epidermal pigments. Artificial chromatophores, modeled after those of cephalopods, are used. With a thought the user can color, lighten, darken, and pattern their skin in natural or unnatural hues and decorations from matte black or camouflage to scrolling words or pulsing rainbows. Beyond its use in confounding recognition, the modulator may grant the user a +2 to related skill set tests when attempting to hide. Cheaper versions of this mod, used primarily by performers, artists, and those wanting to express themselves differently, are available, but these inexpensive models are generally incapable of creating believably natural effects.",
+      "availability": "Restricted",
+      "cost": "Part of Anti-Recognition Suite",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "+2 to hide/disguise; change skin color/pattern at will",
+      "installCost": 0,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb034",
+    "name": "Kinesic Modulators",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This rare and expensive set of implants modifies range of motion, joint extension, muscle tension, and gait to intentionally alter the kinesic profile of an individual. Though they cause a -2 penalty to the user\u2019s Coordination when active, when combined with the other mods in the recognition inhibitor suite, they make the user a human chameleon, able to deceive their own mother, hide in plain sight, or simply vanish into any crowd.",
+      "availability": "Restricted",
+      "cost": "Part of Anti-Recognition Suite",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Alters gait/movement profile; \u22122 Coordination when active; part of Anti-Recognition Suite",
+      "installCost": 0,
+      "strainImpact": -2,
+      "testMod": -2
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb035",
+    "name": "Programmable Pili",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This synthetic form of hair is visually and tactilely indistinguishable from organic pili, but an interface chip allows remarkable control and versatility over the user\u2019s hair color, length, and style. In seconds the user can change the length of the smart material fibers up to 30 cm and alter the color to any organic or artificial hue. They can also select from a variety of style presets. Should they choose, the hair can also light up in bright colors and even animate\u2014waving, bouncing, or standing up on command. Axillary modules provide similar control over facial and even body hair. Pili modification is a core product family representing 23% of the cosmetic biomods market revenue.",
+      "availability": "Restricted",
+      "cost": "Part of Anti-Recognition Suite",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Smart hair \u2014 change color, length, style, luminescence on command",
+      "installCost": 0,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb036",
+    "name": "Voice Modulator",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This small and relatively cheap device is bound to the user\u2019s vocal ligaments. On command it can marginally tighten or loosen the vocal cords to create a broad range of natural sounding voices, from a low adult male bass to a high-pitched childish treble. Though it does not make a user any more sonorous, it does make disguising their voice simple and believable.",
+      "availability": "Restricted",
+      "cost": "8,000\u201335,000cs per module; 105,000cs complete suite",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Change voice pitch/timbre at will; vocal disguise",
+      "installCost": 8000,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb037",
+    "name": "Implanted Radar",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This device gives the user the ability to produce and receive low-powered radar waves. The implant is mounted just below the skin, in a band around the customer\u2019s skull, and has a full 360\u00b0 scanning field. The output can be concentrated to a 120\u00b0 arc Chapter Four 152 in any direction if the user wants more detailed or distant perception. The resolution of this radar is such that objects smaller than 1 cm are invisible. Fine surface features are therefore impossible to distinguish. Radar functions in total darkness, and can easily penetrate fog and smoke, but it doesn\u2019t work underwater. Implanted radar has an effective range of 60 m in the 360\u00b0 mode, and 200 m in the 120\u00b0 mode.",
+      "availability": "Rare",
+      "cost": "18,000cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "360\u00b0 radar; detect objects 30m+; penetrates thin walls",
+      "installCost": 18000,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb038",
+    "name": "Implanted Micro-Toolkit",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "This device consists of a wide alloy wristband with many small, retractable robotic arms, probes, fiber optic microcameras, and similarly integrated micro tools. There are several configurations available; once the basic mounting band and interface are implanted, users can switch among the various toolkits at will. The two most common packages contain electronics and medical/surgical tools. Specialty models for biochemistry, mechanical repair, and artistic applications exist as well. Depending on the model, this device gives the user a +2 bonus to skill tests that could be facilitated by small, task-specific cybernetic tools.",
+      "availability": "Uncommon",
+      "cost": "15,000cs (additional tool sets ~1,500cs)",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Retractable robotic arms, probes, fiber optics in wristband",
+      "installCost": 15000,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb039",
+    "name": "Infrared Sensors",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "Infrared sensors are generally installed in pairs for binocular vision, just under the skin of the cheeks. This configuration is fully concealed and popularly known as \u201cvipers.\u201d Infrared sensors allow the user to perceive both visual and thermal IR, or heat. These sensors make it possible to see objects by the heat they generate or reflect, or to view significant heat sources behind thermally translucent barriers. Users can also track warm-blooded animals by the heat left in their footprints for several minutes after their passing, depending upon ambient temperature and terrain conditions. The quality of the images produced by IR sensors precludes distinguishing detailed features. Additionally, because IR light doesn\u2019t readily penetrate water, such sensors are useless underwater. Infrared sensors provide a +2 bonus to all perception related tests in low light or darkness, and offer a +5 bonus when attempting to locate heat sources within lower temperature surroundings.",
+      "availability": "Uncommon",
+      "cost": "15,000cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "See in infrared; detect heat signatures; see through light fog/smoke",
+      "installCost": 15000,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb040",
+    "name": "Perfect Pitch",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "A popular mod among musicians and singers, perfect pitch allows the user to precisely identify any musical tone within the range of normal human hearing. This biomod confers a +4 bonus to any musical skill sets. Beyond its artistic benefit, perfect pitch is useful for humans attempting to understand cetacean speech, and it allows additional precision in interpreting the results of echolocation data. Users with both the echolocation (page 294) and perfect pitch biomods gain a +2 bonus to any tests involving echolocation. Transformation Time: 2 weeks, plus a week of training",
+      "availability": "Rare",
+      "cost": "3,000cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Identify any musical tone precisely; perfect tonal memory",
+      "installCost": 3000,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "bpb041",
+    "name": "Photoskin",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "system": {
+      "description": "Photoskin is an unusual new mod from Biogene, one that may herald an extended series of biomods based on plant, rather than human or animal, DNA. Photoskin involves modifying the user\u2019s skin cells to produce actual chloroplasts, the organelles in plant cells responsible for photosynthesis. The modification enables the transformed cells to use sunlight to convert water and carbon dioxide into carbohydrates. These nutrients are insufficient to sustain human life for an extended period. However, with a sufficient water supply, photoskin can help the user stave off starvation in dire circumstances. Extremely small quantities of food can be rationed out for an extended period of time, with the photoskin providing extra nutrients to compensate for the meager diet. With a combination of the photoskin and anti-poison biomod allowing users to drink salt water, the odds of survival for those stranded in Poseidon\u2019s wilderness are greatly increased. Subjects with the photoskin biomod can be recognized by the slight but noticeable greenish tint of their skin. Transformation Time: 2 weeks",
+      "availability": "Rare",
+      "cost": "35,000cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Photosynthetic skin; reduces food needs by 25% in sunlight",
+      "installCost": 35000,
+      "strainImpact": 0,
+      "testMod": 0
+    },
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
   }
 ]

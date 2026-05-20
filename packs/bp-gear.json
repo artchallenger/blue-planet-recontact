@@ -3,7 +3,7 @@
     "_id": "bpg001",
     "name": "Artificial Gill Pack",
     "type": "gear",
-    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "A small backpack device containing a biomimetic selectively permeable membrane that functions like a true fish gill. Provides 20\u201330 hours of underwater activity depending on exertion level. Users remain subject to depth and decompression limits.",
       "availability": "Uncommon",
@@ -20,7 +20,7 @@
     "_id": "bpg002",
     "name": "Diving Mask",
     "type": "gear",
-    "img": "icons/equipment/head/goggles-simple-leather.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Full-face diving mask equipped with spotlights, sonar, light intensification, blue-green lidar, built-in hydrophones, and short-range radio links. Inputs effective up to 200m. Displays via integrated HUD or linked to user's vee.",
       "availability": "Common",
@@ -37,7 +37,7 @@
     "_id": "bpg003",
     "name": "Dry Suit",
     "type": "gear",
-    "img": "icons/equipment/chest/vest-cloth-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "One of the most popular garments on Poseidon. Can be either a loose-fitting breathable jumpsuit or a close-fitting wet suit. Smart materials allow rapid switching between states. Neutrally buoyant with built-in heating elements and solar cloth recharging. Worn as casual and work clothing in many communities.",
       "availability": "Common",
@@ -54,7 +54,7 @@
     "_id": "bpg004",
     "name": "Gill Suit",
     "type": "gear",
-    "img": "icons/equipment/chest/vest-cloth-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Layers of osmotic fabric performing as an artificial gill. More durable and comfortable than gill packs. Kinetic converters harvest power from user's movements. Extracts oxygen from water, automatically maintains neutral buoyancy, and keeps user warm even in coldest water. Preferred by frontier inhabitants.",
       "availability": "Uncommon",
@@ -71,7 +71,7 @@
     "_id": "bpg005",
     "name": "Hardsuit",
     "type": "gear",
-    "img": "icons/equipment/chest/breastplate-metal.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Heavy-duty pressure suit for deep-sea operations. Assist servos provide +2 to Physique and Coordination for relevant tasks; if disabled both attributes reduce by 5. Modular arm manipulators accommodate power tools and micro-toolkits. Without fine manipulators, reduces fine dexterity tests by 8. Provides armor protection equal to Durability rating.",
       "availability": "Rare",
@@ -88,7 +88,7 @@
     "_id": "bpg006",
     "name": "MHD Sled (Personal)",
     "type": "gear",
-    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Magnetohydrodynamic underwater propulsion sled. Well-streamlined models can move at over 35 kph. Surface speed is doubled due to reduced drag. Most have integrated navigational equipment. Marginally buoyant without a load.",
       "availability": "Uncommon",
@@ -105,7 +105,7 @@
     "_id": "bpg007",
     "name": "Smart Fins",
     "type": "gear",
-    "img": "icons/equipment/feet/boots-simple-brown.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Standard diving fins with acceleration sensors and responsive material stiffeners that automatically vary rigidity during thrust. Increases swimming pace by one meter per action. Stiffeners improve stroke power during different parts of the thrust curve.",
       "availability": "Uncommon",
@@ -122,7 +122,7 @@
     "_id": "bpg008",
     "name": "Neural Trodes",
     "type": "gear",
-    "img": "icons/equipment/head/helm-simple-leather.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Sensitive electrodes mounted in a soft, tight-fitting headset or pasted directly to the skull. Allow interfacing with digital devices using the brain's electrical field. The most common form of non-invasive hardware interfacing.",
       "availability": "Common",
@@ -139,7 +139,7 @@
     "_id": "bpg009",
     "name": "Uplink Communicator (Personal)",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Satellite transceiver for long-range communications. Requires operational comm satellite to relay signals. Subject to interference from severe storms, jamming signals, and security protocol changes. Commercial satellites available but expensive and unreliable.",
       "availability": "Common",
@@ -156,7 +156,7 @@
     "_id": "bpg010",
     "name": "Sub-Surface Communicator",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Underwater communication device. Hydrophones effective to 75m. Ultra-phones (ultrasonic) viable to 500m, can translate cetacean concept strings. Infra-phones effective to 1,000km but bulky and low bandwidth. Signals transmitted as audible vibrations through water \u2014 not private without signal codes.",
       "availability": "Rare",
@@ -173,7 +173,7 @@
     "_id": "bpg011",
     "name": "Virt (Personal Computer)",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "The ubiquitous personal computing device of 2199. Functions as communicator, data storage, entertainment system, and interface hub. Most models are wearable. Capabilities strictly limited to available programs and databases.",
       "availability": "Common",
@@ -190,7 +190,7 @@
     "_id": "bpg012",
     "name": "L-Core (Basic)",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Learning-capable computer that adapts to frequent users and develops simulated personalities. Not sapient but simulates intelligence well. Capabilities limited to available programs and databases. Used for complex analysis, navigation, and tactical support.",
       "availability": "Uncommon",
@@ -207,7 +207,7 @@
     "_id": "bpg013",
     "name": "Bug Hunter",
     "type": "gear",
-    "img": "icons/creatures/invertebrates/spider-mandibles-brown.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Tiny autonomous robot that searches out and disables electronic surveillance devices. Insect-like ambulatory drone programmed to detect EM emissions that don't match approved signals. Can notify security, temporarily disable bugs with static discharge, or permanently burn them out with an ECM pulse.",
       "availability": "Rare",
@@ -224,7 +224,7 @@
     "_id": "bpg014",
     "name": "Picket Sensors",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Small sensors that detect preset stimuli and alert a remote receiver. Can detect motion, heat, sound, vibration, light, radio, and radar. Spherical detection fields, line-of-sight ranges, adjustable sensitivity. Can be used singly or in sequence to monitor a perimeter. Some models function underwater via sonar.",
       "availability": "Uncommon",
@@ -241,7 +241,7 @@
     "_id": "bpg015",
     "name": "MARNOC (Millimeter-Wave Radar Binoculars)",
     "type": "gear",
-    "img": "icons/equipment/head/goggles-simple-leather.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Detects and analyzes objects at range. Can penetrate thin materials to reveal concealed blades, firearms, armor under clothing, and hidden compartments in light vehicles. Also used medically to locate foreign bodies, broken bones, and cyberware.",
       "availability": "Uncommon",
@@ -258,7 +258,7 @@
     "_id": "bpg016",
     "name": "NUMAR (Nuclear Magnetic Resonance Detector)",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Induces electromagnetic emissions from molecular structures to determine object composition. Used to scan for binary propellant components, explosives, contraband drugs, and other illegal compounds. Invulnerable to known countermeasures \u2014 can only be bypassed by reprogramming, sabotage, bribery, or extortion.",
       "availability": "Rare",
@@ -275,7 +275,7 @@
     "_id": "bpg017",
     "name": "Medical Kit (Standard)",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Standard field medical kit containing trauma supplies, medications, diagnostic equipment, and basic surgical tools. Required for first aid and field medical procedures.",
       "availability": "Common",
@@ -292,7 +292,7 @@
     "_id": "bpg018",
     "name": "Sail Kite",
     "type": "gear",
-    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Large durable bioplastic wind kite rigged to a control/tow harness. Integrated servos adjust control lines. Reduces travel time for long trips by several magnitudes. Allows exhausted swimmers to stay on the move. Subject to wind vagaries.",
       "availability": "Rare",
@@ -309,7 +309,7 @@
     "_id": "bpg019",
     "name": "Survival Kit",
     "type": "gear",
-    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Comprehensive survival kit for Poseidon's wilderness. Includes water filtration, emergency rations, shelter materials, signal devices, basic tools, and navigation aids. Essential for anyone venturing far from settlements.",
       "availability": "Common",
@@ -326,7 +326,7 @@
     "_id": "bpg020",
     "name": "Locator Beacon",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Emergency transponder that broadcasts location data for search and rescue. Can be activated manually or automatically triggered. Sealed against water and pressure. Standard equipment on most survival kits and rescue harnesses.",
       "availability": "Common",
@@ -343,7 +343,7 @@
     "_id": "bpg021",
     "name": "Sonar Unit (Personal)",
     "type": "gear",
-    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Portable sonar unit for detecting and identifying underwater objects. Passive mode listens for sounds; active mode transmits sound waves that reflect from objects. Line-of-sight range 10\u201330 km, doubled in active mode.",
       "availability": "Common",
@@ -360,7 +360,7 @@
     "_id": "bpg022",
     "name": "Rescue Ball",
     "type": "gear",
-    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Emergency inflatable survival sphere. Contains water filters, emergency rations, and standard medical kit. Equipped with locator beacon. Self-sealing against water. Provides shelter and life support for stranded individuals at sea.",
       "availability": "Common",
@@ -377,7 +377,7 @@
     "_id": "bpg023",
     "name": "Smart Rope",
     "type": "gear",
-    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Bioplastic rope with embedded smart materials that stiffen on command or impact. Adjustable tension via interface. UV-resistant and buoyant. Standard equipment for surface and underwater work.",
       "availability": "Common",
@@ -394,7 +394,7 @@
     "_id": "bpg024",
     "name": "Cutting Torch",
     "type": "gear",
-    "img": "icons/tools/smithing/hammer-and-anvil.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Compact plasma cutting torch effective in air and underwater. Used for hull breaching, salvage operations, and field repairs. Adjustable cutting intensity.",
       "availability": "Common",
@@ -411,7 +411,7 @@
     "_id": "bpg025",
     "name": "Grapple Gun",
     "type": "gear",
-    "img": "icons/weapons/guns/gun-pistol-grey.webp",
+    "img": "icons/svg/item-bag.svg",
     "system": {
       "description": "Fires a magnetic or mechanical grapple on a high-tensile smart line. Used for scaling surfaces, emergency extraction, and boarding operations. Integrated spool motor for rapid ascent or descent.",
       "availability": "Uncommon",

@@ -3,7 +3,7 @@
     "_id": "bpam001",
     "name": "Standard Ammo (Handgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Standard binary propellant ammo for handguns.",
       "weaponClass": "handgun",
@@ -22,7 +22,7 @@
     "_id": "bpam002",
     "name": "Standard Ammo (Shotgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Standard binary propellant ammo for shotguns.",
       "weaponClass": "shotgun",
@@ -41,7 +41,7 @@
     "_id": "bpam003",
     "name": "Standard Ammo (Rifle)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Standard binary propellant ammo for rifles and long arms.",
       "weaponClass": "rifle",
@@ -60,7 +60,7 @@
     "_id": "bpam004",
     "name": "Standard Ammo (Heavy Weapon)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Standard binary propellant ammo for heavy weapons.",
       "weaponClass": "heavy",
@@ -79,7 +79,7 @@
     "_id": "bpam005",
     "name": "Antipersonnel Ammo (Handgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Shot or fl\u00e9chette ammo. +2 DR vs unarmored, -2 DR vs armored.",
       "weaponClass": "handgun",
@@ -98,7 +98,7 @@
     "_id": "bpam006",
     "name": "Antipersonnel Ammo (Shotgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Shot or fl\u00e9chette ammo. +2 DR vs unarmored, -2 DR vs armored.",
       "weaponClass": "shotgun",
@@ -117,7 +117,7 @@
     "_id": "bpam007",
     "name": "Antipersonnel Ammo (Rifle)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Shot or fl\u00e9chette ammo. +2 DR vs unarmored, -2 DR vs armored.",
       "weaponClass": "rifle",
@@ -136,7 +136,7 @@
     "_id": "bpam008",
     "name": "Antipersonnel Ammo (Heavy Weapon)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Shot or fl\u00e9chette ammo. +2 DR vs unarmored, -2 DR vs armored.",
       "weaponClass": "heavy",
@@ -155,7 +155,7 @@
     "_id": "bpam009",
     "name": "Armor-Piercing Ammo (Handgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Reduces target armor by 4 points (min 0).",
       "weaponClass": "handgun",
@@ -174,7 +174,7 @@
     "_id": "bpam010",
     "name": "Armor-Piercing Ammo (Shotgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Reduces target armor by 4 points (min 0).",
       "weaponClass": "shotgun",
@@ -193,7 +193,7 @@
     "_id": "bpam011",
     "name": "Armor-Piercing Ammo (Rifle)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Reduces target armor by 4 points (min 0).",
       "weaponClass": "rifle",
@@ -212,7 +212,7 @@
     "_id": "bpam012",
     "name": "Armor-Piercing Ammo (Heavy Weapon)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Reduces target armor by 4 points (min 0).",
       "weaponClass": "heavy",
@@ -231,7 +231,7 @@
     "_id": "bpam013",
     "name": "HE Ammo (Handgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive. Doubles base damage rating.",
       "weaponClass": "handgun",
@@ -250,7 +250,7 @@
     "_id": "bpam014",
     "name": "HE Ammo (Shotgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive. Doubles base damage rating.",
       "weaponClass": "shotgun",
@@ -269,7 +269,7 @@
     "_id": "bpam015",
     "name": "HE Ammo (Rifle)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive. Doubles base damage rating.",
       "weaponClass": "rifle",
@@ -288,7 +288,7 @@
     "_id": "bpam016",
     "name": "HE Ammo (Heavy Weapon)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive. Doubles base damage rating.",
       "weaponClass": "heavy",
@@ -307,7 +307,7 @@
     "_id": "bpam017",
     "name": "HEAP Ammo (Handgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive armor-piercing. DR x1.5 (round down), reduces target armor by 2.",
       "weaponClass": "handgun",
@@ -326,7 +326,7 @@
     "_id": "bpam018",
     "name": "HEAP Ammo (Shotgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive armor-piercing. DR x1.5 (round down), reduces target armor by 2.",
       "weaponClass": "shotgun",
@@ -345,7 +345,7 @@
     "_id": "bpam019",
     "name": "HEAP Ammo (Rifle)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive armor-piercing. DR x1.5 (round down), reduces target armor by 2.",
       "weaponClass": "rifle",
@@ -364,7 +364,7 @@
     "_id": "bpam020",
     "name": "HEAP Ammo (Heavy Weapon)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive armor-piercing. DR x1.5 (round down), reduces target armor by 2.",
       "weaponClass": "heavy",
@@ -383,7 +383,7 @@
     "_id": "bpam021",
     "name": "Self-Guided Ammo (Handgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Smart ammo. +2 to hit, eliminates cover penalties.",
       "weaponClass": "handgun",
@@ -402,7 +402,7 @@
     "_id": "bpam022",
     "name": "Self-Guided Ammo (Shotgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Smart ammo. +2 to hit, eliminates cover penalties.",
       "weaponClass": "shotgun",
@@ -421,7 +421,7 @@
     "_id": "bpam023",
     "name": "Self-Guided Ammo (Rifle)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Smart ammo. +2 to hit, eliminates cover penalties.",
       "weaponClass": "rifle",
@@ -440,7 +440,7 @@
     "_id": "bpam024",
     "name": "Self-Guided Ammo (Heavy Weapon)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Smart ammo. +2 to hit, eliminates cover penalties.",
       "weaponClass": "heavy",
@@ -459,7 +459,7 @@
     "_id": "bpam025",
     "name": "Self-Propelled Ammo (Handgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Rocket-assisted. No range penalties on attack tests.",
       "weaponClass": "handgun",
@@ -478,7 +478,7 @@
     "_id": "bpam026",
     "name": "Self-Propelled Ammo (Shotgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Rocket-assisted. No range penalties on attack tests.",
       "weaponClass": "shotgun",
@@ -497,7 +497,7 @@
     "_id": "bpam027",
     "name": "Self-Propelled Ammo (Rifle)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Rocket-assisted. No range penalties on attack tests.",
       "weaponClass": "rifle",
@@ -516,7 +516,7 @@
     "_id": "bpam028",
     "name": "Self-Propelled Ammo (Heavy Weapon)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Rocket-assisted. No range penalties on attack tests.",
       "weaponClass": "heavy",
@@ -535,7 +535,7 @@
     "_id": "bpam029",
     "name": "Suppression-Gel Ammo (Handgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Non-lethal gel rounds. Max minor wound. Physique/Psyche test or -6 penalty. Half range. Ineffective vs armor.",
       "weaponClass": "handgun",
@@ -554,7 +554,7 @@
     "_id": "bpam030",
     "name": "Suppression-Gel Ammo (Shotgun)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Non-lethal gel rounds. Max minor wound. Physique/Psyche test or -6 penalty. Half range. Ineffective vs armor.",
       "weaponClass": "shotgun",
@@ -573,7 +573,7 @@
     "_id": "bpam031",
     "name": "Suppression-Gel Ammo (Rifle)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Non-lethal gel rounds. Max minor wound. Physique/Psyche test or -6 penalty. Half range. Ineffective vs armor.",
       "weaponClass": "rifle",
@@ -592,7 +592,7 @@
     "_id": "bpam032",
     "name": "Suppression-Gel Ammo (Heavy Weapon)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Non-lethal gel rounds. Max minor wound. Physique/Psyche test or -6 penalty. Half range. Ineffective vs armor.",
       "weaponClass": "heavy",
@@ -611,7 +611,7 @@
     "_id": "bpam033",
     "name": "Harpoon (Standard)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Standard harpoon rounds. DR reduced to 50% of normal when fired underwater instead of standard 90%.",
       "weaponClass": "speargun",
@@ -630,7 +630,7 @@
     "_id": "bpam034",
     "name": "Harpoon (Antipersonnel)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Antipersonnel harpoon. +2 DR vs unarmored, -2 vs armored. Underwater DR at 50% of normal.",
       "weaponClass": "speargun",
@@ -649,7 +649,7 @@
     "_id": "bpam035",
     "name": "Harpoon (Armor-Piercing)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Armor-piercing harpoon. Reduces target armor by 4. Underwater DR at 50% of normal.",
       "weaponClass": "speargun",
@@ -668,7 +668,7 @@
     "_id": "bpam036",
     "name": "Harpoon (HE)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive harpoon. Doubles damage rating. Underwater DR at 50% of normal.",
       "weaponClass": "speargun",
@@ -687,7 +687,7 @@
     "_id": "bpam037",
     "name": "Harpoon (HEAP)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "HEAP harpoon. DR x1.5, reduces target armor by 2. Underwater DR at 50% of normal.",
       "weaponClass": "speargun",
@@ -706,7 +706,7 @@
     "_id": "bpam038",
     "name": "Harpoon (Self-Guided)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Smart harpoon. +2 to hit, eliminates cover penalties. Underwater DR at 50% of normal.",
       "weaponClass": "speargun",
@@ -725,7 +725,7 @@
     "_id": "bpam039",
     "name": "Harpoon (Self-Propelled)",
     "type": "ammo",
-    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Rocket-assisted harpoon. No range penalties. Underwater DR at 50% of normal.",
       "weaponClass": "speargun",
@@ -744,7 +744,7 @@
     "_id": "bpam040",
     "name": "Powerheads",
     "type": "ammo",
-    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Explosive tips for spearguns. Fixed DR 12 regardless of base weapon damage. Effective bangsticks against hostile marine life.",
       "weaponClass": "speargun",
@@ -763,7 +763,7 @@
     "_id": "bpam041",
     "name": "Grenade \u2014 Armor-Piercing",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Launcher-only. Reduces target armor to half. DR 12.",
       "weaponClass": "grenade",
@@ -783,7 +783,7 @@
     "_id": "bpam042",
     "name": "Grenade \u2014 Concussion",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Potent underwater. Blasts open doors, damages structures, concusses opposition. DR 8.",
       "weaponClass": "grenade",
@@ -803,7 +803,7 @@
     "_id": "bpam043",
     "name": "Grenade \u2014 Fragmentation",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Blasts antipersonnel shrapnel in all directions. DR 10.",
       "weaponClass": "grenade",
@@ -823,7 +823,7 @@
     "_id": "bpam044",
     "name": "Grenade \u2014 Incendiary",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Burning compound over 2m radius. DR 8 first round, drops by 1 each round.",
       "weaponClass": "grenade",
@@ -843,7 +843,7 @@
     "_id": "bpam045",
     "name": "Grenade \u2014 Breaching",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Shaped-charge. Directed DR 15 vs target, backblast DR 6.",
       "weaponClass": "grenade",
@@ -863,7 +863,7 @@
     "_id": "bpam046",
     "name": "Grenade \u2014 EMP",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "No physical damage. Unshielded electronics within 10m make Durability test at -4 or short out.",
       "weaponClass": "grenade",
@@ -883,7 +883,7 @@
     "_id": "bpam047",
     "name": "Grenade \u2014 Suppression",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Chemical cloud affects 20 cubic meter area.",
       "weaponClass": "grenade",
@@ -903,7 +903,7 @@
     "_id": "bpam048",
     "name": "Grenade \u2014 Adhesive",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Adhesive fluid over 4m radius. Bonds to anything. -6 penalty to all physical actions.",
       "weaponClass": "grenade",
@@ -923,7 +923,7 @@
     "_id": "bpam049",
     "name": "Grenade \u2014 Flash-Bang",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Flash and sonic bang. 4m radius. Stun test or -6 penalty. Underwater radius doubles.",
       "weaponClass": "grenade",
@@ -943,7 +943,7 @@
     "_id": "bpam050",
     "name": "Grenade \u2014 Nausea",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Contact gas. All actions -6 penalty. Psyche test reduces to -3. Lasts 5+(10-Physique) min.",
       "weaponClass": "grenade",
@@ -963,7 +963,7 @@
     "_id": "bpam051",
     "name": "Grenade \u2014 Sleep",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Colorless, odorless gas. Unconscious for 5+(10-Physique) min. Blocked by filters/gas masks.",
       "weaponClass": "grenade",
@@ -983,7 +983,7 @@
     "_id": "bpam052",
     "name": "Grenade \u2014 OBS",
     "type": "ammo",
-    "img": "icons/weapons/thrown/grenade-round.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Prismatic smoke cloud. Opaque to all sensors except high-powered sonar.",
       "weaponClass": "grenade",
@@ -1003,7 +1003,7 @@
     "_id": "bpam053",
     "name": "Torpedo \u2014 HE",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "High-explosive mini-torpedo. DR 22.",
       "weaponClass": "torpedo",
@@ -1023,7 +1023,7 @@
     "_id": "bpam054",
     "name": "Torpedo \u2014 HEAP",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "HEAP mini-torpedo. DR 16, halves target armor (round down).",
       "weaponClass": "torpedo",
@@ -1043,7 +1043,7 @@
     "_id": "bpam055",
     "name": "Torpedo \u2014 Incendiary",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Burns without oxygen. DR 12 first round, drops by 1 each round.",
       "weaponClass": "torpedo",
@@ -1063,7 +1063,7 @@
     "_id": "bpam056",
     "name": "Torpedo \u2014 EMP",
     "type": "ammo",
-    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "img": "icons/svg/circle.svg",
     "system": {
       "description": "Massive EMP. Durability test at -8 or inoperative. Half radius: -4.",
       "weaponClass": "torpedo",
