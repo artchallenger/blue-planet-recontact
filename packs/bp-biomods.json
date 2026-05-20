@@ -1,0 +1,427 @@
+[
+  {
+    "_id": "bpb001",
+    "name": "Amplified Hearing",
+    "type": "biomod",
+    "img": "icons/magic/nature/wolf-paw-glowing-teal.webp",
+    "system": {
+      "description": "Significantly enhances the subject's sense of hearing. Offers a +4 bonus to all hearing rolls.",
+      "availability": "Uncommon",
+      "installCost": 4000,
+      "function": "+4 to all hearing rolls",
+      "transformationTime": "3 weeks",
+      "features": "",
+      "models": "Biogene Fidelity III, Hydrospan Jawbone, Somatic Systems PinDrop",
+      "equipped": false,
+      "testMod": 4
+    }
+  },
+  {
+    "_id": "bpb002",
+    "name": "Echolocation (Standard)",
+    "type": "biomod",
+    "img": "icons/magic/sonic/wave-rings-teal.webp",
+    "system": {
+      "description": "User bounces ultrasonic pulses off their environment, forming images by interpreting echoes. Functions only underwater with an effective range of about 100m. Doesn't require light but cannot distinguish colors. Can reveal interiors of thin-walled objects and detect cetacean/mechanical ultrasonic sounds.",
+      "availability": "Uncommon",
+      "installCost": 6000,
+      "function": "Underwater echolocation to 100m",
+      "transformationTime": "3 weeks",
+      "features": "",
+      "models": "Biogene ChiAudio, Hydrospan Click/Buzz, Somatic Systems Earsight",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb003",
+    "name": "Echolocation (Improved)",
+    "type": "biomod",
+    "img": "icons/magic/sonic/wave-rings-teal.webp",
+    "system": {
+      "description": "Can be used in both air and water. Range of 40m in air and 400m underwater. Doesn't require light but cannot distinguish colors. Can reveal interiors of thin-walled objects. Allows hearing ultrasonic sounds.",
+      "availability": "Uncommon",
+      "installCost": 9000,
+      "function": "Air/water echolocation (40m air / 400m water)",
+      "transformationTime": "3 weeks",
+      "features": "",
+      "models": "Biogene ChiAudio, Hydrospan Click/Buzz, Somatic Systems Earsight",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb004",
+    "name": "Enhanced Olfactory Sense",
+    "type": "biomod",
+    "img": "icons/magic/nature/leaf-wind-pink.webp",
+    "system": {
+      "description": "Gives user a sense of smell equal to the average canine. Can identify individuals by scent and track by smell if trail was made within the past 30 hours and hasn't been obscured. +4 to tests based on odors.",
+      "availability": "Rare",
+      "installCost": 5000,
+      "function": "+4 to odor-based tests, tracking ability",
+      "transformationTime": "3 weeks",
+      "features": "",
+      "models": "GenDiver OTN Mod, Nippon Industrial State Olfacts, Somatic Systems PU",
+      "equipped": false,
+      "testMod": 4
+    }
+  },
+  {
+    "_id": "bpb005",
+    "name": "Extrasensory Perception Enhancement",
+    "type": "biomod",
+    "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+    "system": {
+      "description": "Boosts neurotransmitter levels associated with ESP activity. Combined with training, makes subjects more empathic. +2 to Cognition in instances where intuition or association are key. Includes Danger Sense (secret Cognition test at -4 when about to enter peril) and Empathic Connection (sense target emotional state).",
+      "availability": "Rare",
+      "installCost": 90000,
+      "function": "+2 Cognition (intuition/association), Danger Sense, Empathic Connection",
+      "transformationTime": "2 weeks + 4 months training",
+      "features": "",
+      "models": "Rhine Foundation ESPer Premium",
+      "equipped": false,
+      "testMod": 2
+    }
+  },
+  {
+    "_id": "bpb006",
+    "name": "Magnetic Orientation",
+    "type": "biomod",
+    "img": "icons/magic/earth/orb-cluster-blue.webp",
+    "system": {
+      "description": "Increased sensitivity to a planet's electromagnetic field, permitting orientation toward magnetic north. Can be confounded by strong magnetic fields and susceptible to local variations in planetary magnetism. A lifesaver in wilderness navigation.",
+      "availability": "Rare",
+      "installCost": 4000,
+      "function": "Innate magnetic north orientation",
+      "transformationTime": "2 weeks + 1 week training",
+      "features": "",
+      "models": "Lavender Organics BirdBrain 2, Anasi Systems Boussole II, Alltech Bearing SI",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb007",
+    "name": "Night Vision",
+    "type": "biomod",
+    "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+    "system": {
+      "description": "User can see in low-light conditions like nocturnal predators. Pupils are slit like a cat's and extremely variable in size. Removes all vision penalties caused by poor lighting. Useless in complete darkness.",
+      "availability": "Common",
+      "installCost": 5000,
+      "function": "Removes low-light vision penalties",
+      "transformationTime": "3 weeks",
+      "features": "",
+      "models": "GenDiver CatEye, Lavender Organics Sprite, Anasi Systems de Nuit",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb008",
+    "name": "Telescopic Vision",
+    "type": "biomod",
+    "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+    "system": {
+      "description": "Gives subject's eyes variable magnification up to 10X. Provides +4 bonus on distance-hampered Cognition tests for vision.",
+      "availability": "Uncommon",
+      "installCost": 5000,
+      "function": "+4 to distance vision tests, 10X magnification",
+      "transformationTime": "3 weeks",
+      "features": "",
+      "models": "GenDiver HawkEye v3.2, Lavender Organics Zuum Lenz, Simplex Proximal",
+      "equipped": false,
+      "testMod": 4
+    }
+  },
+  {
+    "_id": "bpb009",
+    "name": "Improved Blood Clotting",
+    "type": "biomod",
+    "img": "icons/magic/life/heart-cross-red.webp",
+    "system": {
+      "description": "Enhanced blood clotting response. +1 bonus on trauma rolls when suffering major or mortal wounds. +2 bonus to characters attempting first aid on the user. Slightly elevated incidence of embolism and stroke.",
+      "availability": "Uncommon",
+      "installCost": 8000,
+      "function": "+1 trauma rolls, +2 to first aid on user",
+      "transformationTime": "3 weeks",
+      "features": "",
+      "models": "Biogene Stoploss, Anasi Systems Sanguine II, Alltech APCF",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb010",
+    "name": "Improved Blood Oxygenation",
+    "type": "biomod",
+    "img": "icons/magic/life/heart-cross-red.webp",
+    "system": {
+      "description": "Increases oxygen delivery capability of the subject's blood. Increased stamina and ability to hold breath for up to 10 minutes even while physically active. +2 to Physique when cardiovascular conditioning or endurance is relevant.",
+      "availability": "Common",
+      "installCost": 9500,
+      "function": "+2 Physique (endurance), hold breath 10 min active",
+      "transformationTime": "1 month",
+      "features": "",
+      "models": "Biogene Deep Breath, GenDiver Hemo2, Somatic Systems O2Plus",
+      "equipped": false,
+      "testMod": 2
+    }
+  },
+  {
+    "_id": "bpb011",
+    "name": "Longevity Therapy",
+    "type": "biomod",
+    "img": "icons/magic/life/heart-glowing-green.webp",
+    "system": {
+      "description": "Xenosilicate-based process that arrests the aging process by restoring telomeres in DNA. Dials back senescence of cellular function. Must be renewed every 10\u201312 months. Extended life spans of regular users could be indefinite.",
+      "availability": "Common",
+      "installCost": 35000,
+      "function": "Arrests aging process, renewed annually",
+      "transformationTime": "2 weeks",
+      "features": "",
+      "models": "Lavender Organics Immortalis, Anasi Systems Jeune II, Youth Salon Platinum Package",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb012",
+    "name": "Pheromone Control",
+    "type": "biomod",
+    "img": "icons/magic/nature/plant-spirit-flower-pink.webp",
+    "system": {
+      "description": "Enables user to control and concentrate their body's pheromone production. Provides +1 bonus to any social maneuvers in close physical proximity with target. Can also inhibit emission of normal pheromones.",
+      "availability": "Restricted",
+      "installCost": 9000,
+      "function": "+1 to social maneuvers in close proximity",
+      "transformationTime": "2 weeks",
+      "features": "",
+      "models": "Anasi Systems Influence, Biogene Charisma, Somatic Systems Phem III",
+      "equipped": false,
+      "testMod": 1
+    }
+  },
+  {
+    "_id": "bpb013",
+    "name": "Respiratory Filter",
+    "type": "biomod",
+    "img": "icons/magic/air/air-burst-spiral-teal.webp",
+    "system": {
+      "description": "Allows user to breathe highly contaminated atmospheres without harm, as long as sufficient oxygen is present and there are no corrosive compounds. Generally purchased by emergency workers and others in regular contact with polluted air.",
+      "availability": "Rare",
+      "installCost": 19300,
+      "function": "Breathe contaminated atmospheres safely",
+      "transformationTime": "2 weeks",
+      "features": "",
+      "models": "Lavender Organics CleanAir, Anasi Systems Respirer, Somatic Systems Intake",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb014",
+    "name": "Tissue Regeneration",
+    "type": "biomod",
+    "img": "icons/magic/life/crosses-trio-green.webp",
+    "system": {
+      "description": "Allows doctors to heal and repair almost any disease or injury. Damaged limbs and malfunctioning organs can be fully, perfectly regenerated. Skin, muscles, bones, glands, nerves \u2014 everything can be regenerated or replaced.",
+      "availability": "Common",
+      "installCost": 2000,
+      "function": "Full tissue/organ regeneration (cost varies by extent)",
+      "transformationTime": "2\u20136 months",
+      "features": "",
+      "models": "Lavender Organics NuLimbs, Biogene Replicant Series, Somatic Systems Gro-Mor",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb015",
+    "name": "Accelerated Neurons",
+    "type": "biomod",
+    "img": "icons/magic/lightning/bolt-blue.webp",
+    "system": {
+      "description": "Hardwires major neural pathways so nerve impulses travel faster and with greater coordination. Permanent +1 to Coordination attribute and one additional reaction during action rounds. Raises metabolic energy demands \u2014 user must consume about 50% more calories than previously.",
+      "availability": "Common",
+      "installCost": 95000,
+      "function": "+1 Coordination (permanent), +1 reaction per round",
+      "transformationTime": "2 months",
+      "features": "",
+      "models": "Lavender Organics QuikAxon, Anasi Systems Synapse, Elite Forms NaK Pump",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb016",
+    "name": "Dexterity Enhancement",
+    "type": "biomod",
+    "img": "icons/magic/lightning/bolt-blue.webp",
+    "system": {
+      "description": "Complex enhancement of motor nerves, muscle groups, joints, tendons, and ligaments, with a dedicated processor that refines commonly repeated actions via digital memory and motor neuron filters. +1 permanent bonus to Coordination for tests based on manual dexterity.",
+      "availability": "Rare",
+      "installCost": 9700,
+      "function": "+1 Coordination (manual dexterity tests)",
+      "transformationTime": "2 months",
+      "features": "dexterity-enhancement",
+      "models": "Lavender Organics Sleight, Hanover Industries Manos v4.5, Somatic Systems Dex",
+      "equipped": false,
+      "testMod": 1
+    }
+  },
+  {
+    "_id": "bpb017",
+    "name": "Double Joints",
+    "type": "biomod",
+    "img": "icons/skills/movement/figure-running-blue.webp",
+    "system": {
+      "description": "Makes tendons capable of stretching further without damage across major joints. +1 bonus to Coordination in situations where body flexibility is important (e.g., cramped spaces, escaping restraints). At moderator's discretion.",
+      "availability": "Rare",
+      "installCost": 15000,
+      "function": "+1 Coordination (flexibility situations)",
+      "transformationTime": "3 weeks",
+      "features": "",
+      "models": "Anasi Systems Souple, Lavender Organics 10don, Simplex Joyntz",
+      "equipped": false,
+      "testMod": 1
+    }
+  },
+  {
+    "_id": "bpb018",
+    "name": "Nictitating Membranes",
+    "type": "biomod",
+    "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+    "system": {
+      "description": "Thick, retractable, transparent eye covers that protect eyes without impairing vision. Most often used underwater to protect eyes from exposure and normalize refraction for clear vision. Also useful in dusty or contaminated environments.",
+      "availability": "Common",
+      "installCost": 2500,
+      "function": "Eye protection, clear vision underwater",
+      "transformationTime": "2 weeks",
+      "features": "",
+      "models": "GenDiver ClearEye, Lavender Organics NicMem, Hydrospan Vizor",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb019",
+    "name": "Organ Composite",
+    "type": "biomod",
+    "img": "icons/magic/life/heart-cross-red.webp",
+    "system": {
+      "description": "Replaces many internal organs with a spongy complex of multifunction tissues that decentralizes glandular, renal, hematic, and hepatic functions. Even after significant damage, body retains vital capabilities. +1 Physique (permanent) and +2 on trauma tests. Imposes -4 on first aid and medical care rolls for the user's internal injuries.",
+      "availability": "Rare",
+      "installCost": 180000,
+      "function": "+1 Physique, +2 trauma tests, -4 to first aid on user",
+      "transformationTime": "2 months",
+      "features": "",
+      "models": "Anasi Systems Ubigland, Lavender Organics Endo, Elite Forms CORE",
+      "equipped": false,
+      "testMod": 1
+    }
+  },
+  {
+    "_id": "bpb020",
+    "name": "Glider",
+    "type": "biomod",
+    "img": "icons/skills/movement/figure-running-blue.webp",
+    "system": {
+      "description": "Subject develops patagia \u2014 large membranous flaps of skin \u2014 stretched between upper and lower extremities. Allows controlled glides and aerial maneuvers in pressurized microgravity. +2 bonus to Coordination-based tests in freefall. Can stay aloft in low-G environments indefinitely using air currents. Not effective in higher gravity environments.",
+      "availability": "Rare",
+      "installCost": 7500,
+      "function": "+2 Coordination (freefall), indefinite low-G gliding",
+      "transformationTime": "1 month",
+      "features": "",
+      "models": "Moore Subsystems Flite",
+      "equipped": false,
+      "testMod": 2
+    }
+  },
+  {
+    "_id": "bpb021",
+    "name": "Aquaform (Light)",
+    "type": "biomod",
+    "img": "icons/magic/water/wave-foam-blue.webp",
+    "system": {
+      "description": "Transforms adult human into a light aquaform. Elongated feet with long webbed toes. Adapted for aquatic environments with enhanced underwater movement. Includes improved blood oxygenation equivalent.",
+      "availability": "Rare",
+      "installCost": 75000,
+      "function": "Aquatic adaptation, enhanced underwater movement",
+      "transformationTime": "4 months",
+      "features": "",
+      "models": "Lavender Organics Mer, GenDiver AquaHuman, Somatic Systems Pelagic",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb022",
+    "name": "Aquaform (Full)",
+    "type": "biomod",
+    "img": "icons/magic/water/wave-foam-blue.webp",
+    "system": {
+      "description": "Full aquatic transformation with gill system, streamlined body, and extensive aquatic capabilities. Can breathe underwater indefinitely. Significantly enhanced underwater speed and endurance.",
+      "availability": "Rare",
+      "installCost": 250000,
+      "function": "Full aquatic transformation, breathe underwater",
+      "transformationTime": "6 months",
+      "features": "",
+      "models": "Lavender Organics MerFull, GenDiver AquaHuman Plus, Somatic Systems Pelagic II",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb023",
+    "name": "Consensual Psychiatric Intervention",
+    "type": "biomod",
+    "img": "icons/magic/perception/orb-eye-blue.webp",
+    "system": {
+      "description": "Prescribed by licensed psychiatrists to help patients permanently compensate for chemical irregularities. Can cure a wide variety of minor or major neuroses or psychoses. People often react negatively to anyone known to have had one.",
+      "availability": "Common",
+      "installCost": 18600,
+      "function": "Treats psychiatric conditions, alters emotional makeup",
+      "transformationTime": "1 week",
+      "features": "",
+      "models": "Lavender Organics Peace of Mind, Biogene Better Days, Macao Cyclics MIS",
+      "equipped": false,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb024",
+    "name": "Alpha Transhuman Package",
+    "type": "biomod",
+    "img": "icons/magic/life/heart-glowing-green.webp",
+    "system": {
+      "description": "No anatomical vestiges, no genetic defects, requires only 4 hours of sleep per night. Equivalent of improved blood oxygenation. Natural lifespan more than 120 years. +1 to any two attributes (player's choice), +2 to social maneuvers where appearance and gracefulness are influential.",
+      "availability": "Rare",
+      "installCost": 135000,
+      "function": "+1 to two attributes, +2 appearance-based social maneuvers, 120+ year lifespan",
+      "transformationTime": "N/A",
+      "features": "",
+      "models": "Lavender Organics Superiorum, Biogene Nobilis Series, Somatic Systems Primus Line",
+      "equipped": false,
+      "testMod": 2
+    }
+  },
+  {
+    "_id": "bpb025",
+    "name": "Supertrooper Package",
+    "type": "biomod",
+    "img": "icons/magic/body/shield-barrier-glowing-blue.webp",
+    "system": {
+      "description": "Military biomod package. Improved blood oxygenation plus bioplastic-reinforced bones. +1 permanent Physique, +2 when using Physique to reduce incoming damage ratings. Adds up to 25kg body mass, +1 on intimidate maneuvers. 35% increased metabolic demands.",
+      "availability": "Restricted",
+      "installCost": 150000,
+      "function": "+1 Physique, +2 damage reduction, +1 intimidate",
+      "transformationTime": "5 months",
+      "features": "",
+      "models": "Biogene Enforcer, GenDiver Hercules, Somatic Systems Manpower",
+      "equipped": false,
+      "testMod": 1
+    }
+  }
+]

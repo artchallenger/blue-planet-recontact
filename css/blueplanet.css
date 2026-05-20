@@ -1,0 +1,2057 @@
+/* ========================================= */
+/* BLUE PLANET RECONTACT STYLES        */
+/* ========================================= */
+
+/* --- GLOBAL & FONTS --- */
+.blueplanet-sheet {
+    font-family: 'Roboto', sans-serif;
+    color: #1a1a1a;
+}
+
+.blueplanet-sheet h2, 
+.blueplanet-sheet .label,
+.blueplanet-sheet label {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+/* --- TABS --- */
+.sheet-tabs {
+    flex: 0 0 40px;
+    border-bottom: 3px solid #1b3f75;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.sheet-tabs .item {
+    font-family: 'Barlow Condensed';
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    color: #666;
+    background: #e0e0e0;
+    margin-right: 5px;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    border: none;
+}
+
+.sheet-tabs .item.active {
+    background: #1b3f75; /* Dark Blue */
+    color: white;
+    text-shadow: none;
+}
+
+/* --- MAIN LAYOUT GRID --- */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Fixed left sidebar, fluid right */
+    gap: 20px;
+    align-items: start;
+}
+
+.profile-sidebar {
+    grid-column: 1;
+    border-right: 2px dashed #ccc;
+    padding-right: 15px;
+}
+
+.profile-main {
+    grid-column: 2;
+    min-width: 0; /* Prevents text overflow breaking grid */
+}
+
+/* --- HEADERS --- */
+.section-header h2 {
+    background: #2d6da6; /* Med Blue */
+    color: white;
+    padding: 2px 8px;
+    font-size: 1.1rem;
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 0% 100%);
+    border-bottom: none;
+}
+
+/* ========================================= */
+/* ATTRIBUTES & FOCUS BUBBLES               */
+/* ========================================= */
+
+.attribute-group {
+    margin-bottom: 20px;
+}
+
+/* The Name + Bubble Container */
+.attr-header {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+/* The clickable Attribute Label */
+.attr-label {
+    flex: 1;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #1b3f75;
+    border-bottom: 3px solid #2d6da6; /* Thick Blue Underline */
+    line-height: 1;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+.attr-label:hover {
+    color: #4fa8db;
+    text-shadow: 0 0 5px rgba(79, 168, 219, 0.3);
+}
+
+/* --- THE MAIN ATTRIBUTE BUBBLE --- */
+.attr-input {
+    flex: 0 0 42px;
+    height: 42px;
+    margin-left: -10px; /* Pulls bubble slightly over line end */
+    margin-bottom: -5px; /* Aligns bubble visually */
+    z-index: 2;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border-radius: 50%; /* Ensures circular shape */
+    
+    /* THE BUBBLE LOOK (Matches Strain Style) */
+    border: 3px solid #2d6da6; /* Thick Blue Border */
+    background: #ffffff;       /* Crisp White Background */
+    color: #1b3f75;           /* Dark Blue Text */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle depth */
+}
+
+/* FORCE BUBBLE LOOK IN PLAY MODE (Readonly) */
+/* This overrides generic system styles that flatten readonly inputs */
+input[readonly].attr-input {
+    border: 3px solid #2d6da6 !important;
+    background: #ffffff !important;
+    color: #1b3f75 !important;
+    cursor: default;
+}
+
+/* --- FOCUS ATTRIBUTES --- */
+.focus-attr {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 4px;
+    padding-left: 5px;
+}
+
+/* Focus Name Line */
+.focus-name {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #999;
+    background: transparent;
+    height: 24px;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    font-size: 0.9rem;
+}
+.focus-name:focus { outline: none; border-bottom: 1px solid #2d6da6; }
+.focus-name::placeholder { color: #ccc; font-style: italic; font-size: 0.8rem; }
+
+/* Remove underline for Focus Name in Play Mode */
+input[readonly].focus-name {
+    border-bottom: 1px solid transparent;
+    color: #000;
+    font-weight: bold;
+}
+
+/* --- THE SMALLER FOCUS BUBBLE --- */
+.focus-rank {
+    flex: 0 0 28px;
+    height: 28px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 0;
+    border-radius: 50%; /* Ensures circular shape */
+
+    /* THE BUBBLE LOOK (Slightly lighter border for hierarchy) */
+    border: 2px solid #4fa8db; 
+    background: #ffffff;
+    color: #1b3f75;
+}
+
+/* FORCE FOCUS BUBBLE LOOK IN PLAY MODE (Readonly) */
+input[readonly].focus-rank {
+    border: 2px solid #4fa8db !important;
+    background: #ffffff !important;
+    color: #1b3f75 !important;
+    cursor: default;
+}
+
+/* --- SHEET CONTROLS (Edit/Play Button) --- */
+.control-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    color: #333;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+.control-btn:hover {
+    background: #ccc;
+    color: #000;
+}
+
+/* Visual cues for Play vs Edit */
+.sheet.actor input:disabled,
+.sheet.actor input[readonly] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    color: #000;
+}
+
+/* --- STRAIN TRACKS --- */
+.status-header {
+    margin-top: 25px;
+}
+
+.strain-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; 
+    height: 40px;
+    gap: 8px;
+}
+
+.strain-label {
+    flex: 0 0 80px; 
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    color: #1b3f75;
+    font-size: 1.1rem;
+}
+
+/* Container for the Max Bubble */
+.strain-rank-container {
+    flex: 0 0 50px;
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.strain-rank-display {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid #2d6da6;
+    background: white;
+    color: #1b3f75;
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.strain-rank-input {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px dashed #4fa8db;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #1b3f75;
+    background: rgba(255,255,255,0.9);
+}
+
+/* Pips Alignment */
+.resource-dots {
+    display: flex;
+    gap: 4px; 
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.strain-pip {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #2d6da6;
+    border-radius: 50%;
+    cursor: pointer;
+    background: white;
+}
+.strain-pip.filled {
+    background-color: #2d6da6;
+    box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+}
+
+.strain-toggle {
+    cursor: pointer;
+    font-weight: bold;
+    color: #1b3f75;
+}
+.strain-toggle:hover {
+    color: #2d6da6;
+    text-decoration: underline;
+}
+
+/* --- INJURY TRACKS --- */
+.injury-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.injury-row label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bold;
+    color: #1b3f75;
+    font-size: 1rem;
+    flex: 0 0 60px;
+}
+
+.injury-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.injury-val {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #c9302c; /* Red Border */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #c9302c; /* Red Text */
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.injury-val:hover {
+    background-color: #ffe6e6;
+    transform: scale(1.1);
+}
+
+.injury-val.filled {
+    background-color: #c9302c; /* Solid Red */
+    color: white;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* --- TAGS TABLE STYLING (New) --- */
+.tags-table {
+    border-top: 2px solid #1b3f75;
+}
+
+.tag-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 0;
+    min-height: 30px;
+}
+
+.tag-row.header {
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    color: #1b3f75;
+    border-bottom: 2px solid #1b3f75;
+    padding-bottom: 2px;
+}
+
+/* Tag Columns */
+.tag-col-name {
+    flex: 0 0 140px;
+}
+
+.tag-col-mod {
+    flex: 0 0 50px;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.tag-col-feat {
+    flex: 1;
+}
+
+.tag-col-ctrl {
+    flex: 0 0 50px;
+    text-align: right;
+}
+
+/* Tag Edit Inputs */
+.tag-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+}
+
+.tag-input-mod {
+    width: 30px;
+    margin-left: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* Tag Play Mode Display */
+.tag-display-name {
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+}
+
+.tag-mod-badge {
+    margin-left: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.tag-desc {
+    font-size: 0.9rem;
+    color: #444;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+/* --- CONTROLS GENERIC --- */
+.tag-control {
+    margin-left: 5px;
+    color: #999;
+    cursor: pointer;
+}
+.tag-control:hover { color: #1b3f75; }
+
+/* --- SKILL MATRIX LAYOUT --- */
+.skills-header-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.col-head {
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    color: #4fa8db;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* Column Widths */
+.rank-col { flex: 0 0 60px; text-align: center; }
+.label-col { flex: 0 0 130px; }
+.data-col  { flex: 1; padding-left: 15px; }
+
+.skill-matrix-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    height: 40px;
+}
+
+/* 1. The Rank Bubble (Left) */
+.skill-rank-container {
+    flex: 0 0 60px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* The horizontal connector line coming out of the bubble */
+.skill-rank-container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 50%; /* reach halfway */
+    height: 3px;
+    background: #1b3f75;
+    z-index: 0;
+}
+
+.rank-display-bubble {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #1b3f75; /* Dark Blue */
+    color: #1b3f75;
+    font-weight: 800;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-family: 'Barlow Condensed';
+}
+
+/* Edit Mode Input Bubble */
+.rank-input {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 3px solid #1b3f75 !important;
+    text-align: center;
+    font-weight: 800;
+    color: #1b3f75;
+    font-size: 1.4rem;
+    padding: 0;
+    background: #fff;
+    z-index: 1;
+    font-family: 'Barlow Condensed';
+}
+
+/* 2. The Category Label (Origin, etc.) */
+.skill-category-label {
+    flex: 0 0 130px;
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #a0c4e3; /* Light Blue Text like screenshot */
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 5px;
+}
+/* The line running under the label */
+.skill-category-label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Align with bottom of text */
+    width: 100%;
+    height: 3px;
+    background: #1b3f75;
+}
+
+/* 3. The Skill Slots (General/Core/Specialty) */
+.skill-slot {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: flex-end; /* Text sits on the line */
+    padding-left: 15px;
+}
+
+/* The thick bar above the skill */
+.skill-slot::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0; /* Top of cell */
+    width: 15px; /* The little "hook" down */
+    height: 100%; 
+    border-left: 3px solid #1b3f75; /* Vertical line */
+    border-top: 3px solid #1b3f75;  /* Top Horizontal line */
+}
+/* The bottom line */
+.skill-slot::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #1b3f75;
+}
+
+/* The Actual Skill Name */
+.skill-name {
+    width: 100%;
+    font-weight: bold;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 2;
+    margin-bottom: 3px; /* Lift off the line slightly */
+}
+.skill-name:hover { color: #2d6da6; }
+
+/* Edit Input */
+.skill-input {
+    width: 95%;
+    border: none;
+    background: rgba(255,255,255,0.5);
+    border-bottom: 1px dashed #999;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.skill-empty { color: #ccc; font-style: italic; margin-bottom: 3px; }
+/* --- TRACKS SECTION --- */
+.tracks-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+    border-top: 2px solid #1b3f75;
+    padding-top: 10px;
+}
+
+.track-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Headers */
+.track-header {
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    color: #4fa8db; /* Light Blue */
+    text-align: center;
+    border-bottom: 2px solid #1b3f75;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.track-header-input {
+    width: 100%;
+    text-align: center;
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #1b3f75;
+    margin-bottom: 5px;
+    color: #1b3f75;
+}
+
+/* Rows */
+.track-line {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.track-line-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.8rem;
+    padding: 0 2px;
+    background: transparent;
+}
+.track-mod-label {
+    flex: 0 0 35px;
+    font-size: 0.7rem;
+    color: #999;
+    text-align: right;
+}
+
+/* --- SHAPES --- */
+.track-shape {
+    width: 16px;
+    height: 16px;
+    background: #ccc; /* Default empty state color logic handled by CSS shapes below */
+    cursor: pointer;
+    flex: 0 0 16px;
+    transition: background 0.2s;
+}
+
+/* Base style: Empty = Border only (simulated by background being white + border logic, 
+   but for clip-path borders are hard. We use background color switching for simplicity.) */
+.track-shape {
+    background-color: white;
+    border: 2px solid #1b3f75; /* Only works for Circle */
+    box-sizing: border-box;
+}
+
+/* Filled State */
+.track-shape.filled {
+    background-color: #1b3f75 !important;
+}
+
+/* 1. CIRCLE */
+.track-shape.circle {
+    border-radius: 50%;
+}
+
+/* 2. TRIANGLE UP */
+.track-shape.tri-up {
+    border: none; /* clip-path hides border */
+    background-color: #1b3f75; /* The 'border' color */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    /* To simulate 'empty', we can use opacity or a pseudo element, 
+       but for simplicity: Empty = Grey, Filled = Blue */
+    background-color: #ccc; 
+}
+.track-shape.tri-up.filled {
+    background-color: #1b3f75;
+}
+
+/* 3. TRIANGLE DOWN */
+.track-shape.tri-down {
+    border: none;
+    background-color: #ccc;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+.track-shape.tri-down.filled {
+    background-color: #1b3f75;
+}
+/* --- TIES TABLE --- */
+.ties-table {
+    border-top: 2px solid #1b3f75;
+    margin-bottom: 20px;
+}
+
+.tie-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 6px 0;
+}
+
+.tie-row.header {
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    color: #1b3f75;
+    border-bottom: 2px solid #1b3f75;
+    font-size: 0.9rem;
+}
+
+/* Columns */
+.tie-col.name { flex: 0 0 120px; padding-right: 10px; }
+.tie-col.data { flex: 1; padding-right: 10px; } /* Connection & Obligation share space */
+.tie-col.end  { flex: 0 0 60px; display: flex; align-items: center; justify-content: flex-end; gap: 8px; }
+
+/* Text Styling */
+.tie-text {
+    font-size: 0.9rem;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tie-text.bold { font-weight: bold; color: #1a1a1a; }
+
+/* Inputs */
+.tie-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    font-family: 'Roboto';
+    font-size: 0.9rem;
+}
+
+/* Controls */
+.tie-control {
+    color: #999;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.tie-control:hover { color: #1b3f75; }
+
+/* The Tie Bubble */
+.tie-bubble {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #1b3f75;
+    border-radius: 50%;
+    cursor: pointer;
+    background: white;
+}
+.tie-bubble.filled {
+    background: #1b3f75;
+}
+/* --- INVENTORY (Gear Tab) --- */
+.inventory-section {
+    margin-bottom: 25px;
+}
+
+.inventory-list {
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.inv-row {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 0.9rem;
+}
+.inv-row:last-child {
+    border-bottom: none;
+}
+
+.inv-row.header {
+    background: #e0e0e0;
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    color: #1b3f75;
+    border-bottom: 2px solid #1b3f75;
+}
+
+/* Columns */
+.inv-col { padding: 0 5px; }
+
+.inv-col.name {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and name */
+    font-weight: bold;
+    cursor: pointer;
+}
+.inv-col.name:hover { color: #4fa8db; }
+
+.inv-col.small { flex: 0 0 40px; text-align: center; }
+.inv-col.med   { flex: 0 0 80px; text-align: center; }
+.inv-col.wide  { flex: 2; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: #666; }
+
+.inv-col.ctrl {
+    flex: 0 0 50px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* Icons */
+.inv-col img {
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: #000;
+}
+/* -------------------------------------------- */
+/* INVENTORY & GEAR LISTS                      */
+/* -------------------------------------------- */
+
+/* 1. The Container */
+.inventory-list {
+    border: 1px solid #1b3f75;
+    border-radius: 3px;
+    overflow: hidden; /* Keeps the corners rounded */
+    margin-bottom: 20px;
+}
+
+/* 2. The Header Row (Dark Blue Background) */
+.inventory-list .inv-row.header {
+    background-color: #1b3f75;  /* Deep Blue */
+    color: #ffffff;             /* White Text */
+    font-weight: bold;
+    font-family: "Oswald", sans-serif; /* Or your header font */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 5px;
+    border-bottom: none;
+}
+
+/* 3. The Item Rows (Alternating Colors) */
+.inventory-list .inv-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 5px;
+    color: #1b3f75; /* Dark Blue Text */
+    border-bottom: 1px solid #c9d6e3;
+    background-color: #ffffff; /* Default White */
+}
+
+/* Zebra Striping: Make every even row Light Blue */
+.inventory-list .inv-row:nth-child(even) {
+    background-color: #dbe8f5; /* Light Blue specific to your example */
+}
+
+/* Hover Effect */
+.inventory-list .inv-row:not(.header):hover {
+    background-color: #f0f5fa;
+    cursor: pointer;
+}
+
+/* 4. Column Sizing & Text Fixes */
+
+/* NAME: Fix cut-off text by allowing wrapping */
+.inv-col.name {
+    flex: 3; /* Give name the most space */
+    justify-content: flex-start;
+    text-align: left;
+    font-weight: bold;
+    
+    /* These lines fix the cut-off issue */
+    white-space: normal; 
+    overflow: visible;
+    text-overflow: clip;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+/* Smaller columns */
+.inv-col.small {
+    flex: 0.8;
+    text-align: center;
+    border-left: 1px solid rgba(27, 63, 117, 0.1); /* Subtle divider */
+}
+
+/* Medium columns (Damage, Cost) */
+.inv-col.med {
+    flex: 1.2;
+    text-align: center;
+    border-left: 1px solid rgba(27, 63, 117, 0.1);
+}
+
+/* Wide columns (Description) */
+.inv-col.wide {
+    flex: 4;
+    text-align: left;
+    padding-left: 10px;
+    font-style: italic;
+    font-size: 0.85em;
+    border-left: 1px solid rgba(27, 63, 117, 0.1);
+}
+
+/* Controls (Edit/Delete icons) */
+.inv-col.ctrl {
+    flex: 0.5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.inv-row:hover .inv-col.ctrl {
+    opacity: 1;
+}
+
+/* 5. Item Images */
+.inv-col.name img {
+    border: none;
+    margin-right: 5px;
+    flex-shrink: 0; /* Prevents image from squishing */
+    border-radius: 2px;
+}
+/* FEATURE CHIPS */
+.feature-chip-container {
+    min-height: 24px;
+}
+
+.feature-chip {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: default;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+    color: #666;
+}
+
+/* Active means we found it in the catalog */
+.feature-chip.active {
+    background-color: #e3f2fd;
+    border-color: #1b3f75;
+    color: #1b3f75;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.feature-chip.active:hover {
+    background-color: #1b3f75;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Missing means typo or unknown feature */
+.feature-chip.missing {
+    opacity: 0.6;
+    border-style: dashed;
+}
+/* ========================================= */
+/* CHAT CARDS                                */
+/* ========================================= */
+
+.bp-chat-card {
+    font-family: 'Barlow Condensed', sans-serif;
+    border: 1px solid #1b3f75;
+    background: #f4f7fb;
+    margin: 2px 0;
+}
+
+.bp-chat-header {
+    background: #1b3f75;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    clip-path: polygon(0 0, 100% 0, 97% 100%, 0% 100%);
+    letter-spacing: 0.05em;
+}
+
+.bp-chat-body {
+    padding: 6px 10px;
+}
+
+.bp-chat-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #dce6f0;
+    padding: 2px 0;
+}
+
+.bp-label {
+    color: #2d6da6;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.bp-value {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.bp-chat-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 0 2px 0;
+    margin-top: 4px;
+}
+
+.bp-success { color: #1b6b1b; }
+.bp-failure { color: #8b0000; }
+
+.bp-av {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.bp-chat-special {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    margin-top: 4px;
+    letter-spacing: 0.05em;
+}
+
+.bp-benefit {
+    background: #d4edda;
+    color: #1b6b1b;
+    border-left: 3px solid #1b6b1b;
+}
+
+.bp-complication {
+    background: #fff3cd;
+    color: #856404;
+    border-left: 3px solid #ffc107;
+}
+
+.bp-consequence {
+    background: #f8d7da;
+    color: #8b0000;
+    border-left: 3px solid #8b0000;
+}
+.bp-tn-value {
+    position: relative;
+}
+
+.bp-tn-hint {
+    font-size: 0.75rem;
+    color: #2d6da6;
+    margin-left: 2px;
+    cursor: help;
+}
+
+/* ========================================= */
+/* SHEET HEADER — REDESIGN                  */
+/* ========================================= */
+
+.sheet-header {
+    background: #f0f4f8;
+    border-bottom: 3px solid #1b3f75;
+    padding: 6px 10px 6px 10px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Each row is a full-width flex row */
+.header-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.header-pip-row {
+    align-items: center;
+}
+
+/* Each field grows to fill available space */
+.header-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.header-concept { flex: 0 0 auto; }
+.header-goal    { flex: 1; }
+
+.header-toggle {
+    flex: 0 0 auto;
+    margin-left: auto;
+    align-self: center;
+}
+
+.header-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: #1b3f75;
+    display: block;
+    margin-bottom: 1px;
+    white-space: nowrap;
+}
+
+.header-sublabel {
+    font-weight: 400;
+    font-size: 0.6rem;
+    color: #4fa8db;
+    margin-left: 3px;
+}
+
+.header-input {
+    border: none;
+    border-bottom: 2px solid #2d6da6;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    width: 100%;
+    padding: 1px 2px;
+    min-width: 0;
+}
+.header-input:focus { outline: none; border-bottom: 2px solid #4fa8db; }
+
+.header-name-input {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #1b3f75;
+}
+
+/* Concept radios */
+.header-concept .radio-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-concept .radio-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    color: #1b3f75;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* CHIPS */
+.header-chips-groups {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.chips-group {
+    display: flex;
+    gap: 3px;
+}
+
+/* REPUTATION */
+.header-rep-groups {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.rep-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+}
+
+.rep-group-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4fa8db;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.rep-label-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px dashed #4fa8db;
+    background: transparent;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    text-align: center;
+    color: #1b3f75;
+    text-transform: uppercase;
+    min-width: 0;
+}
+
+.rep-pips {
+    display: flex;
+    gap: 3px;
+}
+
+/* Shared pip */
+.header-pip {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #2d6da6;
+    background: white;
+    cursor: pointer;
+    display: inline-block;
+    flex-shrink: 0;
+    transition: background 0.1s;
+}
+
+.header-pip.filled { background: #2d6da6; }
+.header-pip:hover { border-color: #4fa8db; background: #d0e8f8; }
+.header-pip.filled:hover { background: #1b3f75; }
+
+/* ========================================= */
+/* FEATURES SECTION                         */
+/* ========================================= */
+
+.features-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 6px;
+}
+
+.features-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.feature-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.feature-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.feature-field.wide { flex: 2; }
+
+.feature-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: #2d6da6;
+    margin-bottom: 1px;
+}
+
+.feature-input {
+    border: none;
+    border-bottom: 1px solid #2d6da6;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: #1a1a1a;
+    width: 100%;
+    padding: 1px 2px;
+}
+
+.feature-input:focus { outline: none; border-bottom: 1px solid #4fa8db; }
+
+input[readonly].feature-input {
+    border-bottom: 1px solid transparent;
+    color: #333;
+}
+/* ========================================= */
+/* EQUIPPED TOGGLE                          */
+/* ========================================= */
+
+.equipped-toggle {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #2d6da6;
+    background: white;
+    cursor: pointer;
+    display: inline-block;
+    flex-shrink: 0;
+    transition: background 0.1s;
+}
+
+.equipped-toggle.filled {
+    background: #2d6da6;
+}
+
+.equipped-toggle:hover {
+    border-color: #4fa8db;
+    background: #d0e8f8;
+}
+
+.equipped-toggle.filled:hover {
+    background: #1b3f75;
+}
+/* ============================================================ */
+/* NPC SHEET                                                    */
+/* ============================================================ */
+
+.npc-sheet {
+    font-family: 'Barlow Condensed', sans-serif;
+    background: #f5f0e8;
+}
+
+.npc-sheet .npc-header {
+    background: #1b3f75;
+    padding: 10px 12px;
+    border-bottom: 3px solid #0d2a52;
+}
+
+.npc-sheet .npc-header-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.npc-sheet .npc-name-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.npc-sheet .npc-name-input {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.npc-sheet .npc-name-input:focus {
+    outline: none;
+    border-bottom-color: rgba(255,255,255,0.8);
+}
+
+.npc-sheet .npc-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.npc-sheet .npc-meta-input {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    color: #c5d8f0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    width: 160px;
+}
+
+.npc-sheet .npc-tier-input {
+    width: 90px;
+    font-style: italic;
+}
+
+.npc-sheet .npc-meta-sep {
+    color: rgba(255,255,255,0.4);
+    font-size: 1rem;
+}
+
+.npc-sheet .npc-portrait {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    border: 2px solid rgba(255,255,255,0.3);
+    object-fit: cover;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Body */
+.npc-sheet .npc-body {
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Sections */
+.npc-sheet .npc-section {
+    background: #fff;
+    border: 1px solid #d0ccc2;
+    border-radius: 4px;
+    padding: 6px 10px 8px;
+}
+
+.npc-sheet .npc-section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #1b3f75;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e0dbd0;
+    margin-bottom: 6px;
+    padding-bottom: 2px;
+}
+
+/* Attributes */
+.npc-sheet .npc-attrs-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.npc-sheet .npc-attr-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.npc-sheet .npc-attr-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #1b3f75;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.npc-sheet .npc-attr-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1b3f75;
+    text-align: center;
+    width: 56px;
+    border: 1px solid #c9d6e3;
+    border-radius: 4px;
+    background: #f4f7fb;
+    padding: 2px 0;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* Wounds */
+.npc-sheet .npc-wounds-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.npc-sheet .npc-wound-penalty {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #c9302c;
+    margin-left: 4px;
+}
+
+/* Skills */
+.npc-sheet .npc-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.npc-sheet .npc-skill-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 6px;
+    border-radius: 3px;
+    background: #f8f6f2;
+    border: 1px solid #e8e3d8;
+    font-size: 0.9rem;
+    color: #222;
+}
+
+.npc-sheet .npc-skill-text {
+    flex: 1;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+}
+
+.npc-sheet .npc-skill-roll,
+.npc-sheet .npc-skill-delete {
+    color: #888;
+    cursor: pointer;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 2px 4px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.npc-sheet .npc-skill-roll:hover { color: #1b3f75; background: #eef3fb; }
+.npc-sheet .npc-skill-delete:hover { color: #c9302c; background: #fdecea; }
+
+.npc-sheet .npc-skill-add-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.npc-sheet .npc-skill-rank-input {
+    width: 44px;
+    flex-shrink: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    border: 1px dashed #c0b8a8;
+    border-radius: 3px;
+    padding: 3px 4px;
+    background: #faf8f4;
+    color: #1b3f75;
+}
+
+.npc-sheet .npc-skill-tier-input {
+    flex: 1;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    border: 1px dashed #c0b8a8;
+    border-radius: 3px;
+    padding: 3px 6px;
+    background: #faf8f4;
+    color: #555;
+    min-width: 0;
+}
+
+/* Attack, biomods, notes */
+.npc-sheet .npc-attack-input,
+.npc-sheet .npc-notes-input {
+    width: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid #d8d2c4;
+    border-radius: 3px;
+    padding: 4px 8px;
+    background: #f8f6f2;
+    color: #222;
+    box-sizing: border-box;
+}
+
+.npc-sheet .npc-description-input {
+    width: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid #d8d2c4;
+    border-radius: 3px;
+    padding: 4px 8px;
+    background: #f8f6f2;
+    color: #222;
+    min-height: 60px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* ============================================================ */
+/* CREATURE SHEET                                               */
+/* ============================================================ */
+
+.creature-sheet {
+    font-family: 'Barlow Condensed', sans-serif;
+    background: #f5f0e8;
+}
+
+.creature-sheet .creature-header {
+    background: #2a4a1e;
+    padding: 10px 12px;
+    border-bottom: 3px solid #1a3010;
+}
+
+.creature-sheet .creature-header-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.creature-sheet .creature-name-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.creature-sheet .creature-name-input {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.creature-sheet .creature-name-input:focus { outline: none; border-bottom-color: rgba(255,255,255,0.8); }
+
+.creature-sheet .creature-meta-input {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #c5ddb0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    width: 100%;
+}
+
+.creature-sheet .creature-portrait {
+    width: 56px;
+    height: 56px;
+    border-radius: 4px;
+    border: 2px solid rgba(255,255,255,0.3);
+    object-fit: cover;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.creature-sheet .creature-body {
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.creature-sheet .creature-section {
+    background: #fff;
+    border: 1px solid #d0ccc2;
+    border-radius: 4px;
+    padding: 6px 10px 8px;
+}
+
+.creature-sheet .creature-section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #2a4a1e;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e0dbd0;
+    margin-bottom: 6px;
+    padding-bottom: 2px;
+}
+
+.creature-sheet .creature-attrs-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.creature-sheet .creature-attr-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.creature-sheet .creature-attr-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #2a4a1e;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.creature-sheet .creature-attr-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2a4a1e;
+    text-align: center;
+    width: 64px;
+    border: 1px solid #b8d4a8;
+    border-radius: 4px;
+    background: #f4faf0;
+    padding: 2px 0;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.creature-sheet .creature-attr-roll {
+    color: #2a4a1e;
+    cursor: pointer;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+.creature-sheet .creature-attr-roll:hover { opacity: 1; }
+
+.creature-sheet .creature-attr-raw {
+    margin-top: 4px;
+    font-size: 0.75rem;
+    color: #888;
+    font-style: italic;
+    text-align: center;
+}
+
+.creature-sheet .creature-fields-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.creature-sheet .creature-field-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.creature-sheet .creature-field-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2a4a1e;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    width: 110px;
+    flex-shrink: 0;
+}
+
+.creature-sheet .creature-field-input {
+    flex: 1;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid #d8d2c4;
+    border-radius: 3px;
+    padding: 2px 8px;
+    background: #f8f6f2;
+    color: #222;
+    min-width: 0;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.creature-sheet .creature-field-textarea {
+    flex: 1;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid #d8d2c4;
+    border-radius: 3px;
+    padding: 3px 8px;
+    background: #f8f6f2;
+    color: #222;
+    min-height: 44px;
+    resize: vertical;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.creature-sheet .creature-field-row--tall {
+    align-items: flex-start;
+}
+
+.creature-sheet .creature-field-row--tall .creature-field-label {
+    padding-top: 4px;
+}
+
+.creature-sheet .creature-description-input {
+    width: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid #d8d2c4;
+    border-radius: 3px;
+    padding: 4px 8px;
+    background: #f8f6f2;
+    color: #222;
+    min-height: 60px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* ============================================================ */
+/* SIMPLE NPC SHEET                                             */
+/* ============================================================ */
+
+.simplenpc-sheet { font-family: 'Barlow Condensed', sans-serif; background: #f5f0e8; }
+
+.simplenpc-sheet .simplenpc-header {
+    background: #1b3f75;
+    padding: 10px 12px 8px;
+    border-bottom: 3px solid #0d2a52;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.simplenpc-sheet .simplenpc-name-input {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.simplenpc-sheet .simplenpc-name-input:focus { outline: none; border-bottom-color: rgba(255,255,255,0.8); }
+
+.simplenpc-sheet .simplenpc-header-meta { display: flex; gap: 8px; }
+
+.simplenpc-sheet .simplenpc-select {
+    flex: 1;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 4px;
+    color: #e8f0fb;
+    padding: 3px 6px;
+}
+
+.simplenpc-sheet .simplenpc-tier-select option[value="everyday"]    { color: #7dd6a0; }
+.simplenpc-sheet .simplenpc-tier-select option[value="exceptional"] { color: #8ab4f8; }
+.simplenpc-sheet .simplenpc-tier-select option[value="elite"]       { color: #f08090; }
+
+.simplenpc-sheet .simplenpc-body { padding: 10px 12px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto; flex: 1; }
+
+.simplenpc-sheet .simplenpc-section {
+    background: #fff;
+    border: 1px solid #d0ccc2;
+    border-radius: 4px;
+    padding: 6px 10px 8px;
+}
+
+.simplenpc-sheet .simplenpc-section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #1b3f75;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e0dbd0;
+    margin-bottom: 6px;
+    padding-bottom: 2px;
+}
+
+/* TN display */
+.simplenpc-sheet .simplenpc-tn-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.simplenpc-sheet .simplenpc-tn-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.simplenpc-sheet .simplenpc-tn-divider {
+    width: 1px;
+    height: 48px;
+    background: #e0dbd0;
+    margin: 0 8px;
+}
+.simplenpc-sheet .simplenpc-tn-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #1b3f75;
+    text-transform: uppercase;
+}
+.simplenpc-sheet .simplenpc-tn-value {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1b3f75;
+    line-height: 1;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.simplenpc-sheet .simplenpc-tn-note {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #999;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* Roll buttons */
+.simplenpc-sheet .simplenpc-roll-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.simplenpc-sheet .simplenpc-roll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
+    background: #eef3fb;
+    border: 1px solid #c9d6e3;
+    border-radius: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #1b3f75;
+    cursor: pointer;
+    text-align: center;
+}
+.simplenpc-sheet .simplenpc-roll-btn:hover { background: #1b3f75; color: #fff; }
+
+/* Wounds */
+.simplenpc-sheet .simplenpc-wounds-col { display: flex; flex-direction: column; gap: 6px; }
+.simplenpc-sheet .simplenpc-wound-row  { display: flex; align-items: center; gap: 10px; }
+
+.simplenpc-sheet .simplenpc-wound-pip {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #999;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+}
+.simplenpc-sheet .simplenpc-wound-pip.filled          { background: #c9302c; border-color: #c9302c; }
+.simplenpc-sheet .simplenpc-wound-pip.simplenpc-wound-major.filled  { background: #c97030; border-color: #c97030; }
+.simplenpc-sheet .simplenpc-wound-pip.simplenpc-wound-mortal.filled { background: #7a1f2e; border-color: #7a1f2e; }
+
+.simplenpc-sheet .simplenpc-wound-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1b3f75;
+    width: 52px;
+    flex-shrink: 0;
+}
+.simplenpc-sheet .simplenpc-wound-rule {
+    font-size: 0.75rem;
+    color: #666;
+    font-style: italic;
+}
+
+.simplenpc-sheet .simplenpc-physique-btn {
+    display: block;
+    margin-top: 8px;
+    padding: 5px 10px;
+    background: #fdecea;
+    border: 1px solid #c9302c;
+    border-radius: 4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #c9302c;
+    cursor: pointer;
+    text-align: center;
+}
+.simplenpc-sheet .simplenpc-physique-btn:hover { background: #c9302c; color: #fff; }
+
+/* Reference table */
+.simplenpc-sheet .simplenpc-ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+.simplenpc-sheet .simplenpc-ref-table th {
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1b3f75;
+    font-weight: 700;
+    padding: 3px 4px;
+    border-bottom: 1px solid #e0dbd0;
+    text-align: center;
+}
+.simplenpc-sheet .simplenpc-ref-table th:first-child { text-align: left; }
+.simplenpc-sheet .simplenpc-ref-table td {
+    padding: 4px 4px;
+    text-align: center;
+    color: #555;
+    border-bottom: 1px solid #f0ece4;
+    font-size: 0.82rem;
+}
+.simplenpc-sheet .simplenpc-ref-table td:first-child { text-align: left; color: #333; }
+
+.simplenpc-sheet .simplenpc-ref-table .snpc-row-active td { background: #eef3fb; }
+.simplenpc-sheet .simplenpc-ref-table .snpc-col-active    { color: #1b3f75 !important; font-weight: 700; }
+.simplenpc-sheet .simplenpc-ref-table .snpc-row-active .snpc-col-active {
+    background: #1b3f75;
+    color: #fff !important;
+    border-radius: 3px;
+}
+
+.simplenpc-sheet .snpc-tier-everyday    { color: #4a7c59; }
+.simplenpc-sheet .snpc-tier-exceptional { color: #1b3f75; }
+.simplenpc-sheet .snpc-tier-elite       { color: #7a1f2e; }
+
+/* Notes */
+.simplenpc-sheet .simplenpc-notes {
+    width: 100%;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    border: 1px solid #d8d2c4;
+    border-radius: 3px;
+    padding: 4px 8px;
+    background: #f8f6f2;
+    color: #222;
+    min-height: 50px;
+    resize: vertical;
+    box-sizing: border-box;
+}

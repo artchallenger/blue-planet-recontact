@@ -1,0 +1,427 @@
+[
+  {
+    "_id": "bpg001",
+    "name": "Artificial Gill Pack",
+    "type": "gear",
+    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "system": {
+      "description": "A small backpack device containing a biomimetic selectively permeable membrane that functions like a true fish gill. Provides 20\u201330 hours of underwater activity depending on exertion level. Users remain subject to depth and decompression limits.",
+      "availability": "Uncommon",
+      "cost": 1450,
+      "weight": 2,
+      "quantity": 1,
+      "features": "warm, smart, rechargeable, responsive, sealed, sensors",
+      "models": "Hydrospan AirFree, GenDiver Extrax, Somatic Systems ExoGill",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg002",
+    "name": "Diving Mask",
+    "type": "gear",
+    "img": "icons/equipment/head/goggles-simple-leather.webp",
+    "system": {
+      "description": "Full-face diving mask equipped with spotlights, sonar, light intensification, blue-green lidar, built-in hydrophones, and short-range radio links. Inputs effective up to 200m. Displays via integrated HUD or linked to user's vee.",
+      "availability": "Common",
+      "cost": 375,
+      "weight": 0.75,
+      "quantity": 1,
+      "features": "hot, rechargeable, responsive, sensors",
+      "models": "Biogene SeaView, Hydrospan H2Eye, Sub Products Panoramask",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg003",
+    "name": "Dry Suit",
+    "type": "gear",
+    "img": "icons/equipment/chest/vest-cloth-blue.webp",
+    "system": {
+      "description": "One of the most popular garments on Poseidon. Can be either a loose-fitting breathable jumpsuit or a close-fitting wet suit. Smart materials allow rapid switching between states. Neutrally buoyant with built-in heating elements and solar cloth recharging. Worn as casual and work clothing in many communities.",
+      "availability": "Common",
+      "cost": 2900,
+      "weight": 4,
+      "quantity": 1,
+      "features": "cold, flat, integrated, rechargeable, responsive, sealed",
+      "models": "Hydrospan Fishskin, Hanover Industries Series 3, Down Inc. Waterborn Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg004",
+    "name": "Gill Suit",
+    "type": "gear",
+    "img": "icons/equipment/chest/vest-cloth-blue.webp",
+    "system": {
+      "description": "Layers of osmotic fabric performing as an artificial gill. More durable and comfortable than gill packs. Kinetic converters harvest power from user's movements. Extracts oxygen from water, automatically maintains neutral buoyancy, and keeps user warm even in coldest water. Preferred by frontier inhabitants.",
+      "availability": "Uncommon",
+      "cost": 4500,
+      "weight": 5,
+      "quantity": 1,
+      "features": "warm, flat, integrated, responsive, sealed, sensors",
+      "models": "Hydrospan GillSkin, GenDiver OsmoSuit, Somatic Systems AquaWear",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg005",
+    "name": "Hardsuit",
+    "type": "gear",
+    "img": "icons/equipment/chest/breastplate-metal.webp",
+    "system": {
+      "description": "Heavy-duty pressure suit for deep-sea operations. Assist servos provide +2 to Physique and Coordination for relevant tasks; if disabled both attributes reduce by 5. Modular arm manipulators accommodate power tools and micro-toolkits. Without fine manipulators, reduces fine dexterity tests by 8. Provides armor protection equal to Durability rating.",
+      "availability": "Rare",
+      "cost": 60000,
+      "weight": 65,
+      "quantity": 1,
+      "features": "hardened, hot, gi, rechargeable, responsive, sealed, sensors",
+      "models": "Hydrospan Trilobite Line, Atlas Materials Benthic Operator Series, Techland Deep6",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg006",
+    "name": "MHD Sled (Personal)",
+    "type": "gear",
+    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "system": {
+      "description": "Magnetohydrodynamic underwater propulsion sled. Well-streamlined models can move at over 35 kph. Surface speed is doubled due to reduced drag. Most have integrated navigational equipment. Marginally buoyant without a load.",
+      "availability": "Uncommon",
+      "cost": 9500,
+      "weight": 8,
+      "quantity": 1,
+      "features": "hot, smart, integrated, rechargeable, sealed, sensors",
+      "models": "Atlas Materials MHD Mk5, Hydrospan CarGo, Hard Industries Heavy Sled",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg007",
+    "name": "Smart Fins",
+    "type": "gear",
+    "img": "icons/equipment/feet/boots-simple-brown.webp",
+    "system": {
+      "description": "Standard diving fins with acceleration sensors and responsive material stiffeners that automatically vary rigidity during thrust. Increases swimming pace by one meter per action. Stiffeners improve stroke power during different parts of the thrust curve.",
+      "availability": "Uncommon",
+      "cost": 480,
+      "weight": 1.2,
+      "quantity": 1,
+      "features": "warm, smart, responsive",
+      "models": "Hydrospan FlipPro, GenDiver PowerFin, Sub Products ThrustFin",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg008",
+    "name": "Neural Trodes",
+    "type": "gear",
+    "img": "icons/equipment/head/helm-simple-leather.webp",
+    "system": {
+      "description": "Sensitive electrodes mounted in a soft, tight-fitting headset or pasted directly to the skull. Allow interfacing with digital devices using the brain's electrical field. The most common form of non-invasive hardware interfacing.",
+      "availability": "Common",
+      "cost": 850,
+      "weight": 0.15,
+      "quantity": 1,
+      "features": "warm, smart, rechargeable",
+      "models": "Lavender Organics ThinkCap, Anasi Systems NeuralLink, Simplex Trode Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg009",
+    "name": "Uplink Communicator (Personal)",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "Satellite transceiver for long-range communications. Requires operational comm satellite to relay signals. Subject to interference from severe storms, jamming signals, and security protocol changes. Commercial satellites available but expensive and unreliable.",
+      "availability": "Common",
+      "cost": 1450,
+      "weight": 0.275,
+      "quantity": 1,
+      "features": "warm, smart, rechargeable",
+      "models": "Atlas Materials Link Systems, GenDiver Skynet, Elite Forms StratoComm",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg010",
+    "name": "Sub-Surface Communicator",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "Underwater communication device. Hydrophones effective to 75m. Ultra-phones (ultrasonic) viable to 500m, can translate cetacean concept strings. Infra-phones effective to 1,000km but bulky and low bandwidth. Signals transmitted as audible vibrations through water \u2014 not private without signal codes.",
+      "availability": "Rare",
+      "cost": 230,
+      "weight": 0.5,
+      "quantity": 1,
+      "features": "warm, flat, rechargeable, sensors",
+      "models": "Hydrospan EarMe, Hydrospan Melon, Hydrospan LongSong",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg011",
+    "name": "Virt (Personal Computer)",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "The ubiquitous personal computing device of 2199. Functions as communicator, data storage, entertainment system, and interface hub. Most models are wearable. Capabilities strictly limited to available programs and databases.",
+      "availability": "Common",
+      "cost": 800,
+      "weight": 0.1,
+      "quantity": 1,
+      "features": "warm, smart, rechargeable",
+      "models": "Lavender Organics Companion, Anasi Systems Pocket-L, Nippon Industrial State Virt Pro",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg012",
+    "name": "L-Core (Basic)",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "Learning-capable computer that adapts to frequent users and develops simulated personalities. Not sapient but simulates intelligence well. Capabilities limited to available programs and databases. Used for complex analysis, navigation, and tactical support.",
+      "availability": "Uncommon",
+      "cost": 25000,
+      "weight": 2,
+      "quantity": 1,
+      "features": "hot, gi, rechargeable, sensors",
+      "models": "Lavender Organics Hugo Series, Anasi Systems Core-S, O'Day HiComp",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg013",
+    "name": "Bug Hunter",
+    "type": "gear",
+    "img": "icons/creatures/invertebrates/spider-mandibles-brown.webp",
+    "system": {
+      "description": "Tiny autonomous robot that searches out and disables electronic surveillance devices. Insect-like ambulatory drone programmed to detect EM emissions that don't match approved signals. Can notify security, temporarily disable bugs with static discharge, or permanently burn them out with an ECM pulse.",
+      "availability": "Rare",
+      "cost": 650,
+      "weight": 0.002,
+      "quantity": 1,
+      "features": "hot, smart, rechargeable, sensors",
+      "models": "MacLeod Troubleshooter v9, Nippon Industrial State Seeker Series, Spectrum Resources Whisper Net",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg014",
+    "name": "Picket Sensors",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "Small sensors that detect preset stimuli and alert a remote receiver. Can detect motion, heat, sound, vibration, light, radio, and radar. Spherical detection fields, line-of-sight ranges, adjustable sensitivity. Can be used singly or in sequence to monitor a perimeter. Some models function underwater via sonar.",
+      "availability": "Uncommon",
+      "cost": 1800,
+      "weight": 0.3,
+      "quantity": 1,
+      "features": "hardened, hot, smart, rechargeable",
+      "models": "MacLeod Enforcement Perimeter One, Nippon Industrial State Security Zone, Simplex Picketz",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg015",
+    "name": "MARNOC (Millimeter-Wave Radar Binoculars)",
+    "type": "gear",
+    "img": "icons/equipment/head/goggles-simple-leather.webp",
+    "system": {
+      "description": "Detects and analyzes objects at range. Can penetrate thin materials to reveal concealed blades, firearms, armor under clothing, and hidden compartments in light vehicles. Also used medically to locate foreign bodies, broken bones, and cyberware.",
+      "availability": "Uncommon",
+      "cost": 3200,
+      "weight": 0.5,
+      "quantity": 1,
+      "features": "hot, smart, rechargeable, sealed, sensors",
+      "models": "Hanover Industries MARNOC Mk4, MacLeod Enforcement SeeThrough, Simplex RaView",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg016",
+    "name": "NUMAR (Nuclear Magnetic Resonance Detector)",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "Induces electromagnetic emissions from molecular structures to determine object composition. Used to scan for binary propellant components, explosives, contraband drugs, and other illegal compounds. Invulnerable to known countermeasures \u2014 can only be bypassed by reprogramming, sabotage, bribery, or extortion.",
+      "availability": "Rare",
+      "cost": 12500,
+      "weight": 0.75,
+      "quantity": 1,
+      "features": "hot, smart, rechargeable, sealed, sensors",
+      "models": "Hanover Industries NS Detektor, MacLeod Enforcement PassLock, Simplex NumaScan",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg017",
+    "name": "Medical Kit (Standard)",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "Standard field medical kit containing trauma supplies, medications, diagnostic equipment, and basic surgical tools. Required for first aid and field medical procedures.",
+      "availability": "Common",
+      "cost": 450,
+      "weight": 1.5,
+      "quantity": 1,
+      "features": "warm, smart, sealed",
+      "models": "Biogene MedKit Pro, Lavender Organics FieldCare, GenDiver Trauma Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg018",
+    "name": "Sail Kite",
+    "type": "gear",
+    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "system": {
+      "description": "Large durable bioplastic wind kite rigged to a control/tow harness. Integrated servos adjust control lines. Reduces travel time for long trips by several magnitudes. Allows exhausted swimmers to stay on the move. Subject to wind vagaries.",
+      "availability": "Rare",
+      "cost": 320,
+      "weight": 0.4,
+      "quantity": 1,
+      "features": "cold, flat, responsive",
+      "models": "Hydrospan Monkey/Tow, Native Inc. Ripper",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg019",
+    "name": "Survival Kit",
+    "type": "gear",
+    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "system": {
+      "description": "Comprehensive survival kit for Poseidon's wilderness. Includes water filtration, emergency rations, shelter materials, signal devices, basic tools, and navigation aids. Essential for anyone venturing far from settlements.",
+      "availability": "Common",
+      "cost": 680,
+      "weight": 3,
+      "quantity": 1,
+      "features": "sealed",
+      "models": "Atlas Materials Frontier Pack, Hydrospan Survive, Native Inc. Bushkit",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg020",
+    "name": "Locator Beacon",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "Emergency transponder that broadcasts location data for search and rescue. Can be activated manually or automatically triggered. Sealed against water and pressure. Standard equipment on most survival kits and rescue harnesses.",
+      "availability": "Common",
+      "cost": 190,
+      "weight": 0.15,
+      "quantity": 1,
+      "features": "warm, flat, rechargeable, sealed, sensors",
+      "models": "Hydrospan PinMe, Atlas Materials FindMe, MacLeod Enforcement Locator Pro",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg021",
+    "name": "Sonar Unit (Personal)",
+    "type": "gear",
+    "img": "icons/equipment/neck/pendant-eye-blue.webp",
+    "system": {
+      "description": "Portable sonar unit for detecting and identifying underwater objects. Passive mode listens for sounds; active mode transmits sound waves that reflect from objects. Line-of-sight range 10\u201330 km, doubled in active mode.",
+      "availability": "Common",
+      "cost": 3750,
+      "weight": 1.5,
+      "quantity": 1,
+      "features": "hot, rechargeable, sealed, sensors",
+      "models": "Hydrospan Monkey/See, Nippon Industrial State DeepSense, Sub Products Sonar Kit",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg022",
+    "name": "Rescue Ball",
+    "type": "gear",
+    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "system": {
+      "description": "Emergency inflatable survival sphere. Contains water filters, emergency rations, and standard medical kit. Equipped with locator beacon. Self-sealing against water. Provides shelter and life support for stranded individuals at sea.",
+      "availability": "Common",
+      "cost": 890,
+      "weight": 2,
+      "quantity": 1,
+      "features": "warm, flat, consumable, responsive, sealed, sensors",
+      "models": "Hydrospan SafeSphere, Atlas Materials Rescue Ball, GenDiver LifeOrb",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg023",
+    "name": "Smart Rope",
+    "type": "gear",
+    "img": "icons/equipment/back/pack-simple-leather-brown.webp",
+    "system": {
+      "description": "Bioplastic rope with embedded smart materials that stiffen on command or impact. Adjustable tension via interface. UV-resistant and buoyant. Standard equipment for surface and underwater work.",
+      "availability": "Common",
+      "cost": 85,
+      "weight": 0.8,
+      "quantity": 1,
+      "features": "warm, responsive",
+      "models": "Atlas Materials SmartLine, Hydrospan Bind, Native Inc. Rope Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg024",
+    "name": "Cutting Torch",
+    "type": "gear",
+    "img": "icons/tools/smithing/hammer-and-anvil.webp",
+    "system": {
+      "description": "Compact plasma cutting torch effective in air and underwater. Used for hull breaching, salvage operations, and field repairs. Adjustable cutting intensity.",
+      "availability": "Common",
+      "cost": 340,
+      "weight": 1.2,
+      "quantity": 1,
+      "features": "hot, rechargeable",
+      "models": "Atlas Materials CutPro, Hydrospan Sear, Techland Torch Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpg025",
+    "name": "Grapple Gun",
+    "type": "gear",
+    "img": "icons/weapons/guns/gun-pistol-grey.webp",
+    "system": {
+      "description": "Fires a magnetic or mechanical grapple on a high-tensile smart line. Used for scaling surfaces, emergency extraction, and boarding operations. Integrated spool motor for rapid ascent or descent.",
+      "availability": "Uncommon",
+      "cost": 760,
+      "weight": 1.8,
+      "quantity": 1,
+      "features": "warm, smart, rechargeable",
+      "models": "MacLeod Enforcement Anchor Series, Atlas Materials GrapPro, Rutger Clamp Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, manipulators, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  }
+]

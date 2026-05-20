@@ -1,0 +1,2546 @@
+[
+  {
+    "_id": "beast001",
+    "name": "Aurora Borealgae",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Autus fervens",
+      "distribution": "Shallow, nutrient-rich subtropical waters, presumably planetwide",
+      "size": "Individuals up to 2 cm in diameter and 6 g, single colonies from a few meters up to 35 km long",
+      "encounterRate": "100%",
+      "resourceValue": "Low\u2014but increasing locally with growing tourist trade",
+      "threatLevel": "Low\u2014sharp edges can injure unwary swimmers",
+      "attack": "Accidental impact",
+      "attributeRaw": "-/-/10",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 10,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast002",
+    "name": "Bad Mojo",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Magus malum",
+      "distribution": "Pelagic surface waters of the Southern Hemisphere\u2019s subtropical and tem perate regions",
+      "size": "1.5 to 2.3 m long and up to 80 kg",
+      "encounterRate": "17%",
+      "resourceValue": "Low\u2014the species is tasty but somewhat difficult and dangerous to catch",
+      "threatLevel": "Medium\u2014attacks on humans are rare but often lethal",
+      "attack": "Brutal, slashing \u201cswim-by\u201d collisions (DR 4 each)",
+      "attributeRaw": "2/4/3",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast003",
+    "name": "Big Round Thing",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "unclassified",
+      "distribution": "Surface waters of major currents planetwide",
+      "size": "Up to 120 m in diameter and 110 metric tons (mt)",
+      "encounterRate": "10%",
+      "resourceValue": "Low\u2014except as a prey attractor and hunting ground",
+      "threatLevel": "Low\u2014navigational hazard",
+      "attack": "N/A",
+      "attributeRaw": "-/-/(22/12)",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast004",
+    "name": "Blimp",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Giordana fluitarus",
+      "distribution": "Open ocean in tropical and subtropical regions worldwide",
+      "size": "Up to 40 m long and 5 kg, including the tentacles",
+      "encounterRate": "48%",
+      "resourceValue": "Low",
+      "threatLevel": "Medium\u2014navigation hazard, venomous stings, fire hazard",
+      "attack": "Sting (DR 3), paralytic neurotoxin (onset 2 minutes, duration 10 hours\u2014Physique)",
+      "attributeRaw": "-/-/-3",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast005",
+    "name": "Blood Hunter",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Venator emeritus",
+      "distribution": "Tropical coastal waters planetwide; there are unverified reports that some tropical rivers may support smaller schools of freshwa ter hunters",
+      "size": "15 cm to 25 cm long and up to 0.35 kg",
+      "encounterRate": "9%",
+      "resourceValue": "Low",
+      "threatLevel": "High",
+      "attack": "Swarming bites (DR 8 per round when attacked by a school)",
+      "attributeRaw": "2/5/-3",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 5,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast006",
+    "name": "Bubble Array",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Photic zone in temperate waters world wide",
+      "size": "Up to 70 m in length and 2 mt",
+      "encounterRate": "8%",
+      "resourceValue": "Medium\u2014source of strong acid",
+      "threatLevel": "Medium, but usually easily avoided",
+      "attack": "Accidental contact (DR 2 burn damage)",
+      "attributeRaw": "-/-12/8",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -12,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 8,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast007",
+    "name": "Carniflora",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Carniflora species",
+      "distribution": "Well-vegetated areas with high annual rainfall in the tropics and subtropics",
+      "size": "0.2 m to 1.3 m for the central mass and 3 m to 20 m for individual stinging vines, and an overall mass of 1.5 kg to 35 kg",
+      "encounterRate": "74%",
+      "resourceValue": "High\u2014Carniflora are sometimes cultivated by natives as a source of toxins to fight pests and for various medical applications, which could eventually prove commercially valuable",
+      "threatLevel": "High\u2014these organisms are extremely dangerous for the unwary",
+      "attack": "Stinging vines (DR 5), paralytic neurotoxin (onset 10 seconds, duration 6-Physique hours)",
+      "attributeRaw": "-3/-3/4",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -3,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -3,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 4,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast008",
+    "name": "Chain Beetle",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Dorsalis givenius",
+      "distribution": "Wet sand, mud flats, and damp shoreline vegetation in temperate and tropical regions planetwide",
+      "size": "25 cm in diameter and up to 2 kg in mass",
+      "encounterRate": "64%",
+      "resourceValue": "High\u2014the beautiful and strangely durable shell has many uses",
+      "threatLevel": "High",
+      "attack": "Multiple slicing bites (DR 3 each)",
+      "attributeRaw": "-4/-2/6",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -4,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 6,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast009",
+    "name": "Chub",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Victus facilis",
+      "distribution": "Originally found only in the coastal scrub of the Westcape region, trans planted chubs have established viable colonies throughout the Pacifica Archipelago where they have escaped native livestock hutches",
+      "size": "25 cm long and up to 0.75 kg",
+      "encounterRate": "10% in native habitats, 80%+ around native settlements",
+      "resourceValue": "High\u2014though there isn\u2019t much meat on each animal, chub flesh is delicious; their cute appearance and docile demeanor also make them popular pets with native children",
+      "threatLevel": "Low",
+      "attack": "N/A",
+      "attributeRaw": "1/2/-6",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 1,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -6,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast010",
+    "name": "Digger Crab",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Wet sands of the intertidal zone",
+      "size": "Up to 1.2 m in diameter and 10 kg",
+      "encounterRate": "87%",
+      "resourceValue": "High\u2014favored and lucrative food source",
+      "threatLevel": "Low to high\u2014these range from creat ing architectural hazards to making lethal attacks on people",
+      "attack": "Crushing/cutting claws (DR 6) and slicing mouthparts (DR 4)",
+      "attributeRaw": "-3/-1/5 (digger and night crawler) -2/-",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -3,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 5,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast011",
+    "name": "Dune Creeper",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Paliurus defendo",
+      "distribution": "Arid coastal dunes from tropical to subtropical regions",
+      "size": "Individual plants can leapfrog for several hundred meters and individual runners can be 20 m long and up to 2 kg",
+      "encounterRate": "100%",
+      "resourceValue": "High\u2014essential resource in native infrastructure and provides superior foraging grounds for native gatherers",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "-/-/4",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 4,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast012",
+    "name": "Echo/Fish",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Temperate to tropical pelagic and nearshore waters planetwide",
+      "size": "Fish analogs range from a few centimeters up to 15 m for the largest, and weigh from a couple grams up to 1,300 kg Echo/fish\u2014vary from 10 to 25 cm and from 0.4 to 2.2 kg Jump jump\u2014vary from 25 cm to 40 cm and 0.4 kg up to 1.8 kg Tridents\u2014vary from 1 m to 2.5 m and 25 kg to 50 kg",
+      "encounterRate": "85%\u2013100%",
+      "resourceValue": "High\u2014these species represent the most important sources of meat in the native human and cete diets",
+      "threatLevel": "Low",
+      "attack": "Mostly harmless bites",
+      "attributeRaw": "2/6/-3 (echo/fish), 2/4/1 (jump jump),",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 6,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast013",
+    "name": "Fast Fungus",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Found planetwide, fast fungus grows in all but the most arid environments",
+      "size": "Variable based on the size of the nutrient source",
+      "encounterRate": "100%",
+      "resourceValue": "N/A",
+      "threatLevel": "Medium\u2014can cause dangerous infec tions in humans",
+      "attack": "N/A",
+      "attributeRaw": "N/A",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast014",
+    "name": "Ghoster",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Ghosters float at or very near the water\u2019s surface, drifting about at the will of ocean currents; they\u2019re only found in temperate lati tudes as colder temperatures inhibit the chem istry of their electrical potential, and the tempes tuous weather of the Storm Belt can shred their fragile bodies",
+      "size": "Large ghosters can cover several thousand square meters",
+      "encounterRate": "11%",
+      "resourceValue": "None",
+      "threatLevel": "High",
+      "attack": "Electrical discharge (DR 4)",
+      "attributeRaw": "N/A",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast015",
+    "name": "Gladiator Crab",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Wet sands of the intertidal zone",
+      "size": "Up to 1.2 m in diameter and 10 kg",
+      "encounterRate": "87%",
+      "resourceValue": "High\u2014favored and lucrative food source",
+      "threatLevel": "Low to high\u2014these range from creat ing architectural hazards to making lethal attacks on people",
+      "attack": "Crushing/cutting claws (DR 6) and slicing mouthparts (DR 4)",
+      "attributeRaw": "-3/-1/5 (digger and night crawler) -2/-",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 12,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast016",
+    "name": "Glass Coral",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Crystalus perspicuus",
+      "distribution": "Tropical waters planetwide",
+      "size": "Individual animals are up to 1 cm diameter and 2 g, with colonies growing up to 3 km long",
+      "encounterRate": "100%",
+      "resourceValue": "Important source of tool and artis tic materials to natives, and of increasing regional import in the tourist trade",
+      "threatLevel": "Medium\u2014extreme hazard to unwary swimmers and helmsmen",
+      "attack": "Accidental impact (DR 6) B",
+      "attributeRaw": "-/-/10",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 10,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast017",
+    "name": "Grass Devil",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "unclassified",
+      "distribution": "To date, grass devils have only been confirmed in the central savannas of New Corazon and Prime Meridian, but biologists suspect that their full range is more extensive",
+      "size": "2 to 3 m in length and 200 to 300 kg",
+      "encounterRate": "17%",
+      "resourceValue": "None",
+      "threatLevel": "High\u2014there are numerous verified reports of lethal attacks on humans and livestock",
+      "attack": "Claws and slicing bite (DR 8)",
+      "attributeRaw": "3/4/8",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 3,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 8,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast018",
+    "name": "Greater White",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Greater whites and lesser whites can be found in every known marine habitat pla netwide. Leviathans can be found in photic zones of high latitude waters planetwide",
+      "size": "Greater whites\u201425 m to 75 m long and 120 mt to 190 mt Lesser whites\u20142 m to 24 m (average 15 m) long and 6 kg to 16 mt (average 9 mt) Leviathans\u2014Largest specimen observed was 131 m long with an estimated weight of 280 mt",
+      "encounterRate": "Greater white\u2014<1% as predators this large can\u2019t be common, as the ecology couldn\u2019t support a large population; it\u2019s because of their rarity, in part, that marine travel on Posei don is an acceptable risk Lesser white\u201497% Leviathan\u2014<1%",
+      "resourceValue": "Lesser white\u2014High\u2014a prized and flavorful food source, many colonial restaurants have begun featuring lesser white meat, and commercial fisheries are currently pressed to meet demand Greater White\u2014Low\u2014lethally impractical to exploit in any significant way Leviathan\u2014Unknown but the subject of intense scientific curiosity",
+      "threatLevel": "Greater white and lesser white\u2014High\u2014as of now, there\u2019s no greater animal threat on Posei don than an attacking greater white, or even a bigger lesser white; the HCST strongly advises avoiding encounters with these species at all costs Leviathan\u2014Unknown as encounters have been few and mostly via remotes",
+      "attack": "Greater White\u2014bite, ram, or breach (DR 30+) Lesser white\u2014slicing bite (DR 2 to 15, based on size), ram/breach (DR 1 to 25, based on size) Leviathan\u2014breach (DR 40)",
+      "attributeRaw": "-2/(0/-10)/(30/18) (greater white), -1/4/4",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 30,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast019",
+    "name": "Hangin' Joe",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Tropical-zone Poseidon mangroves and some humid, coastal jungles",
+      "size": "Foot measures 2 m to 3 m long, tentacles are up to 30 m long, and 200 kg to 250 kg",
+      "encounterRate": "15%",
+      "resourceValue": "None\u2014the flesh is rubbery and ammonia compounds make it almost unpalatable",
+      "threatLevel": "High",
+      "attack": "Grapple and constriction (DR 2, slow suf focation)",
+      "attributeRaw": "-2/1/5",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 5,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast020",
+    "name": "Harvester Worm",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Planetwide in the tailings of Long John mining operations",
+      "size": "0.5 m to 3 m long and up to 6 kg in weight",
+      "encounterRate": "88% in active mine tailings",
+      "resourceValue": "Low, but may prove important in Long John prospecting",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "-4/-8/-6",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -4,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -8,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -6,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast021",
+    "name": "Hexa Boar (Aquatic)",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Verres sexcrus",
+      "distribution": "Salt and freshwater marshes across the Pacifica Archipelago",
+      "size": "1.3 m to 2 m long and 190 kg to 280 kg",
+      "encounterRate": "31%",
+      "resourceValue": "High\u2014a valuable food source",
+      "threatLevel": "Medium",
+      "attack": "Goring horn and defensive spines (DR 7)",
+      "attributeRaw": "1/2/5",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 1,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 5,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast022",
+    "name": "Hexa Boar (Land)",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Verres sexcrus",
+      "distribution": "Shallow, well-vegetated freshwater pools, marshes, and swamps in frost-free latitudes",
+      "size": "0.15 m to 0.3 m long, and 0.5 to 1 kg",
+      "encounterRate": "3%",
+      "resourceValue": "Low",
+      "threatLevel": "High",
+      "attack": "Swarming clutches with slicing bites (DR 4 each)",
+      "attributeRaw": "1/2/-3",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 1,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast023",
+    "name": "Jump Jump",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Temperate to tropical pelagic and nearshore waters planetwide",
+      "size": "Fish analogs range from a few centimeters up to 15 m for the largest, and weigh from a couple grams up to 1,300 kg Echo/fish\u2014vary from 10 to 25 cm and from 0.4 to 2.2 kg Jump jump\u2014vary from 25 cm to 40 cm and 0.4 kg up to 1.8 kg Tridents\u2014vary from 1 m to 2.5 m and 25 kg to 50 kg",
+      "encounterRate": "85%\u2013100%",
+      "resourceValue": "High\u2014these species represent the most important sources of meat in the native human and cete diets",
+      "threatLevel": "Low",
+      "attack": "Mostly harmless bites",
+      "attributeRaw": "2/6/-3 (echo/fish), 2/4/1 (jump jump),",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast024",
+    "name": "Kelp (Poseidon/Strangler)",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Gramen praefoco",
+      "distribution": "Shallow coastal temperate and sub tropical waters planetwide",
+      "size": "Individual fronds or vines can reach 250 m long and up to 55 kg",
+      "encounterRate": "100%",
+      "resourceValue": "High\u2014some varieties can be har vested for textiles, most are nutritious, some are poisonous if ingested",
+      "threatLevel": "Low for most species, high for stran gler kelp and keel vine",
+      "attack": "Grapple (drowning risk)",
+      "attributeRaw": "-/-/3",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast025",
+    "name": "Land Lizard",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Land lizards\u2014tropical forests and river banks pla netwide, Salties\u2014Prey-rich coastal shallows and conti nental shelves in tropical and subtropical lat itudes planetwide",
+      "size": "Land lizard\u20141 m to 4 m long and 15 kg to 190 kg Salties\u20145 m to 8 m long and 350 kg to 475 kg",
+      "encounterRate": "Land lizards\u201418%, Salties\u201427%",
+      "resourceValue": "Low\u2014edible but too dangerous to hunt",
+      "threatLevel": "High",
+      "attack": "Vicious bite and tearing roll (DR 8)",
+      "attributeRaw": "2/3/3 (land lizard), 4/4/8 (pseudoeel) PHARIUM",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 3,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast026",
+    "name": "Lesser White",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Greater whites and lesser whites can be found in every known marine habitat pla netwide. Leviathans can be found in photic zones of high latitude waters planetwide",
+      "size": "Greater whites\u201425 m to 75 m long and 120 mt to 190 mt Lesser whites\u20142 m to 24 m (average 15 m) long and 6 kg to 16 mt (average 9 mt) Leviathans\u2014Largest specimen observed was 131 m long with an estimated weight of 280 mt",
+      "encounterRate": "Greater white\u2014<1% as predators this large can\u2019t be common, as the ecology couldn\u2019t support a large population; it\u2019s because of their rarity, in part, that marine travel on Posei don is an acceptable risk Lesser white\u201497% Leviathan\u2014<1%",
+      "resourceValue": "Lesser white\u2014High\u2014a prized and flavorful food source, many colonial restaurants have begun featuring lesser white meat, and commercial fisheries are currently pressed to meet demand Greater White\u2014Low\u2014lethally impractical to exploit in any significant way Leviathan\u2014Unknown but the subject of intense scientific curiosity",
+      "threatLevel": "Greater white and lesser white\u2014High\u2014as of now, there\u2019s no greater animal threat on Posei don than an attacking greater white, or even a bigger lesser white; the HCST strongly advises avoiding encounters with these species at all costs Leviathan\u2014Unknown as encounters have been few and mostly via remotes",
+      "attack": "Greater White\u2014bite, ram, or breach (DR 30+) Lesser white\u2014slicing bite (DR 2 to 15, based on size), ram/breach (DR 1 to 25, based on size) Leviathan\u2014breach (DR 40)",
+      "attributeRaw": "-2/(0/-10)/(30/18) (greater white), -1/4/4",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -1,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 20,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast027",
+    "name": "Leviathan",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Greater whites and lesser whites can be found in every known marine habitat pla netwide. Leviathans can be found in photic zones of high latitude waters planetwide",
+      "size": "Greater whites\u201425 m to 75 m long and 120 mt to 190 mt Lesser whites\u20142 m to 24 m (average 15 m) long and 6 kg to 16 mt (average 9 mt) Leviathans\u2014Largest specimen observed was 131 m long with an estimated weight of 280 mt",
+      "encounterRate": "Greater white\u2014<1% as predators this large can\u2019t be common, as the ecology couldn\u2019t support a large population; it\u2019s because of their rarity, in part, that marine travel on Posei don is an acceptable risk Lesser white\u201497% Leviathan\u2014<1%",
+      "resourceValue": "Lesser white\u2014High\u2014a prized and flavorful food source, many colonial restaurants have begun featuring lesser white meat, and commercial fisheries are currently pressed to meet demand Greater White\u2014Low\u2014lethally impractical to exploit in any significant way Leviathan\u2014Unknown but the subject of intense scientific curiosity",
+      "threatLevel": "Greater white and lesser white\u2014High\u2014as of now, there\u2019s no greater animal threat on Posei don than an attacking greater white, or even a bigger lesser white; the HCST strongly advises avoiding encounters with these species at all costs Leviathan\u2014Unknown as encounters have been few and mostly via remotes",
+      "attack": "Greater White\u2014bite, ram, or breach (DR 30+) Lesser white\u2014slicing bite (DR 2 to 15, based on size), ram/breach (DR 1 to 25, based on size) Leviathan\u2014breach (DR 40)",
+      "attributeRaw": "-2/(0/-10)/(30/18) (greater white), -1/4/4",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -4,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 45,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast028",
+    "name": "Night Crawler",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Wet sands of the intertidal zone",
+      "size": "Up to 1.2 m in diameter and 10 kg",
+      "encounterRate": "87%",
+      "resourceValue": "High\u2014favored and lucrative food source",
+      "threatLevel": "Low to high\u2014these range from creat ing architectural hazards to making lethal attacks on people",
+      "attack": "Crushing/cutting claws (DR 6) and slicing mouthparts (DR 4)",
+      "attributeRaw": "-3/-1/5 (digger and night crawler) -2/-",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 5,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast029",
+    "name": "Ni\u00f1o Muerto",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Ni\u00f1os muertos\u2014currently known only from the jungles of the Channel and Zion Islands and the mountain forests of Prime Meridian Squealers\u2014tropical forests planetwide",
+      "size": "Ni\u00f1os\u20141.1 m to 1.7 m and 41 kg to 64 kg Squealers\u20140.4 m to 0.8 m and 3.2 kg to 4.8 kg",
+      "encounterRate": "Ni\u00f1os\u201413% Squealers\u201438%",
+      "resourceValue": "None",
+      "threatLevel": "Ni\u00f1os\u2014High\u2014dangerous pack hunters Squealers\u2014Low",
+      "attack": "Ni\u00f1os\u2014vicious bite and infectious claws (DR 5, Physique test to avoid potentially lethal infection) Squealers\u2014scratch and bite (DR 1)",
+      "attributeRaw": "3/4/2 (ni\u00f1os), 2/6/-2 (squealers)",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 3,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast030",
+    "name": "Pharium",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Habitat-specific cultivated strains are now found throughout the Pacifica Archipelago",
+      "size": "Up to 0.4 m tall and 0.025 kg per plant",
+      "encounterRate": "100% where cultivated",
+      "resourceValue": "High",
+      "threatLevel": "Natural strains are harmless, but arti ficially bred strains are addictive and can cause lethal overdoses",
+      "attack": "N/A",
+      "attributeRaw": "N/A",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast031",
+    "name": "Polypod",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "These animals have adapted to every habitat planetwide and are usually found in the photic zone, but reports exist of very old and very large deep-sea species",
+      "size": "Males are usually less than 2 m long and 20 kg while females can reach 18 m long and up to 580 kg",
+      "encounterRate": "28%",
+      "resourceValue": "Medium\u2014useful food source, but troublesome to hunt",
+      "threatLevel": "Males\u2014low, females\u2014high",
+      "attack": "Crushing constriction (suffocation) and slicing bite (DR 5)",
+      "attributeRaw": "-3/6/6",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -3,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 6,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 6,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast032",
+    "name": "Poseidon Mangrove",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Arbormarina insula",
+      "distribution": "Tropical and subtropical shallows pla netwide",
+      "size": "Up to 70 m tall and weighing more than 35 mt",
+      "encounterRate": "100%",
+      "resourceValue": "High as hunting grounds and ecological and physical refugia",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "-/-/40+",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast033",
+    "name": "Poseidon Potato",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Throughout the Pacifica Archipelago as an artifact of the human colonization effort and limited only by a minimum soil moisture content",
+      "size": "8 cm to 10 cm in diameter and 0.2 kg to 0.3 kg",
+      "encounterRate": "84%",
+      "resourceValue": "High\u2014a native food staple",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "N/A",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast034",
+    "name": "Poseidon Sargassum",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Tropical and subtropical surface waters and ocean gyres planetwide",
+      "size": "10 cm to 18 cm and 20 g to 3 kg depending on the species",
+      "encounterRate": "92%",
+      "resourceValue": "High\u2014for both direct use as food and medicine as well as indirect use as ecological nurseries and hunting grounds",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "N/A",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast035",
+    "name": "Poseidon Trilobite",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Tidal pools, beaches, shallow seas, and kelp forests across New Hawaii",
+      "size": "0.3 m to 0.7 m and 4 kg to 6.7 kg",
+      "encounterRate": "89%",
+      "resourceValue": "Medium",
+      "threatLevel": "Low",
+      "attack": "Slicing pinch (DR 2)",
+      "attributeRaw": "-4/1/1",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -4,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast036",
+    "name": "Reefer Colony",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Insula victus",
+      "distribution": "Temperate waters worldwide",
+      "size": "Up to 240 m in diameter Weight: Up to 25 mt",
+      "encounterRate": "13%",
+      "resourceValue": "Medium",
+      "threatLevel": "Low\u2014a minor navigational hazard",
+      "attack": "N/A",
+      "attributeRaw": "-/-/18",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 18,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast037",
+    "name": "Saltwater Pseudoeel",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Malalongus periculosus",
+      "distribution": "Land lizards\u2014tropical forests and river banks pla netwide, Salties\u2014Prey-rich coastal shallows and conti nental shelves in tropical and subtropical lat itudes planetwide",
+      "size": "Land lizard\u20141 m to 4 m long and 15 kg to 190 kg Salties\u20145 m to 8 m long and 350 kg to 475 kg",
+      "encounterRate": "Land lizards\u201418%, Salties\u201427%",
+      "resourceValue": "Low\u2014edible but too dangerous to hunt",
+      "threatLevel": "High",
+      "attack": "Vicious bite and tearing roll (DR 8)",
+      "attributeRaw": "2/3/3 (land lizard), 4/4/8 (pseudoeel) PHARIUM",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 4,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 8,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast038",
+    "name": "Sea Ghoul",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "All coastal and open-ocean habi tats planetwide",
+      "size": "20 cm to 50 cm long and 1.5 kg to 2.2 kg",
+      "encounterRate": "100%",
+      "resourceValue": "Low",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "-1/4/-3",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -1,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast039",
+    "name": "Singer-in-the-Dark",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Based on the wide distribution of native stories featuring singers-in-the-dark, the species may be found throughout the Paci fica Archipelago",
+      "size": "Unknown",
+      "encounterRate": "Unknown",
+      "resourceValue": "Unknown",
+      "threatLevel": "High",
+      "attack": "Unknown",
+      "attributeRaw": "Unknown",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast040",
+    "name": "Squealer",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Ni\u00f1os muertos\u2014currently known only from the jungles of the Channel and Zion Islands and the mountain forests of Prime Meridian Squealers\u2014tropical forests planetwide",
+      "size": "Ni\u00f1os\u20141.1 m to 1.7 m and 41 kg to 64 kg Squealers\u20140.4 m to 0.8 m and 3.2 kg to 4.8 kg",
+      "encounterRate": "Ni\u00f1os\u201413% Squealers\u201438%",
+      "resourceValue": "None",
+      "threatLevel": "Ni\u00f1os\u2014High\u2014dangerous pack hunters Squealers\u2014Low",
+      "attack": "Ni\u00f1os\u2014vicious bite and infectious claws (DR 5, Physique test to avoid potentially lethal infection) Squealers\u2014scratch and bite (DR 1)",
+      "attributeRaw": "3/4/2 (ni\u00f1os), 2/6/-2 (squealers)",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 6,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -2,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast041",
+    "name": "Stick Monkey",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Fluid channels of the mud reef ecosys tems in temperate regions of the Northern Hemi sphere",
+      "size": "Up to 3 m in length and 120 kg",
+      "encounterRate": "11%",
+      "resourceValue": "Low\u2014too dangerous to hunt, but the palps do have useful pharmaceutical applica tions",
+      "threatLevel": "High",
+      "attack": "Bite (DR 4), Poison (DR 5, onset time 5 seconds x Physique, full-body paralysis)",
+      "attributeRaw": "-3/-4/3",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -3,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast042",
+    "name": "Sunburst",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Caneopoise benagus",
+      "distribution": "Planetwide with the largest herds in temperate and polar waters",
+      "size": "2 m to 3 m and 450 kg to 780 kg",
+      "encounterRate": "73%",
+      "resourceValue": "High",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "2/3/4",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 3,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 4,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast043",
+    "name": "Sweet Noodles",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Nutrient-rich sediments within the lower photic zone, presumably planetwide",
+      "size": "Up to 2 m and 4.5 kg",
+      "encounterRate": "9%",
+      "resourceValue": "High",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "N/A",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast044",
+    "name": "Trident Fish",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "Salmonidus poseidonus",
+      "distribution": "Temperate to tropical pelagic and nearshore waters planetwide",
+      "size": "Fish analogs range from a few centimeters up to 15 m for the largest, and weigh from a couple grams up to 1,300 kg Echo/fish\u2014vary from 10 to 25 cm and from 0.4 to 2.2 kg Jump jump\u2014vary from 25 cm to 40 cm and 0.4 kg up to 1.8 kg Tridents\u2014vary from 1 m to 2.5 m and 25 kg to 50 kg",
+      "encounterRate": "85%\u2013100%",
+      "resourceValue": "High\u2014these species represent the most important sources of meat in the native human and cete diets",
+      "threatLevel": "Low",
+      "attack": "Mostly harmless bites",
+      "attributeRaw": "2/6/-3 (echo/fish), 2/4/1 (jump jump),",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 1,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 3,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast045",
+    "name": "Walkabout",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Unknown\u2014given the lack of previ ous encounters, creature is likely restricted to the interior, upland forests of Prime Meridian",
+      "size": "Unknown",
+      "encounterRate": "Unknown",
+      "resourceValue": "Unknown",
+      "threatLevel": "Unknown\u2014presumably high",
+      "attack": "Unknown\u2014presumed extremely dangerous",
+      "attributeRaw": "Unknown",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast046",
+    "name": "Water Hemp",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Damp to dry soils planetwide",
+      "size": "Up to 50 m in length and 25 kg",
+      "encounterRate": "90%",
+      "resourceValue": "High",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "-/-/6",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 6,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast047",
+    "name": "Weedeater",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "Kelp forests in temperate to subtrop ical tropical waters",
+      "size": "1.5 m to 2.5 m long and up to 420 kg",
+      "encounterRate": "41%",
+      "resourceValue": "High",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "-2/-2/10",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": -2,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": -2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 10,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  },
+  {
+    "_id": "beast048",
+    "name": "Xenosilicabenthoid",
+    "type": "creature",
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "scientificName": "",
+      "distribution": "To date only found nearby bacte ria-rich deep-ocean sediments within the Paci fica Archipelago",
+      "size": "2 cm to 3 cm in diameter and from 3.5 g to 6.5 g",
+      "encounterRate": "33%",
+      "resourceValue": "Potentially very high",
+      "threatLevel": "N/A",
+      "attack": "N/A",
+      "attributeRaw": "N/A",
+      "description": "",
+      "attributes": {
+        "awareness": {
+          "value": 0,
+          "label": "Awareness"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    }
+  }
+]

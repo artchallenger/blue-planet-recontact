@@ -1,0 +1,4319 @@
+[
+  {
+    "_id": "npc001",
+    "name": "Captain Omnis",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": -1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Charismatic Leader \u2192 Submarine Captain \u2192 Vengeful Megalomaniac",
+        "6 \u2022 Scientist \u2192 Engineer \u2192 Naval Architect",
+        "4 \u2022 History \u2192 Colonial Politics \u2192 Incorporate Culture"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc002",
+    "name": "Dr. Dayna Mehdya",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Biologist \u2192 Medical Doctor \u2192 Field Surgeon",
+        "4 \u2022 Psychologist \u2192 Therapist \u2192 Emotional Laborer"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc003",
+    "name": "Kekoa Schrader",
+    "type": "npc",
+    "system": {
+      "npcType": "Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "7 \u2022 Electrical Engineer \u2192 AR Systems Designer \u2192 Hacker Extraordinaire",
+        "4 \u2022 Cybernetic Systems \u2192 Robotics \u2192 Autonomous Systems"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc004",
+    "name": "Maglen Chan",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Daughter of Poseidon \u2192 Survivalist \u2192 Aquatic Hunter",
+        "5 \u2022 Social Savvy \u2192 Keen Instincts \u2192 Hyper Alert"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc005",
+    "name": "Jan Ema",
+    "type": "npc",
+    "system": {
+      "npcType": "Silva",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": -1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 GEO Peacekeeper \u2192 Survival \u2192 Unarmed Combat",
+        "4 \u2022 Squad Leader \u2192 Situational Awareness \u2192 Bodyguard",
+        "3 \u2022 Botany \u2192 Research \u2192 Ethnobotany"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc006",
+    "name": "Balara \"Clutch\" Luc",
+    "type": "npc",
+    "system": {
+      "npcType": "Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Propulsion Systems \u2192 Jumpcraft \u2192 Submersibles",
+        "4 \u2022 Supply Chains \u2192 Black Market \u2192 Haven Underground"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc007",
+    "name": "Jakob Barbara",
+    "type": "npc",
+    "system": {
+      "npcType": "Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Pilot \u2192 Jumpcraft \u2192 Emergency Maneuvers",
+        "4 \u2022 Biology \u2192 Conspiracy Theories \u2192 Cryptozoology"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc008",
+    "name": "Robert \"Stingray\" Ray",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Wilderness Survival \u2192 Rumors and Secrets \u2192 Grizzled Explorer",
+        "3 \u2022 Fisherman \u2192 Spear \u2192 Jury-Rig Craftsman"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc009",
+    "name": "Blue Singer",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Cetacean",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 3,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Survival Training \u2192 Poseidon Frontier \u2192 Predator Behavior",
+        "3 \u2022 Charismatic \u2192 Aquatic Performer \u2192 Singer/Storyteller"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc010",
+    "name": "Darryl Best",
+    "type": "npc",
+    "system": {
+      "npcType": "Modified Human",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 4,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 0,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Incorporate Scientist \u2192 Genius Engineer \u2192 Xenotechnology",
+        "3 \u2022 Political Maneuvers \u2192 Investigation \u2192 High-Level Contacts"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc011",
+    "name": "Dr. Lana Drew",
+    "type": "npc",
+    "system": {
+      "npcType": "Unmodified Human",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Natural Medicinet \u2192 Pharmacology \u2192 Medical Science",
+        "2 \u2022Veterinary Explorer \u2192 Mad Scientist \u2192 Marine Experiments"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc012",
+    "name": "Abiodun Yeung",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 MBA \u2192 Incorporate Politics \u2192 Executive",
+        "6 \u2022 Biology \u2192 Genetic Engineering \u2192 Poseidon Genetics"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc013",
+    "name": "Sanyah Taelor",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 MBA \u2192 Incorporate Politics \u2192 Executive",
+        "5 \u2022 Geology \u2192 Surveying \u2192 Poseidon Geography \u201cBOX\u201d CLAYTON Modi"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc014",
+    "name": "Box Clayton",
+    "type": "npc",
+    "system": {
+      "npcType": "Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Old-School Criminal \u2192 Haven Underworld \u2192 Connected Fixer",
+        "4 \u2022 Ex-Incorporate \u2192 Incorporate Culture \u2192 Colonial"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc015",
+    "name": "Abiodun Yeung, Jr.",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Earthborn \u2192 Teenager \u2192 Incorporate Brat",
+        "5 \u2022 Urban Mischief \u2192 Haven Local \u2192 Poseidon Party Scene"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc016",
+    "name": "\"Boomer\" Hurlson",
+    "type": "npc",
+    "system": {
+      "npcType": "Modie",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Commercial Diving \u2192 Specialist Dive Operations \u2192 Dive Supervisor",
+        "4 \u2022 Business Acumen \u2192 Management \u2192 Operational Planning"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc017",
+    "name": "Cody Hurlson",
+    "type": "npc",
+    "system": {
+      "npcType": "Human",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Commercial Diving \u2192 Specialist Dive Operations \u2192 Salvage Diving",
+        "2 \u2022 Incorporate Culture \u2192 Negotiation \u2192 Contract Law"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc018",
+    "name": "Kenedi Hurlson",
+    "type": "npc",
+    "system": {
+      "npcType": "Human",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Technician \u2192 Hostile Environment Systems \u2192 Dive Gear",
+        "2 \u2022 Zero-G Culture \u2192 Orbital Life \u2192 Space Safety Systems"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc019",
+    "name": "Paul Buhlman",
+    "type": "npc",
+    "system": {
+      "npcType": "Aquaform Newcomer",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Commercial Diving \u2192 Specialist Dive Operations \u2192 Inspections",
+        "2 \u2022 Medical \u2192 Paramedic \u2192 Dive Medicine"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc020",
+    "name": "Big Maia",
+    "type": "npc",
+    "system": {
+      "npcType": "Orca Native",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 3,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": -2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 12,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Commercial Diving \u2192 Specialist Dive Operations \u2192 Surveys",
+        "2 \u2022 Instructor \u2192 Commercial Diving \u2192 Cete Techniques"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc021",
+    "name": "Little Manu",
+    "type": "npc",
+    "system": {
+      "npcType": "Dolphin Native",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 3,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Commercial Diving \u2192 Specialist Dive Operations \u2192 Planning",
+        "2 \u2022 Native Culture \u2192 Cete Culture \u2192 Lithic Art"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc022",
+    "name": "Himani Bose",
+    "type": "npc",
+    "system": {
+      "npcType": "Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 0,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Life Sciences \u2192 Doctor \u2192 Rapid Diagnosis",
+        "4 \u2022 Adventurer \u2192 Extreme Sports \u2192 Levelheaded"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc023",
+    "name": "Vidko Lopan",
+    "type": "npc",
+    "system": {
+      "npcType": "Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": -1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 ERT Support \u2192 Dispatcher \u2192 Unflustered Communication",
+        "4 \u2022 Outback Geography \u2192 Tides and Currents \u2192 Weather Prediction"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc024",
+    "name": "Fixer",
+    "type": "npc",
+    "system": {
+      "npcType": "Bottlenose fin",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Engineer \u2192 Vehicle Maintenance \u2192 Aircraft Repair",
+        "4 \u2022 Ex-GEO Peacekeeper \u2192 Bureaucracy \u2192 Scrounging Parts"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc025",
+    "name": "Usaimah Hauksd\u00f3ttir",
+    "type": "npc",
+    "system": {
+      "npcType": "Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": -1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Outback Guide \u2192 Watercraft \u2192 Submarine Pilot",
+        "5 \u2022 Outback Culture \u2192 Prospector Contacts \u2192 Trustworthy Rumors"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc026",
+    "name": "Dr. Mashal Shahidi",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Transhuman",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Genetics \u2192 Experimental Research \u2192 Hormonal Biomods",
+        "5 \u2022 Incorporate Culture \u2192 Senior Management \u2192 Ruthless"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc027",
+    "name": "Simon Bassett",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Biology \u2192 Botany \u2192 Bryology",
+        "2 \u2022 Earth Culture \u2192 Free Zone Survival \u2192 Small Arms Training"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc028",
+    "name": "Lucienne Harrimi",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Survivor",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Electronics Technician \u2192 Programming \u2192 Remote Operations",
+        "3 \u2022 Logistics \u2192 Technology Triage \u2192 Vigilant"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc029",
+    "name": "Marcada",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Vehicle Mechanic \u2192 Make Do \u2192 Zero-G Repairs",
+        "3 \u2022 Newcomer Culture \u2192 Self-Reliant \u2192 Tenacious"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc030",
+    "name": "Eleah Cadieux",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Spacer",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 3,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Incorporate Culture \u2192 Operational Management \u2192 Disciplinarian",
+        "3 \u2022 Spacer Culture \u2192 Pioneering Spirit \u2192 Cooperative"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc031",
+    "name": "Colonel F\u0101ng Strathclyde-Xiao",
+    "type": "npc",
+    "system": {
+      "npcType": "Human Newcomer",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 4,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 GEO Officer \u2192 Mechanized Specialist \u2192 Commander",
+        "3 \u2022 Incorporate Culture \u2192 Incorporate Tactics \u2192 Counter-Incorporate Operations"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc032",
+    "name": "Captain Dominic Smoker",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman Newcomer",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 GEO Officer \u2192 Intelligence \u2192 Surveillance Specialist",
+        "4 \u2022 Poseidon Survival \u2192 Native Culture \u2192 Natives"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc033",
+    "name": "Juan Santos",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 0,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Poseidon Survival \u2192 Boat Operation \u2192 Trading",
+        "5 \u2022 Poseidon Culture \u2192 Northwest Territories \u2192 Native Politics"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc034",
+    "name": "Security Team Leader Beverly Franco",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman Newcomer",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Colonial Culture \u2192 Incorporate \u2192 GenDiver",
+        "4 \u2022 Paramilitary Leadership \u2192 Black Ops \u2192 Unit Command"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc035",
+    "name": "Etta Jones",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Native Leader \u2192 Social Glue \u2192 Family Matriarch",
+        "2 \u2022 Local Businesswoman \u2192 Tidewater Grill Owner \u2192 Master Chef"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc036",
+    "name": "Bethany Latimer",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": -3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": -1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Mischievous \u2192 Charming \u2192 Clever"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc037",
+    "name": "Philip Sanchez",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Native Culture \u2192 Political Activism \u2192 Insurgent Sympathizer",
+        "3 \u2022 Local Guide \u2192 Fisherman \u2192 Speargun"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc038",
+    "name": "Digger Jones",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 0,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Native Culture \u2192 Outdoorsman \u2192 Fisherman",
+        "3 \u2022 Mechanic \u2192 Boatwright \u2192 Hydrogen Technologies"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc039",
+    "name": "Taiji",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Orca",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": -2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 4,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": -2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 14,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Poseidon Survival \u2192 Native Culture \u2192 Big Game Hunting",
+        "4 \u2022 Cetacean Culture \u2192 Mixed Pod Cooperation \u2192 Intimidating"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc040",
+    "name": "Daniela Rivas",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Native Elder \u2192 Relentless \u2192 Meticulous",
+        "5 \u2022 Poseidon Survival \u2192 Jungle Stealth \u2192 Deadeye"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc041",
+    "name": "Slayer",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Bottlenose Dolphin",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": -1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": -2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 5,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Poseidon Survival \u2192 Determined \u2192 Vengeful",
+        "4 \u2022 Despoiler Culture \u2192 Technical Training \u2192 Drone Operations"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc042",
+    "name": "Healer",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Common Dolphin",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Caring \u2192 Inquisitive \u2192 Morbid",
+        "3 \u2022 Native Healer \u2192 Search and Rescue \u2192 Combat Medic"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc043",
+    "name": "Aphotic Heeder",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Beluga",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 6,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Technician \u2192 Underwater Habitat Maintenance \u2192 Electrician",
+        "3 \u2022 Cetacean Culture \u2192 Eco-Activist \u2192 Insurgent Sympathizer"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc044",
+    "name": "Shione Kurosaki",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Athlete \u2192 Incorporate Security \u2192 Martial Arts Instructor",
+        "4 \u2022 Introverted \u2192 Courteous \u2192 Secretive"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc045",
+    "name": "Exauc\u00e8 Madilu",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Free Zone Survival \u2192 Paramilitary Ranger \u2192 Scout",
+        "4 \u2022 Extroverted \u2192 Party Animal \u2192 Dancer"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc046",
+    "name": "Dockfin",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Common Dolphin",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 3,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Cetacean Culture \u2192 Mixed Pod Relations \u2192 Clowning",
+        "3 \u2022 Computers \u2192 Programming \u2192 Automation"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc047",
+    "name": "Dr. Paula Maciejewska",
+    "type": "npc",
+    "system": {
+      "npcType": "Newcomer Modi",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Biology \u2192 Ecology \u2192 Militant Conservationism",
+        "4 \u2022 GEO Culture \u2192 Newcomer Culture \u2192 Colonial Administration"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc048",
+    "name": "Apollo",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Charming \u2192 Deceptive \u2192 Information Gathering",
+        "3 \u2022 Attractive \u2192 Social Chameleon \u2192 Disguise Artist"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc049",
+    "name": "Ceto",
+    "type": "npc",
+    "system": {
+      "npcType": "Common Dolphin",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Mechanic \u2192 Remote Operations \u2192 Offensive Driving",
+        "3 \u2022 Tech Rat \u2192 Brute-Force Hacker \u2192 Online Ghost"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc050",
+    "name": "Athena",
+    "type": "npc",
+    "system": {
+      "npcType": "Feline Hybrid",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 0,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Make It Work \u2192 Weapons Expert \u2192 Demolitions",
+        "2 \u2022 Perfectionist \u2192 Imminently Logical \u2192 Consummate Planner"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc051",
+    "name": "Hephaestus",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Resourceful \u2192 Crafty Scrounger \u2192 Always Knows a Guy",
+        "3 \u2022 Athletic \u2192 Intimidating \u2192 Bruiser"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc052",
+    "name": "Bryan Steeg",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Everyday",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": -1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "2 \u2022 Martian \u2192 Terraforming techie \u2192 Mechanic",
+        "2 \u2022 Failed Prospector \u2192 Sub pilot \u2192 Long John mineralogy",
+        "5 \u2022 Small business owner \u2192 Bartender \u2192 Regional contacts",
+        "4 \u2022 Charming despite one\u2019s better instincts \u2192 Storyteller \u2192 Accomplished liar",
+        "2 \u2022 Brawler \u2192 Knife fighter \u2192 Dirty tricks"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc053",
+    "name": "Rachel Lightfoot",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Exceptional",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 3,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Earth culture \u2192 Free Zone veteran \u2192 Chippewa Tribe member",
+        "3 \u2022 School of hard knocks \u2192 College educated \u2192 Political science",
+        "3 \u2022 Peacekeeper corps \u2192 Electronics tech \u2192 Comms specialist",
+        "3 \u2022 GEO culture \u2192 International law \u2192 GEO Marshal",
+        "3 \u2022 Criminal culture \u2192 Underworld connections \u2192 Investigation",
+        "3 \u2022 Hand-to-hand \u2192 Weapons \u2192 Firearms",
+        "3 \u2022 Psychology \u2192 Empathic \u2192 Persuasive"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc054",
+    "name": "Prophet",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Elite",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 3,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 6,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Pre-Recontact Poseidon \u2192 Colonial culture \u2192 Native fin",
+        "3 \u2022 Ecological systems \u2192 Marine biology \u2192 Predator-prey interactions",
+        "1 \u2022 Geology \u2192 Volcanism \u2192 Long John mineralogy",
+        "5 \u2022 Charismatic speaker \u2192 Subtle negotiator \u2192 Persuasive leader",
+        "4 \u2022 Insurgent \u2192 Reluctant tactician \u2192 Guerrilla strategist",
+        "2 \u2022 Earth history \u2192 Political science \u2192 Colonial politics",
+        "1 \u2022 Unlikely digital warrior \u2192 Researcher \u2192 Remote operations"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc055",
+    "name": "Stuart Parsons",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Exceptional",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Earth culture \u2192 African diaspora \u2192 GEO district upbringing",
+        "3 \u2022 Harvard graduate \u2192 Political science \u2192 International law",
+        "3 \u2022 GEO diplomatic service \u2192 Intelligence analyst \u2192 Accomplished spy",
+        "3 \u2022 Techie \u2192 Remote operations \u2192 Electronic surveillance expert",
+        "3 \u2022 Hand-to-hand basic course \u2192 firearms basic training \u2192 advance pistol course",
+        "3 \u2022 Intentionally charming \u2192 effectively persuasive \u2192 scarily intimidating"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc056",
+    "name": "Mila Franklin",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Exceptional",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Native daughter \u2192 pre-Recontact life \u2192 Frontierswoman",
+        "3 \u2022 Second Try is always first \u2192 Local connections \u2192 Town clout",
+        "5 \u2022 Politician \u2192 Negotiator extraordinaire \u2192 Never takes no for an answer",
+        "2 \u2022 Newcomer culture \u2192 Incorporate culture \u2192 GEO culture",
+        "3 \u2022 City bureaucrat \u2192 Researcher \u2192 Self-taught law",
+        "1 \u2022 Artist \u2192 Found materials \u2192 Sculptor"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc057",
+    "name": "Vendor",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Exceptional",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": -1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Native fin \u2192 Reluctant aquaculturalist \u2192 Poseidon wilds",
+        "5 \u2022 Technician \u2192 Mechanic \u2192 Shipwright",
+        "4 \u2022 Capitalist \u2192 Businessfin \u2192 AquaTech owner",
+        "2 \u2022 Charming fin \u2192 Wry humor \u2192 Connections everywhere",
+        "3 \u2022 Whalesong devotee \u2192 Chorus member \u2192 Aspiring vision/singer",
+        "1 \u2022 Criminal contacts \u2192 Sympathizer \u2192 Underworld financier"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc058",
+    "name": "Faithful Pacheco",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Exceptional",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": -1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "2 \u2022 Incorporate Free Zone \u2192 GEO Liberation Facility \u2192 Urban Survival",
+        "4 \u2022 GEO Military \u2192 Forward Recon \u2192 Heavy Weapons",
+        "3 \u2022 Bright Savanna Resident \u2192 Colonial Representative \u2192 Acting Governor",
+        "2 \u2022 Driver \u2192 Heavy Equipment Operation \u2192 Mechanic",
+        "3 \u2022 Farmer \u2192 Rancher \u2192 Agronomist",
+        "4 \u2022 Charismatic \u2192 Storyteller \u2192 Practical Wisdom"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc059",
+    "name": "Simon Malmoneeds",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Elite",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "2 \u2022 Incorporate Privilege \u2192 Street Life \u2192 Free Spirit",
+        "3 \u2022 Colonial Culture \u2192 Native Culture \u2192 Incorporate Culture",
+        "4 \u2022 Navigation \u2192 Boat Mechanic \u2192 Seamanship",
+        "4 \u2022 Hunter \u2192 Forager \u2192 Poseidon Ecology",
+        "2 \u2022 Electronics \u2192 Communications \u2192 Remote Operations",
+        "2 \u2022 Cete Culture \u2192 Interspecies \u2192 Pod Member",
+        "4 \u2022 Connections Everywhere \u2192 Prime Meridian Is Home \u2192 New Atlas Citizen"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc060",
+    "name": "Bernardo Oliviera",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Everyday",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 3,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Native-Born \u2192 Westcape for Life! \u2192 Perdition Headman",
+        "4 \u2022 Hunter \u2192 Stealthy \u2192 Crack Shot",
+        "2 \u2022 Geology \u2192 Miner \u2192 Water Opal Trade",
+        "1 \u2022 Politics \u2192 International Law \u2192 Insurgent",
+        "3 \u2022 Mechanic \u2192 Rigger \u2192 Sailor"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc061",
+    "name": "Maat Sanusi",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Exceptional",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": -2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Botany \u2192 Biochemistry \u2192 Genetic Engineering",
+        "4 \u2022 Institutional Administrator \u2192 Academic Bully \u2192 Mad Scientist",
+        "3 \u2022 Xenobiology \u2192 Poseidon Ecology \u2192 Poseidon Taxonomy",
+        "2 \u2022 Data science \u2192 Programming \u2192 Virtual Research",
+        "2 \u2022 Animal Behavior \u2192 Human Psychology \u2192 Manipulator",
+        "1 \u2022 Foodie \u2192 Aspiring Chef \u2192 Wine Connoisseur"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc062",
+    "name": "Zelma Tirchett",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Everyday",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Activist \u2192 Advocate \u2192 Agitator",
+        "5 \u2022 Prospector \u2192 Submarine Operations \u2192 Xenosilicate Science",
+        "4 \u2022 Colonial Culture \u2192 Fenny End Representative \u2192 Dealmaker",
+        "2 \u2022 Poseidon Frontier \u2192 Wilderness Survival \u2192 Marine Navigation",
+        "1 \u2022 Athlete \u2192 Cross Trainer \u2192 Kickboxer"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc063",
+    "name": "Tatiana Ballard",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "Exceptional",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": -1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 2,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Wealthy Heiress \u2192 Biogene Cachet \u2192 Ruthless Ambition",
+        "4 \u2022 Incorporate Culture \u2192 Biogene Culture \u2192 Ballard Family Dynamics",
+        "3 \u2022 Media Savvy \u2192 High Fashion \u2192 Media Darling",
+        "2 \u2022 Social Style \u2192 Social Savvy \u2192 Social Manipulator",
+        "2 \u2022 Equestrian Science \u2192 Horseback Riding \u2192 Dressage",
+        "1 \u2022 Mining Technologies \u2192 Xenosilicate Science \u2192 Long John Mining"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc064",
+    "name": "Breeder",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 4,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": -2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 12,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "8 \u2022 Nanotech \u2192 Nereid Design \u2192 Nereid Reproduction",
+        "6 \u2022 Biology \u2192 Chemistry \u2192 Chemical Control and Empathy",
+        "3 \u2022 Creator Legacy \u2192 Systems Ecology \u2192 Bioforming Principles",
+        "1 \u2022 Self-Defense \u2192 Electrical Shock \u2192 Escape"
+      ],
+      "attack": "Attack: Grapple maneuver, Shock (damage rating 3)",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc065",
+    "name": "Technician",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 4,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 4,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 3,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 4,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "8 \u2022 Nanotech \u2192 Nereid Technology \u2192 Repair and Replicate",
+        "6 \u2022 Chemistry \u2192 Physics \u2192 Fluid Dynamics",
+        "3 \u2022 Human Technology \u2192 Digital Systems \u2192 Mechanical Systems",
+        "2 \u2022 Self-Defense \u2192 Electrical Shock \u2192 Escape"
+      ],
+      "attack": "Attack: Claw slice (damage rating 4), Shock (damage rating 3)",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc066",
+    "name": "Herder",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 4,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 5,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "6 \u2022 Nanotech \u2192 Genetics \u2192 Nanomedicine",
+        "6 \u2022 Oceanography \u2192 Marine Ecology \u2192 Population Dynamics",
+        "3 \u2022 Animal Behavior \u2192 Chemical Empathy \u2192 Chemical Mind Control",
+        "4 \u2022 Self-Defense \u2192 Electrical Shock \u2192 Close Combat"
+      ],
+      "attack": "Attack: Claw slice (damage rating 6), Shock (damage rating 4)",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc067",
+    "name": "Protector",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 3,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 6,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 3,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Nanotech \u2192 Assembly \u2192 Disassembly",
+        "5 \u2022 Awareness \u2192 Reconnaissance \u2192 Stealth",
+        "4 \u2022 Chemical Empathy \u2192 Chemical Mind Control \u2192 Chemical Stun",
+        "8 \u2022 Tactics \u2192 Electrical Shock \u2192 Close Combat"
+      ],
+      "attack": "Attack: Claw slice (damage rating 8), Shock (damage rating 6)",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc068",
+    "name": "Soldier Drone",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": -3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 5,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 3,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 5,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "5 \u2022 Stealth \u2192 Intrusion \u2192 Ambush",
+        "5 \u2022 Tactics \u2192 Tracking \u2192 Close Combat"
+      ],
+      "attack": "Attack: Talons (damage rating 6) (twice per round)",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc069",
+    "name": "Forest People",
+    "type": "npc",
+    "system": {
+      "npcType": "",
+      "tier": "",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 2,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": -1,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 2,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Stealth \u2192 Tracking \u2192 Hunting",
+        "4 \u2022 Tactics \u2192 Ambush \u2192 Close Combat",
+        "6 \u2022 Survival Skills \u2192 Poseidon Ecology \u2192 Predator Behavior",
+        "3 \u2022 Empathic Connection \u2192 Shared Memories \u2192 Silent Communication"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc070",
+    "name": "Habib Hussein Al-Muhammadi",
+    "type": "npc",
+    "system": {
+      "npcType": "Transhuman",
+      "tier": "Exceptional",
+      "biomods": "Immunological Symbiote, Implanted Interface, Neural Jack",
+      "attributes": {
+        "cognition": {
+          "value": 3,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "3 \u2022 Atlas in the Blood \u2192 Atlas Laborer \u2192 Atlas Elite",
+        "3 \u2022 Machinist \u2192 Aerospace Engineer \u2192 Interstellar Freighter Captain",
+        "3 \u2022 Research \u2192 Earth Economics \u2192 Poseidon Economics",
+        "3 \u2022 Detail-Oriented Planner \u2192 Strong Negotiator \u2192 Demanding Leader",
+        "3 \u2022 Geology \u2192 Mining \u2192 Long John Industry",
+        "3 \u2022 Student of History \u2192 Political Expert \u2192 International Law"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc071",
+    "name": "Johnny Cecily John",
+    "type": "npc",
+    "system": {
+      "npcType": "Modified Human",
+      "tier": "Everyday",
+      "biomods": "Body Sculpting, Skinlights, Programmable Pili",
+      "attributes": {
+        "cognition": {
+          "value": -1,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 0,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": -1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "1 \u2022 Haven Street Kid \u2192 Scrapper \u2192 Urban Survival",
+        "2 \u2022 Celebrity Wiki \u2192 Connected Throughout the Industry \u2192 Gossip Royalty",
+        "4 \u2022 Entertainer \u2192 Song and Dance \u2192 Impeccable Comedic Timing",
+        "4 \u2022 Over-The-Top Charmer \u2192 Social Manipulator \u2192 Socially Lethal Opponent",
+        "1 \u2022 Business Person \u2192 Savvy Negotiator \u2192 Big Plans"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  },
+  {
+    "_id": "npc072",
+    "name": "Roberto \"Sugar\" McKay",
+    "type": "npc",
+    "system": {
+      "npcType": "Native Aquaform",
+      "tier": "Everyday",
+      "biomods": "",
+      "attributes": {
+        "cognition": {
+          "value": 0,
+          "label": "Cognition"
+        },
+        "psyche": {
+          "value": 2,
+          "label": "Psyche"
+        },
+        "coordination": {
+          "value": 1,
+          "label": "Coordination"
+        },
+        "physique": {
+          "value": 1,
+          "label": "Physique"
+        }
+      },
+      "skills": [
+        "4 \u2022 Native Culture \u2192 Zion Islands Region \u2192 Harmony Resident",
+        "2 \u2022 Charming \u2192 Manipulator \u2192 Expert liar",
+        "4 \u2022 Urban Survival \u2192 Gang Member \u2192 NGC Leader",
+        "3 \u2022 Streetwise \u2192 Wary \u2192 Intimidating",
+        "2 \u2022 Smuggler \u2192 Drug Dealer \u2192 Gunrunner"
+      ],
+      "attack": "",
+      "description": "",
+      "attitude": "",
+      "motivation": "",
+      "wounds": {
+        "minor": {
+          "value": 0,
+          "max": 5
+        },
+        "major": {
+          "value": 0,
+          "max": 4
+        },
+        "mortal": {
+          "value": 0,
+          "max": 3
+        }
+      }
+    },
+    "img": "icons/svg/mystery-man.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {}
+  }
+]

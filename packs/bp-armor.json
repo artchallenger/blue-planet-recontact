@@ -1,0 +1,173 @@
+[
+  {
+    "_id": "bpa001",
+    "name": "Light Body Armor (Vest)",
+    "type": "armor",
+    "img": "icons/equipment/chest/vest-armor-leather-brown.webp",
+    "system": {
+      "description": "Lightweight, comfortable, and concealable. Can be readily hidden under clothing. Made from densely woven polymer-reinforced bioplastic fibers with gel padding.",
+      "availability": "Uncommon",
+      "cost": 1550,
+      "weight": 1.2,
+      "rating": 2,
+      "durability": 2,
+      "coverage": "Torso",
+      "features": "concealable, cold, flat, responsive",
+      "models": "MacLeod Enforcement Edge Armor System, GenDiver X-Lite, Hard Industries Full Stop Range",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpa002",
+    "name": "Heavy Body Armor (Vest)",
+    "type": "armor",
+    "img": "icons/equipment/chest/breastplate-banded.webp",
+    "system": {
+      "description": "Bulky and confining, provides significant protection. Reduces wearer's agility-related Coordination tests by -1 and is not concealable. Ceramic plates can be inserted over vital areas for +1 Durability at -2 Coordination.",
+      "availability": "Uncommon",
+      "cost": 2750,
+      "weight": 2.3,
+      "rating": 3,
+      "durability": 3,
+      "coverage": "Torso",
+      "features": "cold, flat",
+      "models": "MacLeod Enforcement Edge Armor System, GenDiver X-Heavy, Hard Industries Full Stop Range",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpa003",
+    "name": "Combat Armor",
+    "type": "armor",
+    "img": "icons/equipment/chest/breastplate-layered.webp",
+    "system": {
+      "description": "Laminated diamond/ceramic plates articulated into a full-body suit. Expensive, hot, heavy, and uncomfortable but a lifesaver in combat. Smart padding, self-adjusting fit, and integrated servos reduce encumbrance \u2014 but still gives -2 Coordination penalty. Available with phototropic skins (-4 to searchers) and EVA capability.",
+      "availability": "Restricted",
+      "cost": 5000,
+      "weight": 8,
+      "rating": 6,
+      "durability": 6,
+      "coverage": "Full Body",
+      "features": "warm, flat, rechargeable, responsive",
+      "models": "MacLeod Enforcement Edge Armor System, Biogene Centurion Line, Hard Industries Hardskin",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpa004",
+    "name": "Combat Helmet / HUD",
+    "type": "armor",
+    "img": "icons/equipment/head/helm-barbute-brown-dark.webp",
+    "system": {
+      "description": "Laminated bioplastic combat helmet with retractable glaz visor. Includes tactical HUD for navigation, mission data, communications, and hardware interfacing. 360-degree holographic pickups. Adds +1 to armor rating by protecting head and neck.",
+      "availability": "Restricted",
+      "cost": 6400,
+      "weight": 1.15,
+      "rating": 1,
+      "durability": 1,
+      "coverage": "Head and Neck",
+      "features": "hot, smart, rechargeable, responsive, sealed, sensors",
+      "models": "MacLeod Enforcement HeadsUp Edge, Anasi Systems Ph\u00e9nix Line, Simplex Tactix",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpa005",
+    "name": "Phototropic BDU",
+    "type": "armor",
+    "img": "icons/equipment/chest/vest-cloth-green.webp",
+    "system": {
+      "description": "Heavy combat fatigues woven from light industrial bioplastic fibers. Durable and tear-resistant. Thermal circuitry keeps wearer comfortable down to 10\u00b0C in air and 50\u00b0C in water. Phototropic implants automatically match surroundings \u2014 anyone searching for wearer takes -4 penalty.",
+      "availability": "Uncommon",
+      "cost": 340,
+      "weight": 0.57,
+      "rating": 1,
+      "durability": 1,
+      "coverage": "Full Body",
+      "features": "warm, flat, rechargeable, responsive",
+      "models": "MacLeod Enforcement Edge Armor System, Hanover Industries BD-34, Hard Industries Stealth Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpa006",
+    "name": "Light Reactive Armor (Flex)",
+    "type": "armor",
+    "img": "icons/equipment/chest/vest-armor-scaled-grey.webp",
+    "system": {
+      "description": "Thin and concealable. Responsive material with kinetic sensors. In inactive state provides no protection; when activated by impact increases armor rating to 2. Does not protect limbs. While rigid, wearer suffers -1 to agility-related Coordination tests.",
+      "availability": "Rare",
+      "cost": 1200,
+      "weight": 0.89,
+      "rating": 2,
+      "durability": 2,
+      "coverage": "Torso",
+      "features": "concealable, warm, responsive",
+      "models": "MacLeod Stealth Shield, Hanover Industries Polyflex, Hard Industries 2nd Chance Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpa007",
+    "name": "Assault Reactive Armor (Flex)",
+    "type": "armor",
+    "img": "icons/equipment/chest/breastplate-banded.webp",
+    "system": {
+      "description": "Protects torso, neck, upper arms, and legs. In inactive state armor rating 1; in active state increases to 3. While rigid, wearer suffers -1 to agility-related Coordination tests.",
+      "availability": "Rare",
+      "cost": 2800,
+      "weight": 0.89,
+      "rating": 3,
+      "durability": 3,
+      "coverage": "Torso, Arms, Legs",
+      "features": "warm, responsive",
+      "models": "MacLeod Stealth Shield, Hanover Industries Polyflex, Hard Industries 2nd Chance Series",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpa008",
+    "name": "Body Skin",
+    "type": "armor",
+    "img": "icons/equipment/chest/vest-cloth-blue.webp",
+    "system": {
+      "description": "Laced with phototropic implants, reducing wearer's top speed by 10%. Automatically adjusts colors to match surroundings, giving searchers -4 penalty. Provides armor rating of 1.",
+      "availability": "Rare",
+      "cost": 1350,
+      "weight": 2.3,
+      "rating": 1,
+      "durability": 1,
+      "coverage": "Full Body",
+      "features": "cold, flat, rechargeable, responsive, sensors",
+      "models": "Hydrospan Color-Me-Gone, Native Inc. Fader",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  },
+  {
+    "_id": "bpa009",
+    "name": "Powered Battle Armor",
+    "type": "armor",
+    "img": "icons/equipment/chest/breastplate-metal.webp",
+    "system": {
+      "description": "Cybernetically actuated heavy combat armor \u2014 effectively a one-person multi-environment ambulatory tank. Servomotors increase effective Strength by +3; Coordination reduced by only -1. Full sensor suite and fuel cell power. Armor rating 15 (20 against explosions with ablative shielding). Can autonomously return injured or dead operator from deployment.",
+      "availability": "Restricted",
+      "cost": 850000,
+      "weight": 115,
+      "rating": 15,
+      "durability": 15,
+      "coverage": "Full Body",
+      "features": "hardened, hot, gi, integrated, rechargeable, sealed, sensors",
+      "models": "MacLeod Enforcement Rhino Force Multiplier, Atlas Materials Hard Target Battle Armor, Deterrent Manufacturing Damascus System",
+      "equipped": false,
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, concealable, hardened, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, external, air-gapped, premium, upgraded, damaged, drained, encrypted, handmade, junk, jury-rigged, malfunctioning, waterlogged"
+    }
+  }
+]

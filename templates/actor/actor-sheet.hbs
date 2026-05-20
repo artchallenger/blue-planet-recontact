@@ -1,0 +1,758 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+    {{!-- HEADER SECTION --}}
+    <header class="sheet-header">
+
+        {{!-- ROW 1: Name | Motivation | Attitude | Toggle --}}
+        <div class="header-row">
+            <div class="header-field">
+                <label class="header-label">CHARACTER NAME</label>
+                <input name="name" type="text" value="{{actor.name}}" placeholder="Name" class="header-input header-name-input"/>
+            </div>
+            <div class="header-field">
+                <label class="header-label">MOTIVATION</label>
+                <input name="system.details.motivation" type="text" value="{{system.details.motivation}}" class="header-input"/>
+            </div>
+            <div class="header-field">
+                <label class="header-label">ATTITUDE</label>
+                <input name="system.details.attitude" type="text" value="{{system.details.attitude}}" class="header-input"/>
+            </div>
+            <div class="header-toggle">
+                <a class="edit-mode-toggle control-btn">
+                    {{#if isEditing}}
+                        <i class="fas fa-unlock"></i> <b>EDIT MODE</b>
+                    {{else}}
+                        <i class="fas fa-gamepad"></i> <b>PLAY MODE</b>
+                    {{/if}}
+                </a>
+            </div>
+        </div>
+
+        {{!-- ROW 2: Concept | Goal --}}
+        <div class="header-row">
+            <div class="header-field header-concept">
+                <label class="header-label">CONCEPT</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="system.details.concept.level" value="everyday" {{checked (eq system.details.concept.level "everyday")}}> Everyday</label>
+                    <label class="radio-label"><input type="radio" name="system.details.concept.level" value="exceptional" {{checked (eq system.details.concept.level "exceptional")}}> Exceptional</label>
+                    <label class="radio-label"><input type="radio" name="system.details.concept.level" value="elite" {{checked (eq system.details.concept.level "elite")}}> Elite</label>
+                </div>
+            </div>
+            <div class="header-field header-goal">
+                <label class="header-label">GOAL</label>
+                <input name="system.details.goal" type="text" value="{{system.details.goal}}" class="header-input"/>
+            </div>
+        </div>
+
+        {{!-- ROW 3: CHIPS --}}
+        <div class="header-row header-pip-row">
+            <label class="header-label">CH.I.P.S <span class="header-sublabel">CHARACTER IMPROVEMENT POINTS</span></label>
+            <div class="header-chips-groups">
+                {{#each chipsGroups as |group|}}
+                <div class="chips-group">
+                    {{#each group.pips as |pip|}}
+                    <a class="header-pip chips-pip {{#if pip.filled}}filled{{/if}}" data-path="chips" data-index="{{pip.index}}"></a>
+                    {{/each}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        {{!-- ROW 4: REPUTATION --}}
+        <div class="header-row header-pip-row">
+            <label class="header-label">REPUTATION</label>
+            <div class="header-rep-groups">
+                {{#each repGroups as |group|}}
+                <div class="rep-group">
+                    {{#if ../isEditing}}
+                        <input class="rep-label-input" name="system.reputation.{{group.labelKey}}" type="text" value="{{group.label}}" placeholder="Label"/>
+                    {{else}}
+                        <div class="rep-group-label">{{group.label}}</div>
+                    {{/if}}
+                    <div class="rep-pips">
+                        {{#each group.pips as |pip|}}
+                        <a class="header-pip rep-pip {{#if pip.filled}}filled{{/if}}" data-path="reputation" data-index="{{pip.index}}"></a>
+                        {{/each}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+    </header>
+
+    {{!-- TABS NAVIGATION --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="profile">PROFILE & STATUS</a>
+        <a class="item" data-tab="skills">SKILL SETS</a>
+        <a class="item" data-tab="gear">GEAR & BIOMODS</a>
+    </nav>
+
+    {{!-- SHEET BODY --}}
+    <section class="sheet-body">
+
+   {{!-- TAB 1: PROFILE & STATUS --}}
+        <div class="tab profile-tab" data-group="primary" data-tab="profile">
+            
+            <div class="profile-layout">
+                {{!-- LEFT COLUMN: ATTRIBUTES & TRACKS --}}
+                <div class="profile-sidebar">
+                    
+                    {{!-- ATTRIBUTES --}}
+                    <div class="section-header"><h2>ATTRIBUTES</h2></div>
+                    
+                    <div class="attributes-list">
+                        {{!-- COGNITION --}}
+                        <div class="attribute-group">
+                            <div class="attr-header">
+                                <span class="attr-label rollable-attribute" data-key="cognition">COGNITION</span>
+                                <input class="attr-input" name="system.attributes.cognition.value" type="text" value="{{system.attributes.cognition.value}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                            <div class="focus-attr">
+                                <input class="focus-name" name="system.attributes.cognition.focus1.name" data-attrkey="cognition" data-focusindex="1" type="text" value="{{system.attributes.cognition.focus1.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                <input class="focus-rank" name="system.attributes.cognition.focus1.rank" data-attrkey="cognition" data-focusindex="1" type="text" value="{{system.attributes.cognition.focus1.rank}}" placeholder="0" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                            <div class="focus-attr">
+                                <input class="focus-name" name="system.attributes.cognition.focus2.name" data-attrkey="cognition" data-focusindex="2" type="text" value="{{system.attributes.cognition.focus2.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                <input class="focus-rank" name="system.attributes.cognition.focus2.rank" data-attrkey="cognition" data-focusindex="2" type="text" value="{{system.attributes.cognition.focus2.rank}}" placeholder="0" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                        </div>
+
+                        {{!-- PSYCHE --}}
+                        <div class="attribute-group">
+                            <div class="attr-header">
+                                <span class="attr-label rollable-attribute" data-key="psyche">PSYCHE</span>
+                                <input class="attr-input" name="system.attributes.psyche.value" type="text" value="{{system.attributes.psyche.value}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                            <div class="focus-attr">
+                                <input class="focus-name" name="system.attributes.psyche.focus1.name" data-attrkey="psyche" data-focusindex="1" type="text" value="{{system.attributes.psyche.focus1.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                <input class="focus-rank" name="system.attributes.psyche.focus1.rank" data-attrkey="psyche" data-focusindex="1" type="text" value="{{system.attributes.psyche.focus1.rank}}" placeholder="0" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                            <div class="focus-attr">
+                                <input class="focus-name" name="system.attributes.psyche.focus2.name" data-attrkey="psyche" data-focusindex="2" type="text" value="{{system.attributes.psyche.focus2.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                <input class="focus-rank" name="system.attributes.psyche.focus2.rank" data-attrkey="psyche" data-focusindex="2" type="text" value="{{system.attributes.psyche.focus2.rank}}" placeholder="0" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                        </div>
+
+                        {{!-- COORDINATION --}}
+                        <div class="attribute-group">
+                            <div class="attr-header">
+                                <span class="attr-label rollable-attribute" data-key="coordination">COORDINATION</span>
+                                <input class="attr-input" name="system.attributes.coordination.value" type="text" value="{{system.attributes.coordination.value}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                            <div class="focus-attr">
+                                <input class="focus-name" name="system.attributes.coordination.focus1.name" data-attrkey="coordination" data-focusindex="1" type="text" value="{{system.attributes.coordination.focus1.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                <input class="focus-rank" name="system.attributes.coordination.focus1.rank" data-attrkey="coordination" data-focusindex="1" type="text" value="{{system.attributes.coordination.focus1.rank}}" placeholder="0" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                            <div class="focus-attr">
+                                <input class="focus-name" name="system.attributes.coordination.focus2.name" data-attrkey="coordination" data-focusindex="2" type="text" value="{{system.attributes.coordination.focus2.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                <input class="focus-rank" name="system.attributes.coordination.focus2.rank" data-attrkey="coordination" data-focusindex="2" type="text" value="{{system.attributes.coordination.focus2.rank}}" placeholder="0" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                        </div>
+
+                        {{!-- PHYSIQUE --}}
+                        <div class="attribute-group">
+                            <div class="attr-header">
+                                <span class="attr-label rollable-attribute" data-key="physique">PHYSIQUE</span>
+                                <input class="attr-input" name="system.attributes.physique.value" type="text" value="{{system.attributes.physique.value}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                            <div class="focus-attr">
+                                <input class="focus-name" name="system.attributes.physique.focus1.name" data-attrkey="physique" data-focusindex="1" type="text" value="{{system.attributes.physique.focus1.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                <input class="focus-rank" name="system.attributes.physique.focus1.rank" data-attrkey="physique" data-focusindex="1" type="text" value="{{system.attributes.physique.focus1.rank}}" placeholder="0" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                            <div class="focus-attr">
+                                <input class="focus-name" name="system.attributes.physique.focus2.name" data-attrkey="physique" data-focusindex="2" type="text" value="{{system.attributes.physique.focus2.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                <input class="focus-rank" name="system.attributes.physique.focus2.rank" data-attrkey="physique" data-focusindex="2" type="text" value="{{system.attributes.physique.focus2.rank}}" placeholder="0" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{!-- STRAIN TRACKS --}}
+                    <div class="section-header status-header"><h2>STRAIN</h2></div>
+                    <div class="track-box">
+                        <div class="track-row strain-row">
+                            <label class="strain-label strain-toggle" data-type="mental">MENTAL</label>
+                            <div class="strain-rank-container">
+                                {{#if isEditing}}
+                                    <input class="strain-rank-input" name="system.strain.mental.max" type="text" value="{{system.strain.mental.max}}" data-dtype="Number" placeholder="0"/>
+                                {{else}}
+                                    <div class="strain-rank-display">{{system.strain.mental.max}}</div>
+                                {{/if}}
+                            </div>
+                            <div class="resource-dots">
+                                {{#each pips.mental}}
+                                <a class="strain-pip {{#if this.filled}}filled{{/if}}" data-path="strain.mental" data-index="{{this.index}}"></a>
+                                {{/each}}
+                            </div>
+                        </div>
+                        <div class="track-row strain-row">
+                            <label class="strain-label strain-toggle" data-type="physical">PHYSICAL</label>
+                            <div class="strain-rank-container">
+                                {{#if isEditing}}
+                                    <input class="strain-rank-input" name="system.strain.physical.max" type="text" value="{{system.strain.physical.max}}" data-dtype="Number" placeholder="0"/>
+                                {{else}}
+                                    <div class="strain-rank-display">{{system.strain.physical.max}}</div>
+                                {{/if}}
+                            </div>
+                            <div class="resource-dots">
+                                {{#each pips.physical}}
+                                <a class="strain-pip {{#if this.filled}}filled{{/if}}" data-path="strain.physical" data-index="{{this.index}}"></a>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+
+                    {{!-- INJURY TRACKS --}}
+                    <div class="section-header status-header"><h2>INJURY</h2></div>
+                    <div class="track-box">
+                        <div class="injury-row"><label>MINOR</label><div class="injury-dots">{{#each pips.minor}}<a class="wound-pip injury-val {{#if this.filled}}filled{{/if}}" data-path="wounds.minor" data-index="{{this.index}}">{{this.penaltyDisplay}}</a>{{/each}}</div></div>
+                         <div class="injury-row"><label>MAJOR</label><div class="injury-dots">{{#each pips.major}}<a class="wound-pip injury-val {{#if this.filled}}filled{{/if}}" data-path="wounds.major" data-index="{{this.index}}">{{this.penaltyDisplay}}</a>{{/each}}</div></div>
+                         <div class="injury-row"><label>MORTAL</label><div class="injury-dots">{{#each pips.mortal}}<a class="wound-pip injury-val {{#if this.filled}}filled{{/if}}" data-path="wounds.mortal" data-index="{{this.index}}">{{this.penaltyDisplay}}</a>{{/each}}</div></div>
+                    </div>
+
+                    <div class="injury-actions" style="display:flex;gap:6px;margin-top:10px;">
+                        <a class="stun-roll-btn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:5px 8px;background:#1b3f75;color:#e8f0fb;border:1px solid #0d2a52;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;">
+                            <i class="fas fa-bolt" style="font-size:0.85rem;"></i> STUN TEST
+                        </a>
+                        <a class="trauma-roll-btn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:5px 8px;background:#8b1a1a;color:#fce8e8;border:1px solid #5c0f0f;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;">
+                            <i class="fas fa-heart-pulse" style="font-size:0.85rem;"></i> TRAUMA ROLL
+                        </a>
+                    </div>
+
+                </div>
+
+                {{!-- RIGHT COLUMN: TAGS, TRACKS, TIES, BIO --}}
+                <div class="profile-main">
+                    
+                    {{!-- 1. TAGS SECTION --}}
+                    <div class="section-header" style="display:flex; justify-content:space-between; align-items:center;">
+                        <h2>TAGS</h2>
+                        {{#if isEditing}}
+                            {{#if (lt tags.length 5)}}
+                                <a class="item-create control-btn" data-type="tag" style="font-size:0.8rem; padding: 2px 8px;"><i class="fas fa-plus"></i></a>
+                            {{/if}}
+                        {{/if}}
+                    </div>
+
+                    {{#if tags.length}}
+                    <div class="tags-table">
+                        <div class="tag-row header">
+                            <span class="tag-col-name">NAME</span>
+                            <span class="tag-col-mod">MOD</span>
+                            <span class="tag-col-feat">FEATURES</span>
+                            <span class="tag-col-ctrl"></span>
+                        </div>
+                        {{#each tags as |tag|}}
+                        <div class="tag-row">
+                            <div class="tag-col-name">
+                                {{#if ../isEditing}}
+                                    <input class="tag-input item-edit-inline" data-field="name" data-item-id="{{tag._id}}" type="text" value="{{tag.name}}" placeholder="Tag name..."/>
+                                {{else}}
+                                    <span class="tag-display-name">{{tag.name}}</span>
+                                {{/if}}
+                            </div>
+                            <div class="tag-col-mod">
+                                {{#if ../isEditing}}
+                                    <input class="tag-input-mod item-edit-inline" data-field="system.modifier" data-item-id="{{tag._id}}" type="number" value="{{tag.system.modifier}}" placeholder="0"/>
+                                {{else}}
+                                    {{#if tag.system.modifier}}<span class="tag-mod-badge">{{numberFormat tag.system.modifier sign=true}}</span>{{/if}}
+                                {{/if}}
+                            </div>
+                            <div class="tag-col-feat">
+                                {{#if ../isEditing}}
+                                    <input class="tag-input item-edit-inline" data-field="system.description" data-item-id="{{tag._id}}" type="text" value="{{tag.system.description}}" placeholder="Features..."/>
+                                {{else}}
+                                    <span class="tag-desc">{{tag.system.description}}</span>
+                                {{/if}}
+                            </div>
+                            <div class="tag-col-ctrl">
+                                <a class="tag-post-btn" data-item-id="{{tag._id}}" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                                {{#if ../isEditing}}<a class="item-delete" data-item-id="{{tag._id}}" title="Delete"><i class="fas fa-trash"></i></a>{{/if}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{else}}
+                        {{#if isEditing}}<p class="empty-section-hint">No tags yet. Click + to add one.</p>{{/if}}
+                    {{/if}}
+
+                    {{!-- 2. TRACKS SECTION --}}
+                    <div class="section-header" style="margin-top:20px;"><h2>TRACKS</h2></div>
+                    <div class="tracks-container">
+                        {{#each trackList as |track|}}
+                        <div class="track-column">
+                            {{#if ../isEditing}}
+                                <input class="track-header-input" name="system.tracks.{{track.id}}.label" type="text" value="{{track.label}}" placeholder="TRACK NAME"/>
+                            {{else}}
+                                <div class="track-header">{{track.label}}</div>
+                            {{/if}}
+
+                            <div class="track-line">
+                                <a class="track-shape tri-up {{#if (eq track.value 5)}}filled{{/if}}" data-track="{{track.id}}" data-value="5"></a>
+                                <input class="track-line-input" name="system.tracks.{{track.id}}.line5" type="text" value="{{track.line5}}" {{#unless ../isEditing}}readonly{{/unless}}/>
+                                <span class="track-mod-label">+4/-4</span>
+                            </div>
+                            <div class="track-line">
+                                <a class="track-shape tri-up {{#if (eq track.value 4)}}filled{{/if}}" data-track="{{track.id}}" data-value="4"></a>
+                                <input class="track-line-input" name="system.tracks.{{track.id}}.line4" type="text" value="{{track.line4}}" {{#unless ../isEditing}}readonly{{/unless}}/>
+                                <span class="track-mod-label">+2/-2</span>
+                            </div>
+                            <div class="track-line">
+                                <a class="track-shape circle {{#if (eq track.value 3)}}filled{{/if}}" data-track="{{track.id}}" data-value="3"></a>
+                                <input class="track-line-input" name="system.tracks.{{track.id}}.line3" type="text" value="{{track.line3}}" {{#unless ../isEditing}}readonly{{/unless}}/>
+                                <span class="track-mod-label">0</span>
+                            </div>
+                            <div class="track-line">
+                                <a class="track-shape tri-down {{#if (eq track.value 2)}}filled{{/if}}" data-track="{{track.id}}" data-value="2"></a>
+                                <input class="track-line-input" name="system.tracks.{{track.id}}.line2" type="text" value="{{track.line2}}" {{#unless ../isEditing}}readonly{{/unless}}/>
+                                <span class="track-mod-label">-2/+2</span>
+                            </div>
+                            <div class="track-line">
+                                <a class="track-shape tri-down {{#if (eq track.value 1)}}filled{{/if}}" data-track="{{track.id}}" data-value="1"></a>
+                                <input class="track-line-input" name="system.tracks.{{track.id}}.line1" type="text" value="{{track.line1}}" {{#unless ../isEditing}}readonly{{/unless}}/>
+                                <span class="track-mod-label">-4/+4</span>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+
+                    {{!-- 3. TIES SECTION --}}
+                    <div class="section-header" style="margin-top:20px; display:flex; justify-content:space-between; align-items:center;">
+                        <h2>TIES</h2>
+                        {{#if isEditing}}
+                            <a class="item-create control-btn" data-type="tie" style="font-size:0.8rem; padding: 2px 8px;"><i class="fas fa-plus"></i></a>
+                        {{/if}}
+                    </div>
+
+                    <div class="ties-table">
+                        <div class="tie-row header">
+                            <span class="tie-col name">NAME</span>
+                            <span class="tie-col data">CONNECTION</span>
+                            <span class="tie-col data">OBLIGATION</span>
+                            <span class="tie-col end"></span>
+                        </div>
+                        {{#each ties as |tie|}}
+                        <div class="tie-row">
+                            <div class="tie-col name">
+                                {{#if ../isEditing}}
+                                    <input class="tie-input item-edit-inline" data-field="name" data-item-id="{{tie._id}}" type="text" value="{{tie.name}}" placeholder="Name"/>
+                                {{else}}
+                                    <div class="tie-text bold">{{tie.name}}</div>
+                                {{/if}}
+                            </div>
+                            <div class="tie-col data">
+                                {{#if ../isEditing}}
+                                    <input class="tie-input item-edit-inline" data-field="system.connection" data-item-id="{{tie._id}}" type="text" value="{{tie.system.connection}}" placeholder="Connection..."/>
+                                {{else}}
+                                    <div class="tie-text" title="{{tie.system.connection}}">{{tie.system.connection}}</div>
+                                {{/if}}
+                            </div>
+                            <div class="tie-col data">
+                                {{#if ../isEditing}}
+                                    <input class="tie-input item-edit-inline" data-field="system.obligation" data-item-id="{{tie._id}}" type="text" value="{{tie.system.obligation}}" placeholder="Obligation..."/>
+                                {{else}}
+                                    <div class="tie-text" title="{{tie.system.obligation}}">{{tie.system.obligation}}</div>
+                                {{/if}}
+                            </div>
+                            <div class="tie-col end">
+                                <a class="tie-bubble {{#if (gt tie.system.rank 0)}}filled{{/if}}" data-item-id="{{tie._id}}" data-val="{{tie.system.rank}}"></a>
+                                <a class="tie-control item-post" data-item-id="{{tie._id}}" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                                {{#if ../isEditing}}<a class="tie-control item-delete" data-item-id="{{tie._id}}" title="Delete"><i class="fas fa-trash"></i></a>{{/if}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+
+                    {{!-- 4. FEATURES --}}
+                    <div class="section-header" style="margin-top:20px;"><h2>FEATURES</h2></div>
+                    <div class="features-grid">
+                        <div class="features-col">
+                            <div class="feature-row">
+                                <div class="feature-field wide">
+                                    <label class="feature-label">GENERAL STYLE</label>
+                                    <input class="feature-input" name="system.details.generalStyle" type="text" value="{{system.details.generalStyle}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-field">
+                                    <label class="feature-label">SPECIES</label>
+                                    <input class="feature-input" name="system.details.species" type="text" value="{{system.details.species}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                                <div class="feature-field">
+                                    <label class="feature-label">PRONOUNS</label>
+                                    <input class="feature-input" name="system.details.pronouns" type="text" value="{{system.details.pronouns}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-field">
+                                    <label class="feature-label">APPARENT AGE</label>
+                                    <input class="feature-input" name="system.details.apparentAge" type="text" value="{{system.details.apparentAge}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                                <div class="feature-field">
+                                    <label class="feature-label">ACTUAL AGE</label>
+                                    <input class="feature-input" name="system.details.actualAge" type="text" value="{{system.details.actualAge}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-field">
+                                    <label class="feature-label">HEIGHT</label>
+                                    <input class="feature-input" name="system.details.height" type="text" value="{{system.details.height}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                                <div class="feature-field">
+                                    <label class="feature-label">STATURE</label>
+                                    <input class="feature-input" name="system.details.stature" type="text" value="{{system.details.stature}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-field">
+                                    <label class="feature-label">EYE COLOR</label>
+                                    <input class="feature-input" name="system.details.eyeColor" type="text" value="{{system.details.eyeColor}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                                <div class="feature-field">
+                                    <label class="feature-label">HAIR COLOR</label>
+                                    <input class="feature-input" name="system.details.hairColor" type="text" value="{{system.details.hairColor}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-field wide">
+                                    <label class="feature-label">COMPLEXION</label>
+                                    <input class="feature-input" name="system.details.complexion" type="text" value="{{system.details.complexion}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features-col">
+                            <div class="feature-row">
+                                <div class="feature-field wide">
+                                    <label class="feature-label">CLOTHING</label>
+                                    <input class="feature-input" name="system.details.clothing" type="text" value="{{system.details.clothing}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                            <div class="feature-row">
+                                <div class="feature-field wide">
+                                    <label class="feature-label">APPARENT BIOMODS</label>
+                                    <input class="feature-input" name="system.details.apparentBiomods" type="text" value="{{system.details.apparentBiomods}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> {{!-- Close profile-main --}}
+            </div> {{!-- Close profile-layout --}}
+        </div> {{!-- Close tab profile-tab --}}
+
+      {{!-- TAB 2: SKILLS MATRIX --}}
+        <div class="tab skills-tab" data-group="primary" data-tab="skills">
+
+            {{!-- HEADERS --}}
+            <div class="skills-header-row">
+                <span class="col-head rank-col"></span>
+                <span class="col-head label-col"></span>
+                <span class="col-head data-col">GENERAL (1d10)</span>
+                <span class="col-head data-col">CORE (2d10)</span>
+                <span class="col-head data-col">SPECIALTY (3d10)</span>
+            </div>
+
+            <div class="skills-body">
+
+                {{#each skillSetRows as |row|}}
+                <div class="skill-matrix-row">
+
+                    {{!-- RANK BUBBLE --}}
+                    <div class="skill-rank-container">
+                        {{#if ../isEditing}}
+                            <input class="rank-input"
+                                   name="system.skillSets.{{row.key}}.rank"
+                                   type="text"
+                                   value="{{row.rank}}"
+                                   data-dtype="Number"
+                                   placeholder="0"/>
+                        {{else}}
+                            <div class="rank-display-bubble">{{row.rank}}</div>
+                        {{/if}}
+                    </div>
+
+                    {{!-- ROW LABEL --}}
+<div class="skill-category-label">{{row.label}}</div>
+                    {{!-- GENERAL SLOT --}}
+                    <div class="skill-slot">
+                        {{#if ../isEditing}}
+                            <input class="skill-input"
+                                   name="system.skillSets.{{row.key}}.general"
+                                   type="text"
+                                   value="{{row.general}}"
+                                   placeholder="General skill..."/>
+                        {{else}}
+                            {{#if row.general}}
+                                <a class="skill-name rollable-skill"
+                                   data-skillkey="{{row.key}}"
+                                   data-tier="1"
+                                   data-skillname="{{row.general}}">{{row.general}}</a>
+                            {{else}}
+                                <span class="skill-empty">—</span>
+                            {{/if}}
+                        {{/if}}
+                    </div>
+
+                    {{!-- CORE SLOT --}}
+                    <div class="skill-slot">
+                        {{#if ../isEditing}}
+                            <input class="skill-input"
+                                   name="system.skillSets.{{row.key}}.core"
+                                   type="text"
+                                   value="{{row.core}}"
+                                   placeholder="Core skill..."/>
+                        {{else}}
+                            {{#if row.core}}
+                                <a class="skill-name rollable-skill"
+                                   data-skillkey="{{row.key}}"
+                                   data-tier="2"
+                                   data-skillname="{{row.core}}">{{row.core}}</a>
+                            {{else}}
+                                <span class="skill-empty">—</span>
+                            {{/if}}
+                        {{/if}}
+                    </div>
+
+                    {{!-- SPECIALTY SLOT --}}
+                    <div class="skill-slot">
+                        {{#if ../isEditing}}
+                            <input class="skill-input"
+                                   name="system.skillSets.{{row.key}}.specialty"
+                                   type="text"
+                                   value="{{row.specialty}}"
+                                   placeholder="Specialty skill..."/>
+                        {{else}}
+                            {{#if row.specialty}}
+                                <a class="skill-name rollable-skill"
+                                   data-skillkey="{{row.key}}"
+                                   data-tier="3"
+                                   data-skillname="{{row.specialty}}">{{row.specialty}}</a>
+                            {{else}}
+                                <span class="skill-empty">—</span>
+                            {{/if}}
+                        {{/if}}
+                    </div>
+
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+
+        {{!-- TAB 3: GEAR & BIOMODS --}}
+        <div class="tab gear-tab" data-group="primary" data-tab="gear">
+            
+            {{!-- WEAPONS --}}
+            <div class="inventory-section">
+                <div class="section-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2>WEAPONS</h2>
+                    {{#if isEditing}}<a class="item-create control-btn" data-type="weapon"><i class="fas fa-plus"></i></a>{{/if}}
+                </div>
+                <div class="inventory-list">
+                    <div class="inv-row header">
+                        <span class="inv-col name">NAME</span>
+                        <span class="inv-col small">AVAIL</span>
+                        <span class="inv-col med">DAMAGE</span>
+                        <span class="inv-col med">RANGE</span>
+                        <span class="inv-col med">COST</span>
+                        <span class="inv-col ctrl"></span>
+                    </div>
+                    
+                    {{#each weapons as |item|}}
+                    <div class="inv-row">
+                        <div class="inv-col name">
+                             {{#if ../isEditing}}
+                                <a class="item-open" data-item-id="{{item._id}}">
+                                    <img src="{{item.img}}" width="24" height="24"/> {{item.name}}
+                                </a>
+                            {{else}}
+                                <a class="rollable-weapon" data-item-id="{{item._id}}">
+                                    <img src="{{item.img}}" width="24" height="24"/> {{item.name}}
+                                </a>
+                            {{/if}}
+                        </div>
+                        
+                        <div class="inv-col small">{{item.system.availability}}</div>
+                        
+                        {{!-- DAMAGE / PAYLOAD SELECTOR --}}
+                        <div class="inv-col med">
+                            {{#if (gt item.payloadOptions.length 1)}}
+                                <select class="weapon-payload-select" data-item-id="{{item._id}}" style="font-size: 0.8rem; width: 100%;">
+                                    {{#each item.payloadOptions}}
+                                        <option value="{{this.index}}" {{#if (eq ../system.selectedPayloadIndex this.index)}}selected{{/if}}>
+                                            {{this.label}} ({{this.damage}})
+                                        </option>
+                                    {{/each}}
+                                </select>
+                            {{else}}
+                                {{#unless ../isEditing}}
+                                    <a class="rollable-damage" data-item-id="{{item._id}}" data-damage="{{item.system.damage}}" data-name="{{item.name}}" style="cursor:pointer; color:#1b3f75; font-weight:700;">{{item.system.damage}}</a>
+                                {{else}}
+                                    {{item.system.damage}}
+                                {{/unless}}
+                            {{/if}}
+                        </div>
+
+                        <div class="inv-col med">{{item.system.range}}</div>
+                        <div class="inv-col med">
+                            {{#if ../ammo.length}}
+                            <select class="weapon-ammo-select" data-item-id="{{item._id}}" data-loaded="{{item.system.loadedAmmo}}" style="font-size:0.75rem;width:100%;color:#1b3f75;">
+                                <option value="">— Ammo —</option>
+                                {{#each ../ammo as |a|}}
+                                <option value="{{a._id}}">{{a.name}}</option>
+                                {{/each}}
+                            </select>
+                            {{else}}
+                            {{item.system.cost}}
+                            {{/if}}
+                        </div>
+                        
+                        <div class="inv-col ctrl">
+                            <a class="equipped-toggle {{#if item.system.equipped}}filled{{/if}}" data-item-id="{{item._id}}" title="Equipped"></a>
+                            <a class="item-post-btn" data-item-id="{{item._id}}" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                            {{#if ../isEditing}}<a class="item-delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>{{/if}}
+                        </div>
+                    </div>
+                    {{/each}} 
+                </div>
+            </div>
+
+            {{!-- AMMO --}}
+            <div class="inventory-section">
+                <div class="section-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2>AMMUNITION</h2>
+                    {{#if isEditing}}<a class="item-create control-btn" data-type="ammo"><i class="fas fa-plus"></i></a>{{/if}}
+                </div>
+                <div class="inventory-list">
+                    <div class="inv-row header">
+                        <span class="inv-col name">NAME</span>
+                        <span class="inv-col med">TYPE</span>
+                        <span class="inv-col small">AVAIL</span>
+                        <span class="inv-col small">COST</span>
+                        <span class="inv-col ctrl"></span>
+                    </div>
+                    {{#each ammo as |item|}}
+                    <div class="inv-row">
+                        <div class="inv-col name">
+                            {{#if ../isEditing}}
+                                <a class="item-open" data-item-id="{{item._id}}">
+                                    <img src="{{item.img}}" width="24" height="24"/> {{item.name}}
+                                </a>
+                            {{else}}
+                                <a class="ammo-info" data-item-id="{{item._id}}" style="cursor:pointer;">
+                                    <img src="{{item.img}}" width="24" height="24"/> {{item.name}}
+                                </a>
+                            {{/if}}
+                        </div>
+                        <div class="inv-col med">{{item.system.weaponClass}}</div>
+                        <div class="inv-col small">{{item.system.availability}}</div>
+                        <div class="inv-col small">{{item.system.cost}}</div>
+                        <div class="inv-col ctrl">
+                            <a class="item-post-btn" data-item-id="{{item._id}}" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                            {{#if ../isEditing}}<a class="item-delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>{{/if}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            {{!-- ARMOR --}}
+            <div class="inventory-section">
+                <div class="section-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2>ARMOR</h2>
+                    {{#if isEditing}}<a class="item-create control-btn" data-type="armor"><i class="fas fa-plus"></i></a>{{/if}}
+                </div>
+                <div class="inventory-list">
+                    <div class="inv-row header">
+                        <span class="inv-col name">NAME</span>
+                        <span class="inv-col small">TL</span>
+                        <span class="inv-col med">RATING</span>
+                        <span class="inv-col wide">COVERAGE</span>
+                        <span class="inv-col ctrl"></span>
+                    </div>
+                    {{#each armor as |item|}}
+                    <div class="inv-row">
+                        <div class="inv-col name item-open" data-item-id="{{item._id}}">
+                            <img src="{{item.img}}" width="24" height="24"/> {{item.name}}
+                        </div>
+                        <div class="inv-col small">{{item.system.techLevel}}</div>
+                        <div class="inv-col med">{{item.system.rating}}</div>
+                        <div class="inv-col wide">{{item.system.coverage}}</div>
+                        <div class="inv-col ctrl">
+                            <a class="equipped-toggle {{#if item.system.equipped}}filled{{/if}}" data-item-id="{{item._id}}" title="Equipped"></a>
+                            <a class="item-post-btn" data-item-id="{{item._id}}" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                            {{#if ../isEditing}}<a class="item-delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>{{/if}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            {{!-- BIOMODS --}}
+            <div class="inventory-section">
+                <div class="section-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2>BIOMODS</h2>
+                    {{#if isEditing}}<a class="item-create control-btn" data-type="biomod"><i class="fas fa-plus"></i></a>{{/if}}
+                </div>
+                <div class="inventory-list">
+                    <div class="inv-row header">
+                        <span class="inv-col name">NAME</span>
+                        <span class="inv-col small">TL</span>
+                        <span class="inv-col small">COST</span>
+                        <span class="inv-col wide">FUNCTION</span>
+                        <span class="inv-col ctrl"></span>
+                    </div>
+                    {{#each biomods as |item|}}
+                    <div class="inv-row">
+                        <div class="inv-col name item-open" data-item-id="{{item._id}}">
+                            <img src="{{item.img}}" width="24" height="24"/> {{item.name}}
+                        </div>
+                        <div class="inv-col small">{{item.system.techLevel}}</div>
+                        <div class="inv-col small">{{item.system.installCost}}</div>
+                        <div class="inv-col wide">{{item.system.function}}</div>
+                        <div class="inv-col ctrl">
+                            <a class="equipped-toggle {{#if item.system.equipped}}filled{{/if}}" data-item-id="{{item._id}}" title="Equipped"></a>
+                            <a class="item-post-btn" data-item-id="{{item._id}}" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                            {{#if ../isEditing}}<a class="item-delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>{{/if}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            {{!-- GENERAL GEAR --}}
+            <div class="inventory-section">
+                <div class="section-header" style="display:flex; justify-content:space-between; align-items:center;">
+                    <h2>GEAR & EQUIPMENT</h2>
+                    {{#if isEditing}}<a class="item-create control-btn" data-type="gear"><i class="fas fa-plus"></i></a>{{/if}}
+                </div>
+                <div class="inventory-list">
+                    <div class="inv-row header">
+                        <span class="inv-col name">NAME</span>
+                        <span class="inv-col small">QTY</span>
+                        <span class="inv-col small">WT</span>
+                        <span class="inv-col wide">DESCRIPTION</span>
+                        <span class="inv-col ctrl"></span>
+                    </div>
+                    {{#each gear as |item|}}
+                    <div class="inv-row">
+                        <div class="inv-col name item-open" data-item-id="{{item._id}}">
+                            <img src="{{item.img}}" width="24" height="24"/> {{item.name}}
+                        </div>
+                        <div class="inv-col small">{{item.system.quantity}}</div>
+                        <div class="inv-col small">{{item.system.weight}}</div>
+                        <div class="inv-col wide" style="font-style:italic; font-size:0.8rem;">{{item.system.description}}</div>
+                        <div class="inv-col ctrl">
+                            <a class="equipped-toggle {{#if item.system.equipped}}filled{{/if}}" data-item-id="{{item._id}}" title="Equipped"></a>
+                            <a class="item-post-btn" data-item-id="{{item._id}}" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                            {{#if ../isEditing}}<a class="item-delete" data-item-id="{{item._id}}"><i class="fas fa-trash"></i></a>{{/if}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</form>

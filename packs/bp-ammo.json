@@ -1,0 +1,1082 @@
+[
+  {
+    "_id": "bpam001",
+    "name": "Standard Ammo (Handgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Standard binary propellant ammo for handguns.",
+      "weaponClass": "handgun",
+      "ammoType": "standard",
+      "cost": 25,
+      "availability": "Common",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam002",
+    "name": "Standard Ammo (Shotgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Standard binary propellant ammo for shotguns.",
+      "weaponClass": "shotgun",
+      "ammoType": "standard",
+      "cost": 30,
+      "availability": "Common",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam003",
+    "name": "Standard Ammo (Rifle)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Standard binary propellant ammo for rifles and long arms.",
+      "weaponClass": "rifle",
+      "ammoType": "standard",
+      "cost": 40,
+      "availability": "Common",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam004",
+    "name": "Standard Ammo (Heavy Weapon)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Standard binary propellant ammo for heavy weapons.",
+      "weaponClass": "heavy",
+      "ammoType": "standard",
+      "cost": 130,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam005",
+    "name": "Antipersonnel Ammo (Handgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Shot or fl\u00e9chette ammo. +2 DR vs unarmored, -2 DR vs armored.",
+      "weaponClass": "handgun",
+      "ammoType": "antipersonnel",
+      "cost": 50,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 2,
+      "armorMod": 0,
+      "special": "+2 DR vs unarmored. Against armored targets: -2 DR instead.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam006",
+    "name": "Antipersonnel Ammo (Shotgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Shot or fl\u00e9chette ammo. +2 DR vs unarmored, -2 DR vs armored.",
+      "weaponClass": "shotgun",
+      "ammoType": "antipersonnel",
+      "cost": 60,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 2,
+      "armorMod": 0,
+      "special": "+2 DR vs unarmored. Against armored targets: -2 DR instead.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam007",
+    "name": "Antipersonnel Ammo (Rifle)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Shot or fl\u00e9chette ammo. +2 DR vs unarmored, -2 DR vs armored.",
+      "weaponClass": "rifle",
+      "ammoType": "antipersonnel",
+      "cost": 80,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 2,
+      "armorMod": 0,
+      "special": "+2 DR vs unarmored. Against armored targets: -2 DR instead.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam008",
+    "name": "Antipersonnel Ammo (Heavy Weapon)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Shot or fl\u00e9chette ammo. +2 DR vs unarmored, -2 DR vs armored.",
+      "weaponClass": "heavy",
+      "ammoType": "antipersonnel",
+      "cost": 260,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 2,
+      "armorMod": 0,
+      "special": "+2 DR vs unarmored. Against armored targets: -2 DR instead.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam009",
+    "name": "Armor-Piercing Ammo (Handgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Reduces target armor by 4 points (min 0).",
+      "weaponClass": "handgun",
+      "ammoType": "armor-piercing",
+      "cost": 50,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": -4,
+      "special": "Reduces target armor by 4 (min 0).",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam010",
+    "name": "Armor-Piercing Ammo (Shotgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Reduces target armor by 4 points (min 0).",
+      "weaponClass": "shotgun",
+      "ammoType": "armor-piercing",
+      "cost": 60,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": -4,
+      "special": "Reduces target armor by 4 (min 0).",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam011",
+    "name": "Armor-Piercing Ammo (Rifle)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Reduces target armor by 4 points (min 0).",
+      "weaponClass": "rifle",
+      "ammoType": "armor-piercing",
+      "cost": 80,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": -4,
+      "special": "Reduces target armor by 4 (min 0).",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam012",
+    "name": "Armor-Piercing Ammo (Heavy Weapon)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Reduces target armor by 4 points (min 0).",
+      "weaponClass": "heavy",
+      "ammoType": "armor-piercing",
+      "cost": 260,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": -4,
+      "special": "Reduces target armor by 4 (min 0).",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam013",
+    "name": "HE Ammo (Handgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive. Doubles base damage rating.",
+      "weaponClass": "handgun",
+      "ammoType": "he",
+      "cost": 50,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 2,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Doubles base damage rating.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam014",
+    "name": "HE Ammo (Shotgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive. Doubles base damage rating.",
+      "weaponClass": "shotgun",
+      "ammoType": "he",
+      "cost": 60,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 2,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Doubles base damage rating.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam015",
+    "name": "HE Ammo (Rifle)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive. Doubles base damage rating.",
+      "weaponClass": "rifle",
+      "ammoType": "he",
+      "cost": 80,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 2,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Doubles base damage rating.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam016",
+    "name": "HE Ammo (Heavy Weapon)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive. Doubles base damage rating.",
+      "weaponClass": "heavy",
+      "ammoType": "he",
+      "cost": 260,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 2,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Doubles base damage rating.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam017",
+    "name": "HEAP Ammo (Handgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive armor-piercing. DR x1.5 (round down), reduces target armor by 2.",
+      "weaponClass": "handgun",
+      "ammoType": "heap",
+      "cost": 100,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1.5,
+      "dmgAdd": 0,
+      "armorMod": -2,
+      "special": "Damage rating x1.5 (round down). Reduces target armor by 2.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam018",
+    "name": "HEAP Ammo (Shotgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive armor-piercing. DR x1.5 (round down), reduces target armor by 2.",
+      "weaponClass": "shotgun",
+      "ammoType": "heap",
+      "cost": 120,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1.5,
+      "dmgAdd": 0,
+      "armorMod": -2,
+      "special": "Damage rating x1.5 (round down). Reduces target armor by 2.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam019",
+    "name": "HEAP Ammo (Rifle)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive armor-piercing. DR x1.5 (round down), reduces target armor by 2.",
+      "weaponClass": "rifle",
+      "ammoType": "heap",
+      "cost": 160,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1.5,
+      "dmgAdd": 0,
+      "armorMod": -2,
+      "special": "Damage rating x1.5 (round down). Reduces target armor by 2.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam020",
+    "name": "HEAP Ammo (Heavy Weapon)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive armor-piercing. DR x1.5 (round down), reduces target armor by 2.",
+      "weaponClass": "heavy",
+      "ammoType": "heap",
+      "cost": 520,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1.5,
+      "dmgAdd": 0,
+      "armorMod": -2,
+      "special": "Damage rating x1.5 (round down). Reduces target armor by 2.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam021",
+    "name": "Self-Guided Ammo (Handgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Smart ammo. +2 to hit, eliminates cover penalties.",
+      "weaponClass": "handgun",
+      "ammoType": "self-guided",
+      "cost": 150,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "+2 to hit, eliminates cover penalties.",
+      "attackMod": 2
+    }
+  },
+  {
+    "_id": "bpam022",
+    "name": "Self-Guided Ammo (Shotgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Smart ammo. +2 to hit, eliminates cover penalties.",
+      "weaponClass": "shotgun",
+      "ammoType": "self-guided",
+      "cost": 180,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "+2 to hit, eliminates cover penalties.",
+      "attackMod": 2
+    }
+  },
+  {
+    "_id": "bpam023",
+    "name": "Self-Guided Ammo (Rifle)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Smart ammo. +2 to hit, eliminates cover penalties.",
+      "weaponClass": "rifle",
+      "ammoType": "self-guided",
+      "cost": 240,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "+2 to hit, eliminates cover penalties.",
+      "attackMod": 2
+    }
+  },
+  {
+    "_id": "bpam024",
+    "name": "Self-Guided Ammo (Heavy Weapon)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Smart ammo. +2 to hit, eliminates cover penalties.",
+      "weaponClass": "heavy",
+      "ammoType": "self-guided",
+      "cost": 780,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "+2 to hit, eliminates cover penalties.",
+      "attackMod": 2
+    }
+  },
+  {
+    "_id": "bpam025",
+    "name": "Self-Propelled Ammo (Handgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Rocket-assisted. No range penalties on attack tests.",
+      "weaponClass": "handgun",
+      "ammoType": "self-propelled",
+      "cost": 100,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "No range penalties on attack tests.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam026",
+    "name": "Self-Propelled Ammo (Shotgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Rocket-assisted. No range penalties on attack tests.",
+      "weaponClass": "shotgun",
+      "ammoType": "self-propelled",
+      "cost": 120,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "No range penalties on attack tests.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam027",
+    "name": "Self-Propelled Ammo (Rifle)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Rocket-assisted. No range penalties on attack tests.",
+      "weaponClass": "rifle",
+      "ammoType": "self-propelled",
+      "cost": 160,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "No range penalties on attack tests.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam028",
+    "name": "Self-Propelled Ammo (Heavy Weapon)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Rocket-assisted. No range penalties on attack tests.",
+      "weaponClass": "heavy",
+      "ammoType": "self-propelled",
+      "cost": 520,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "No range penalties on attack tests.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam029",
+    "name": "Suppression-Gel Ammo (Handgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Non-lethal gel rounds. Max minor wound. Physique/Psyche test or -6 penalty. Half range. Ineffective vs armor.",
+      "weaponClass": "handgun",
+      "ammoType": "suppression-gel",
+      "cost": 150,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Max minor wound. Target makes Physique or Psyche test or suffers -6 penalty for (10-Physique) rounds. Half range. Ineffective vs armor.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam030",
+    "name": "Suppression-Gel Ammo (Shotgun)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Non-lethal gel rounds. Max minor wound. Physique/Psyche test or -6 penalty. Half range. Ineffective vs armor.",
+      "weaponClass": "shotgun",
+      "ammoType": "suppression-gel",
+      "cost": 150,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Max minor wound. Target makes Physique or Psyche test or suffers -6 penalty for (10-Physique) rounds. Half range. Ineffective vs armor.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam031",
+    "name": "Suppression-Gel Ammo (Rifle)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Non-lethal gel rounds. Max minor wound. Physique/Psyche test or -6 penalty. Half range. Ineffective vs armor.",
+      "weaponClass": "rifle",
+      "ammoType": "suppression-gel",
+      "cost": 150,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Max minor wound. Target makes Physique or Psyche test or suffers -6 penalty for (10-Physique) rounds. Half range. Ineffective vs armor.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam032",
+    "name": "Suppression-Gel Ammo (Heavy Weapon)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Non-lethal gel rounds. Max minor wound. Physique/Psyche test or -6 penalty. Half range. Ineffective vs armor.",
+      "weaponClass": "heavy",
+      "ammoType": "suppression-gel",
+      "cost": 150,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Max minor wound. Target makes Physique or Psyche test or suffers -6 penalty for (10-Physique) rounds. Half range. Ineffective vs armor.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam033",
+    "name": "Harpoon (Standard)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "system": {
+      "description": "Standard harpoon rounds. DR reduced to 50% of normal when fired underwater instead of standard 90%.",
+      "weaponClass": "speargun",
+      "ammoType": "harpoon-standard",
+      "cost": 340,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 0.5,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Underwater DR reduced to 50% of normal instead of standard 90%.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam034",
+    "name": "Harpoon (Antipersonnel)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "system": {
+      "description": "Antipersonnel harpoon. +2 DR vs unarmored, -2 vs armored. Underwater DR at 50% of normal.",
+      "weaponClass": "speargun",
+      "ammoType": "harpoon-antipersonnel",
+      "cost": 400,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 0.5,
+      "dmgAdd": 2,
+      "armorMod": 0,
+      "special": "+2 DR vs unarmored, -2 vs armored. Underwater DR 50% of normal.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam035",
+    "name": "Harpoon (Armor-Piercing)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "system": {
+      "description": "Armor-piercing harpoon. Reduces target armor by 4. Underwater DR at 50% of normal.",
+      "weaponClass": "speargun",
+      "ammoType": "harpoon-ap",
+      "cost": 400,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0.5,
+      "dmgAdd": 0,
+      "armorMod": -4,
+      "special": "Reduces target armor by 4 (min 0). Underwater DR 50% of normal.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam036",
+    "name": "Harpoon (HE)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "system": {
+      "description": "High-explosive harpoon. Doubles damage rating. Underwater DR at 50% of normal.",
+      "weaponClass": "speargun",
+      "ammoType": "harpoon-he",
+      "cost": 450,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "Doubles base damage rating. Underwater DR 50% of normal.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam037",
+    "name": "Harpoon (HEAP)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "system": {
+      "description": "HEAP harpoon. DR x1.5, reduces target armor by 2. Underwater DR at 50% of normal.",
+      "weaponClass": "speargun",
+      "ammoType": "harpoon-heap",
+      "cost": 500,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0.75,
+      "dmgAdd": 0,
+      "armorMod": -2,
+      "special": "DR x1.5 (round down), reduces target armor by 2. Underwater DR 50% of normal.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam038",
+    "name": "Harpoon (Self-Guided)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "system": {
+      "description": "Smart harpoon. +2 to hit, eliminates cover penalties. Underwater DR at 50% of normal.",
+      "weaponClass": "speargun",
+      "ammoType": "harpoon-self-guided",
+      "cost": 500,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 0.5,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "+2 to hit, eliminates cover penalties. Underwater DR 50% of normal.",
+      "attackMod": 2
+    }
+  },
+  {
+    "_id": "bpam039",
+    "name": "Harpoon (Self-Propelled)",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "system": {
+      "description": "Rocket-assisted harpoon. No range penalties. Underwater DR at 50% of normal.",
+      "weaponClass": "speargun",
+      "ammoType": "harpoon-self-propelled",
+      "cost": 480,
+      "availability": "Rare",
+      "quantity": 1,
+      "dmgMult": 0.5,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "special": "No range penalties on attack tests. Underwater DR 50% of normal.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam040",
+    "name": "Powerheads",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/spear-simple-green.webp",
+    "system": {
+      "description": "Explosive tips for spearguns. Fixed DR 12 regardless of base weapon damage. Effective bangsticks against hostile marine life.",
+      "weaponClass": "speargun",
+      "ammoType": "powerhead",
+      "cost": 340,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 12,
+      "armorMod": 0,
+      "special": "Fixed DR 12 regardless of base weapon damage.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam041",
+    "name": "Grenade \u2014 Armor-Piercing",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Launcher-only. Reduces target armor to half. DR 12.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-ap",
+      "cost": 90,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 12,
+      "special": "Reduces target armor to half (round down).",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam042",
+    "name": "Grenade \u2014 Concussion",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Potent underwater. Blasts open doors, damages structures, concusses opposition. DR 8.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-concussion",
+      "cost": 70,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 8,
+      "special": "",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam043",
+    "name": "Grenade \u2014 Fragmentation",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Blasts antipersonnel shrapnel in all directions. DR 10.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-fragmentation",
+      "cost": 80,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 10,
+      "special": "",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam044",
+    "name": "Grenade \u2014 Incendiary",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Burning compound over 2m radius. DR 8 first round, drops by 1 each round.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-incendiary",
+      "cost": 75,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 8,
+      "special": "Burning compound \u2014 DR drops by 1 each round until 0. See burning rules p.281.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam045",
+    "name": "Grenade \u2014 Breaching",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Shaped-charge. Directed DR 15 vs target, backblast DR 6.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-breaching",
+      "cost": 275,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 15,
+      "special": "Directed DR 15 vs target, explosive backblast DR 6.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam046",
+    "name": "Grenade \u2014 EMP",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "No physical damage. Unshielded electronics within 10m make Durability test at -4 or short out.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-emp",
+      "cost": 1275,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 0,
+      "special": "No physical damage. Unshielded electronics within 10m make Durability test at -4 or short out.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam047",
+    "name": "Grenade \u2014 Suppression",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Chemical cloud affects 20 cubic meter area.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-suppression",
+      "cost": 0,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 0,
+      "special": "Chemical cloud affects 20m\u00b3 area. See suppression rules.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam048",
+    "name": "Grenade \u2014 Adhesive",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Adhesive fluid over 4m radius. Bonds to anything. -6 penalty to all physical actions.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-adhesive",
+      "cost": 165,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 0,
+      "special": "Targets within 4m bonded to surroundings. -6 penalty to all physical actions.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam049",
+    "name": "Grenade \u2014 Flash-Bang",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Flash and sonic bang. 4m radius. Stun test or -6 penalty. Underwater radius doubles.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-flashbang",
+      "cost": 45,
+      "availability": "Uncommon",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 1,
+      "special": "Stun test required. Failure = -6 penalty for (10-Physique) rounds. Underwater radius doubles.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam050",
+    "name": "Grenade \u2014 Nausea",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Contact gas. All actions -6 penalty. Psyche test reduces to -3. Lasts 5+(10-Physique) min.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-nausea",
+      "cost": 75,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 0,
+      "special": "Contact gas. All actions -6 penalty (Psyche test reduces to -3). Effect lasts 5+(10-Physique) min.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam051",
+    "name": "Grenade \u2014 Sleep",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Colorless, odorless gas. Unconscious for 5+(10-Physique) min. Blocked by filters/gas masks.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-sleep",
+      "cost": 75,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 0,
+      "special": "Unconscious for 5+(10-Physique) min. Blocked by filters/gas masks.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam052",
+    "name": "Grenade \u2014 OBS",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/grenade-round.webp",
+    "system": {
+      "description": "Prismatic smoke cloud. Opaque to all sensors except high-powered sonar.",
+      "weaponClass": "grenade",
+      "ammoType": "grenade-obs",
+      "cost": 345,
+      "availability": "Uncommon",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 0,
+      "special": "Prismatic smoke cloud. Opaque to all sensors except high-powered sonar.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam053",
+    "name": "Torpedo \u2014 HE",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "High-explosive mini-torpedo. DR 22.",
+      "weaponClass": "torpedo",
+      "ammoType": "torpedo-he",
+      "cost": 950,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 22,
+      "special": "",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam054",
+    "name": "Torpedo \u2014 HEAP",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "HEAP mini-torpedo. DR 16, halves target armor (round down).",
+      "weaponClass": "torpedo",
+      "ammoType": "torpedo-heap",
+      "cost": 1750,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 16,
+      "special": "Halves target armor rating (round down).",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam055",
+    "name": "Torpedo \u2014 Incendiary",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Burns without oxygen. DR 12 first round, drops by 1 each round.",
+      "weaponClass": "torpedo",
+      "ammoType": "torpedo-incendiary",
+      "cost": 3200,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 1,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 12,
+      "special": "DR 12 first round, drops by 1 each round. Burns without oxygen. See burning rules p.281.",
+      "attackMod": 0
+    }
+  },
+  {
+    "_id": "bpam056",
+    "name": "Torpedo \u2014 EMP",
+    "type": "ammo",
+    "img": "icons/weapons/thrown/shell-bullet.webp",
+    "system": {
+      "description": "Massive EMP. Durability test at -8 or inoperative. Half radius: -4.",
+      "weaponClass": "torpedo",
+      "ammoType": "torpedo-emp",
+      "cost": 12500,
+      "availability": "Restricted",
+      "quantity": 1,
+      "dmgMult": 0,
+      "dmgAdd": 0,
+      "armorMod": 0,
+      "baseDamage": 0,
+      "special": "No physical damage. Unshielded electronics make Durability test at -8 or short out. Half radius: -4.",
+      "attackMod": 0
+    }
+  }
+]

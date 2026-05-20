@@ -1,0 +1,124 @@
+<form class="{{cssClass}} flexcol creature-sheet" autocomplete="off">
+
+    {{!-- HEADER --}}
+    <header class="sheet-header creature-header">
+        <div class="creature-header-top">
+            <div class="creature-name-block">
+                <input type="text" name="name" value="{{actor.name}}"
+                       class="creature-name-input" placeholder="Creature Name"/>
+                <div class="creature-meta-row">
+                    <input type="text" name="system.scientificName" value="{{system.scientificName}}"
+                           class="creature-meta-input" placeholder="Scientific name"/>
+                </div>
+            </div>
+            <img class="creature-portrait" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        </div>
+    </header>
+
+    {{!-- BODY --}}
+    <div class="creature-body">
+
+        {{!-- ATTRIBUTES --}}
+        <section class="creature-section">
+            <div class="creature-section-label">ATTRIBUTES</div>
+            <div class="creature-attrs-row">
+                <div class="creature-attr-block">
+                    <div class="creature-attr-label">Awareness</div>
+                    <input type="number" name="system.attributes.awareness.value"
+                           value="{{system.attributes.awareness.value}}" class="creature-attr-value"/>
+                    <a class="creature-attr-roll" data-attr="awareness" title="Roll Awareness"><i class="fas fa-dice-d10"></i></a>
+                </div>
+                <div class="creature-attr-block">
+                    <div class="creature-attr-label">Coordination</div>
+                    <input type="number" name="system.attributes.coordination.value"
+                           value="{{system.attributes.coordination.value}}" class="creature-attr-value"/>
+                    <a class="creature-attr-roll" data-attr="coordination" title="Roll Coordination"><i class="fas fa-dice-d10"></i></a>
+                </div>
+                <div class="creature-attr-block">
+                    <div class="creature-attr-label">Physique</div>
+                    <input type="number" name="system.attributes.physique.value"
+                           value="{{system.attributes.physique.value}}" class="creature-attr-value"/>
+                    <a class="creature-attr-roll" data-attr="physique" title="Roll Physique"><i class="fas fa-dice-d10"></i></a>
+                </div>
+            </div>
+            {{#if system.attributeRaw}}
+            <div class="creature-attr-raw">Raw: {{system.attributeRaw}}</div>
+            {{/if}}
+        </section>
+
+        {{!-- WOUNDS --}}
+        <section class="creature-section">
+            <div class="creature-section-label">WOUNDS</div>
+            <div class="injury-row">
+                <label>MINOR <span class="npc-wound-penalty">(−1)</span></label>
+                <div class="injury-dots" data-wound-type="minor">
+                    {{#times system.wounds.minor.max}}
+                    <div class="injury-val {{#if (lte (add index 1) ../system.wounds.minor.value)}}filled{{/if}}"
+                         data-index="{{add index 1}}"></div>
+                    {{/times}}
+                </div>
+            </div>
+            <div class="injury-row">
+                <label>MAJOR <span class="npc-wound-penalty">(−2)</span></label>
+                <div class="injury-dots" data-wound-type="major">
+                    {{#times system.wounds.major.max}}
+                    <div class="injury-val {{#if (lte (add index 1) ../system.wounds.major.value)}}filled{{/if}}"
+                         data-index="{{add index 1}}"></div>
+                    {{/times}}
+                </div>
+            </div>
+            <div class="injury-row">
+                <label>MORTAL <span class="npc-wound-penalty">(−3)</span></label>
+                <div class="injury-dots" data-wound-type="mortal">
+                    {{#times system.wounds.mortal.max}}
+                    <div class="injury-val {{#if (lte (add index 1) ../system.wounds.mortal.value)}}filled{{/if}}"
+                         data-index="{{add index 1}}"></div>
+                    {{/times}}
+                </div>
+            </div>
+        </section>
+
+        {{!-- ATTACK --}}
+        <section class="creature-section">
+            <div class="creature-section-label">ATTACK</div>
+            <input type="text" name="system.attack" value="{{system.attack}}"
+                   class="creature-field-input" placeholder="Attack description"/>
+        </section>
+
+        {{!-- FIELD DATA --}}
+        <section class="creature-section">
+            <div class="creature-section-label">FIELD DATA</div>
+            <div class="creature-fields-grid">
+                <div class="creature-field-row creature-field-row--tall">
+                    <span class="creature-field-label">Distribution</span>
+                    <textarea name="system.distribution" class="creature-field-textarea" placeholder="—">{{system.distribution}}</textarea>
+                </div>
+                <div class="creature-field-row">
+                    <span class="creature-field-label">Size</span>
+                    <input type="text" name="system.size" value="{{system.size}}" class="creature-field-input" placeholder="—"/>
+                </div>
+                <div class="creature-field-row">
+                    <span class="creature-field-label">Encounter Rate</span>
+                    <input type="text" name="system.encounterRate" value="{{system.encounterRate}}" class="creature-field-input" placeholder="—"/>
+                </div>
+                <div class="creature-field-row">
+                    <span class="creature-field-label">Threat Level</span>
+                    <input type="text" name="system.threatLevel" value="{{system.threatLevel}}" class="creature-field-input" placeholder="—"/>
+                </div>
+                <div class="creature-field-row creature-field-row--tall">
+                    <span class="creature-field-label">Resource Value</span>
+                    <textarea name="system.resourceValue" class="creature-field-textarea" placeholder="—">{{system.resourceValue}}</textarea>
+                </div>
+            </div>
+        </section>
+
+        {{!-- NOTES --}}
+        <section class="creature-section">
+            <div class="creature-section-label">NOTES</div>
+            <textarea name="system.description" class="creature-description-input"
+                      placeholder="GM notes, special abilities, behavior...">{{system.description}}</textarea>
+        </section>
+
+    </div>
+
+</form>

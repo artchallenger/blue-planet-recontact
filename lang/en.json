@@ -1,0 +1,15 @@
+{
+  "TYPES.Actor.character": "Character",
+  "TYPES.Actor.npc": "NPC",
+  "TYPES.Item.skill": "Skill",
+  "TYPES.Item.tag": "Tag",
+  "TYPES.Item.tie": "Tie",
+  "TYPES.Item.gear": "Gear",
+  "TYPES.Item.weapon": "Weapon",
+  "TYPES.Item.armor": "Armor",
+  "TYPES.Item.biomod": "Biomod",
+  "BluePlanet.Attributes.Cognition": "Cognition",
+  "BluePlanet.Attributes.Psyche": "Psyche",
+  "BluePlanet.Attributes.Physique": "Physique",
+  "BluePlanet.Attributes.Coordination": "Coordination"
+}

@@ -1,0 +1,444 @@
+[
+  {
+    "_id": "bpw001",
+    "name": "Diamond Knife",
+    "type": "weapon",
+    "img": "icons/weapons/daggers/dagger-curved-blue.webp",
+    "system": {
+      "description": "Knives are ubiquitous across the frontier, constructed from industrial diamond laminate layered over a metal or plastic blank. The diamond layering produces a durable, fine-edged blade that almost never needs sharpening. Most integrate a double-edge blade with a flat chisel tip and enlarged pommel.",
+      "availability": "Uncommon",
+      "cost": 650,
+      "weight": 0.28,
+      "damage": "4",
+      "range": "Close",
+      "durability": 8,
+      "availableFeatures": "close combat",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw002",
+    "name": "Machete",
+    "type": "weapon",
+    "img": "icons/weapons/swords/sword-broad-blue.webp",
+    "system": {
+      "description": "Large, general-purpose blades used for clearing vegetation and self-defense. Single edged, approximately 50cm long, with short serrated saw sections near the grip.",
+      "availability": "Common",
+      "cost": 175,
+      "weight": 0.4,
+      "damage": "5",
+      "range": "Close",
+      "durability": 4,
+      "availableFeatures": "close combat",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw003",
+    "name": "Stun Gloves",
+    "type": "weapon",
+    "img": "icons/equipment/hand/gauntlet-segmented-grey.webp",
+    "system": {
+      "description": "Contact weapons that deliver an incapacitating electrical shock. Targets must make a Physique test or be incapacitated.",
+      "availability": "Uncommon",
+      "cost": 450,
+      "weight": 0.3,
+      "damage": "Special",
+      "range": "Close",
+      "durability": 1,
+      "availableFeatures": "close combat, warm, rechargeable",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw004",
+    "name": "Light Handgun",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-pistol-blue.webp",
+    "system": {
+      "description": "Designed to evade detection \u2014 compact, light, and free of metallic parts. Limited ammo capacity and stopping power. Any attempt to hide or conceal gains +2 bonus.",
+      "availability": "Rare",
+      "cost": 750,
+      "weight": 0.85,
+      "damage": "5",
+      "range": "30m",
+      "durability": 3,
+      "availableFeatures": "flat, low capacity, single, armor-piercing",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw005",
+    "name": "Heavy Handgun",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-pistol-blue.webp",
+    "system": {
+      "description": "Favored by law enforcement and criminals alike. Large caliber with considerable stopping power. Common military sidearm. Many colonists carry them for defense against Poseidon wildlife.",
+      "availability": "Common",
+      "cost": 900,
+      "weight": 1.2,
+      "damage": "7",
+      "range": "30m",
+      "durability": 3,
+      "availableFeatures": "warm, smart, high capacity, antipersonnel, armor-piercing, single, burst",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw006",
+    "name": "Sonic Stunner",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-pistol-grey.webp",
+    "system": {
+      "description": "Fires a highly collimated burst of ultrasound. Non-lethal. Useless in low-pressure or vacuum environments. Weapon of choice for orbital security forces. Can shatter glass and crack fragile objects.",
+      "availability": "Uncommon",
+      "cost": 1200,
+      "weight": 0.8,
+      "damage": "Special",
+      "range": "6m (handheld) / 20m (portable)",
+      "durability": -2,
+      "availableFeatures": "warm, smart, rechargeable, low capacity, single",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw007",
+    "name": "Fazer",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-pistol-grey.webp",
+    "system": {
+      "description": "A painfully irritating chemical agent in a spray canister with pistol grip. Non-lethal self-defense weapon, widely distributed throughout Earth and the colonies.",
+      "availability": "Common",
+      "cost": 120,
+      "weight": 0.4,
+      "damage": "Special",
+      "range": "5m",
+      "durability": 0,
+      "availableFeatures": "flat, low capacity, single",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw008",
+    "name": "Combat Shotgun",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-blunderbuss-brown.webp",
+    "system": {
+      "description": "Preferred by law enforcement aboard orbital stations and pressurized habitats where damage to pressure-bearing bulkheads could be catastrophic. Military grade models are automatic and typically fire antipersonnel rounds.",
+      "availability": "Uncommon",
+      "cost": 600,
+      "weight": 2.7,
+      "damage": "7",
+      "range": "30m",
+      "durability": 3,
+      "availableFeatures": "warm, smart, low capacity, antipersonnel, he, optics, single, burst, full, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw009",
+    "name": "Assault Rifle",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-brown.webp",
+    "system": {
+      "description": "Intended for military and security forces. Reliable, lightweight, capable of fully automatic fire. Can be loaded with a range of ammunition types.",
+      "availability": "Restricted",
+      "cost": 2100,
+      "weight": 2.3,
+      "damage": "8",
+      "range": "150m",
+      "durability": 2,
+      "availableFeatures": "warm, smart, high capacity, armor-piercing, he, heap, self-guided, self-propelled, optics, single, full, sniper, suppressive, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw010",
+    "name": "Submachine Gun",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-grey.webp",
+    "system": {
+      "description": "Popular with Incorporate security, military special ops, criminals, and gangsters. Burst and full-auto capable with handgun-equivalent ammunition.",
+      "availability": "Restricted",
+      "cost": 3300,
+      "weight": 2.1,
+      "damage": "4",
+      "range": "100m",
+      "durability": 2,
+      "availableFeatures": "hot, smart, gi, high capacity, antipersonnel, armor-piercing, he, self-guided, optics, single, full, suppressive, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw011",
+    "name": "Sniper Rifle",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-green.webp",
+    "system": {
+      "description": "Military grade weapon designed to kill at distance from concealment. Used in GEO Armed Forces, Incorporate security, and law enforcement special ops.",
+      "availability": "Restricted",
+      "cost": 5700,
+      "weight": 3.2,
+      "damage": "10",
+      "range": "350m",
+      "durability": 2,
+      "availableFeatures": "hot, smart, sensors, low capacity, antipersonnel, armor-piercing, heap, self-guided, self-propelled, optics, single, burst, sniper, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw012",
+    "name": "White Rifle",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-green.webp",
+    "system": {
+      "description": "The modern equivalent of an elephant rifle, designed to be used against Poseidon's most dangerous predators such as the lesser white. Legal owners must have permits to purchase the armor-piercing explosive ammunition.",
+      "availability": "Restricted",
+      "cost": 8900,
+      "weight": 3.7,
+      "damage": "12",
+      "range": "300m",
+      "durability": 2,
+      "availableFeatures": "hot, smart, low capacity, heap, self-guided, self-propelled, indirect, optics, single, burst, sniper, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw013",
+    "name": "Black Powder Long Rifle",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-brown.webp",
+    "system": {
+      "description": "Handcrafted and used only in isolated native settlements. Constructed from indigenous woods or homebrew bioplastic. Uses black powder ignited by battery. Takes minutes to reload but requires no imported ammunition.",
+      "availability": "Rare",
+      "cost": 0,
+      "weight": 4,
+      "damage": "8",
+      "range": "275m",
+      "durability": 1,
+      "availableFeatures": "flat, low capacity, single, sniper, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw014",
+    "name": "Speargun",
+    "type": "weapon",
+    "img": "icons/weapons/polearms/spear-flared.webp",
+    "system": {
+      "description": "Very common on Poseidon, available in a variety of designs. Native spearguns use elastic slings; most manufactured weapons use compressed gas or magnetic induction. Primarily used for fishing.",
+      "availability": "Uncommon",
+      "cost": 740,
+      "weight": 0.84,
+      "damage": "5",
+      "range": "10m",
+      "durability": 2,
+      "availableFeatures": "flat, rechargeable, low capacity, armor-piercing, he, self-guided, self-propelled, single",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw015",
+    "name": "Light SASER",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-pistol-grey.webp",
+    "system": {
+      "description": "Sound Amplification through Stimulated Emission of Radiation. Fires a highly collimated burst of ultrasound. SASER pulses carry much better in water than in air. Listed range is for underwater use.",
+      "availability": "Restricted",
+      "cost": 3400,
+      "weight": 2.3,
+      "damage": "8",
+      "range": "75m",
+      "durability": 0,
+      "availableFeatures": "hot, smart, rechargeable, low capacity, optics, single, burst, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw016",
+    "name": "Heavy SASER",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-grey.webp",
+    "system": {
+      "description": "Usually vehicle mounted, requiring high output power sources. Greater range than light SASER. Uses a trio of SASER arrays linked to converge on a single target point.",
+      "availability": "Restricted",
+      "cost": 22000,
+      "weight": 25,
+      "damage": "11",
+      "range": "120m",
+      "durability": 1,
+      "availableFeatures": "hot, smart, external, sensors, high capacity, burst, full, suppressive",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw017",
+    "name": "Grenade Launcher",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-blunderbuss-grey.webp",
+    "system": {
+      "description": "Either self-contained or mounted piggyback on other guns. Fires a variety of ammunition and can quickly turn the tide in a firefight.",
+      "availability": "Restricted",
+      "cost": 2300,
+      "weight": 2.1,
+      "damage": "Variable",
+      "range": "100m",
+      "durability": 3,
+      "availableFeatures": "warm, smart, low capacity, antipersonnel, armor-piercing, he, heap, self-guided, self-propelled, indirect, single, burst, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw018",
+    "name": "Machine Gun",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-green.webp",
+    "system": {
+      "description": "Always mounted on a rugged tripod, harness, or vehicle. Slower rate of fire than lighter weapons but fires a more massive round, more effective at long ranges. Standard armament on military vehicles.",
+      "availability": "Restricted",
+      "cost": 16000,
+      "weight": 32,
+      "damage": "14",
+      "range": "250m",
+      "durability": 4,
+      "availableFeatures": "warm, smart, high capacity, armor-piercing, self-guided, burst, full, suppressive, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw019",
+    "name": "Assault Cannon",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-grey.webp",
+    "system": {
+      "description": "Intended only for military applications. Exceptionally destructive rotating multibarrel design. Must be mounted or used with an articulated harness or powered armor. Requires integrated cooling systems.",
+      "availability": "Restricted",
+      "cost": 12000,
+      "weight": 21,
+      "damage": "13",
+      "range": "150m",
+      "durability": 3,
+      "availableFeatures": "hot, smart, external, high capacity, armor-piercing, heap, burst, full, suppressive, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw020",
+    "name": "Autocannon",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-rifle-grey.webp",
+    "system": {
+      "description": "Provides close-range fire support for military emplacements and combat vehicles at significantly greater ranges than infantry weapons. Requires powered harness or vehicle mount.",
+      "availability": "Restricted",
+      "cost": 20000,
+      "weight": 37.5,
+      "damage": "18",
+      "range": "1200m",
+      "durability": 4,
+      "availableFeatures": "warm, smart, external, sensors, high capacity, armor-piercing, self-guided, self-propelled, burst, full, suppressive",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw021",
+    "name": "Torpedo Cannon",
+    "type": "weapon",
+    "img": "icons/weapons/guns/gun-blunderbuss-grey.webp",
+    "system": {
+      "description": "Analogous to grenade launchers but designed for underwater use, firing self-propelled miniature torpedoes. Can be handheld or mounted on hardsuits, sleds, or mini-subs. Particularly effective against submerged targets.",
+      "availability": "Restricted",
+      "cost": 3200,
+      "weight": 2.3,
+      "damage": "Variable",
+      "range": "75m",
+      "durability": 4,
+      "availableFeatures": "warm, smart, sensors, low capacity, antipersonnel, armor-piercing, heap, self-guided, self-propelled, indirect, single, two-handed",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw022",
+    "name": "Optical Scope",
+    "type": "gear",
+    "img": "icons/equipment/head/goggles-simple-leather.webp",
+    "system": {
+      "description": "Doubles the effective range of a firearm if the shooter spends at least one action aiming. Reduces penalty due to poor lighting by -1.",
+      "availability": "Common",
+      "cost": 450,
+      "weight": 0.475,
+      "quantity": 1,
+      "availableFeatures": "cold, optics",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw023",
+    "name": "Electronic Scope",
+    "type": "gear",
+    "img": "icons/equipment/head/goggles-simple-leather.webp",
+    "system": {
+      "description": "Supports light intensifiers, laser rangefinders, and motion calibrators. Provides +4 to-hit bonus. Must aim for at least one action.",
+      "availability": "Uncommon",
+      "cost": 5500,
+      "weight": 0.76,
+      "quantity": 1,
+      "availableFeatures": "hot, smart, sensors",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw024",
+    "name": "Laser Designator",
+    "type": "gear",
+    "img": "icons/equipment/head/goggles-simple-leather.webp",
+    "system": {
+      "description": "Reduces aiming time \u2014 shooter receives the aiming bonus and may fire in the same action. Can be mounted on most guns; some handgun designs have integral designators.",
+      "availability": "Uncommon",
+      "cost": 180,
+      "weight": 0.025,
+      "quantity": 1,
+      "availableFeatures": "flat",
+      "features": "",
+      "equipped": false
+    }
+  },
+  {
+    "_id": "bpw025",
+    "name": "Assault Harness",
+    "type": "gear",
+    "img": "icons/equipment/chest/breastplate-simple-leather.webp",
+    "system": {
+      "description": "Worn like web gear, consisting of articulated servo-assisted waldos and support arms. Lifts, carries, and stabilizes assault and heavy weapons. Distributes weight onto torso and hips. Allows use of otherwise crew-served weapons.",
+      "availability": "Rare",
+      "cost": 650,
+      "weight": 1.7,
+      "quantity": 1,
+      "availableFeatures": "flat",
+      "features": "",
+      "equipped": false
+    }
+  }
+]

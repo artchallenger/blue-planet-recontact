@@ -1,0 +1,5 @@
+2026/05/20-14:05:34.150183 16ffcf000 Recovering log #6
+2026/05/20-14:05:34.150906 16ffcf000 Level-0 table #8: started
+2026/05/20-14:05:34.151589 16ffcf000 Level-0 table #8: 63593 bytes OK
+2026/05/20-14:05:34.151996 16ffcf000 Delete type=0 #6
+2026/05/20-14:05:34.152406 16ffcf000 Delete type=3 #4

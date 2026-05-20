@@ -1,0 +1,119 @@
+<form class="{{cssClass}} flexcol simplenpc-sheet" autocomplete="off">
+
+    {{!-- HEADER --}}
+    <header class="simplenpc-header">
+        <input type="text" name="name" value="{{actor.name}}" class="simplenpc-name-input" placeholder="NPC Name"/>
+        <div class="simplenpc-header-meta">
+            <select name="system.tier" class="simplenpc-select simplenpc-tier-select">
+                <option value="everyday"    {{#if (eq system.tier "everyday")}}selected{{/if}}>Everyday</option>
+                <option value="exceptional" {{#if (eq system.tier "exceptional")}}selected{{/if}}>Exceptional</option>
+                <option value="elite"       {{#if (eq system.tier "elite")}}selected{{/if}}>Elite</option>
+            </select>
+            <select name="system.level" class="simplenpc-select">
+                <option value="below"   {{#if (eq system.level "below")}}selected{{/if}}>Below Avg. / Novice</option>
+                <option value="average" {{#if (eq system.level "average")}}selected{{/if}}>Average / Competent</option>
+                <option value="above"   {{#if (eq system.level "above")}}selected{{/if}}>Above Avg. / Expert</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="simplenpc-body">
+
+        {{!-- TN DISPLAY --}}
+        <section class="simplenpc-section">
+            <div class="simplenpc-tn-row">
+                <div class="simplenpc-tn-block">
+                    <div class="simplenpc-tn-label">ATTRIBUTE TN</div>
+                    <div class="simplenpc-tn-value" id="attr-tn-display">{{attrTN}}</div>
+                </div>
+                <div class="simplenpc-tn-divider"></div>
+                <div class="simplenpc-tn-block">
+                    <div class="simplenpc-tn-label">SKILL SET TN</div>
+                    <div class="simplenpc-tn-value" id="skill-tn-display">{{skillTN}}</div>
+                </div>
+            </div>
+            <div class="simplenpc-tn-note">Cumulative TN — do not add +5</div>
+        </section>
+
+        {{!-- ROLL BUTTONS --}}
+        <section class="simplenpc-section">
+            <div class="simplenpc-section-label">ROLL</div>
+            <div class="simplenpc-roll-row">
+                <a class="simplenpc-roll-btn snpc-attr-roll">ATTRIBUTE</a>
+                <a class="simplenpc-roll-btn snpc-skill-roll" data-dice="1">GENERAL (1d10)</a>
+                <a class="simplenpc-roll-btn snpc-skill-roll" data-dice="2">CORE (2d10)</a>
+                <a class="simplenpc-roll-btn snpc-skill-roll" data-dice="3">SPECIALTY (3d10)</a>
+            </div>
+        </section>
+
+        {{!-- WOUNDS --}}
+        <section class="simplenpc-section">
+            <div class="simplenpc-section-label">WOUNDS</div>
+            <div class="simplenpc-wounds-col">
+                <div class="simplenpc-wound-row">
+                    <div class="simplenpc-wound-pip {{#if system.wounds.minor}}filled{{/if}}" data-wound="minor"></div>
+                    <span class="simplenpc-wound-label">MINOR</span>
+                    <span class="simplenpc-wound-rule">−1 to all actions</span>
+                </div>
+                <div class="simplenpc-wound-row">
+                    <div class="simplenpc-wound-pip {{#if system.wounds.major}}filled simplenpc-wound-major{{/if}}" data-wound="major"></div>
+                    <span class="simplenpc-wound-label">MAJOR</span>
+                    <span class="simplenpc-wound-rule">Physique test: success = −2, fail = incapacitated</span>
+                </div>
+                <div class="simplenpc-wound-row">
+                    <div class="simplenpc-wound-pip {{#if system.wounds.mortal}}filled simplenpc-wound-mortal{{/if}}" data-wound="mortal"></div>
+                    <span class="simplenpc-wound-label">MORTAL</span>
+                    <span class="simplenpc-wound-rule">Incapacitated — Physique test to survive</span>
+                </div>
+            </div>
+            {{#if (or system.wounds.major system.wounds.mortal)}}
+            <a class="simplenpc-physique-btn snpc-physique-roll">
+                {{#if system.wounds.mortal}}PHYSIQUE: SURVIVAL TEST{{else}}PHYSIQUE: INCAPACITATION TEST{{/if}}
+            </a>
+            {{/if}}
+        </section>
+
+        {{!-- QUICK REFERENCE TABLE --}}
+        <section class="simplenpc-section simplenpc-ref-section">
+            <div class="simplenpc-section-label">QUICK REFERENCE</div>
+            <table class="simplenpc-ref-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th class="snpc-tier-everyday">Everyday</th>
+                        <th class="snpc-tier-exceptional">Exceptional</th>
+                        <th class="snpc-tier-elite">Elite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="{{#if (eq system.level 'below')}}snpc-row-active{{/if}}">
+                        <td>Below Avg./Novice</td>
+                        <td class="{{#if (eq system.tier 'everyday')}}snpc-col-active{{/if}}">3/3</td>
+                        <td class="{{#if (eq system.tier 'exceptional')}}snpc-col-active{{/if}}">6/6</td>
+                        <td class="{{#if (eq system.tier 'elite')}}snpc-col-active{{/if}}">7/8</td>
+                    </tr>
+                    <tr class="{{#if (eq system.level 'average')}}snpc-row-active{{/if}}">
+                        <td>Average/Competent</td>
+                        <td class="{{#if (eq system.tier 'everyday')}}snpc-col-active{{/if}}">5/5</td>
+                        <td class="{{#if (eq system.tier 'exceptional')}}snpc-col-active{{/if}}">6/7</td>
+                        <td class="{{#if (eq system.tier 'elite')}}snpc-col-active{{/if}}">8/9</td>
+                    </tr>
+                    <tr class="{{#if (eq system.level 'above')}}snpc-row-active{{/if}}">
+                        <td>Above Avg./Expert</td>
+                        <td class="{{#if (eq system.tier 'everyday')}}snpc-col-active{{/if}}">6/5</td>
+                        <td class="{{#if (eq system.tier 'exceptional')}}snpc-col-active{{/if}}">7/7</td>
+                        <td class="{{#if (eq system.tier 'elite')}}snpc-col-active{{/if}}">8/10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        {{!-- NOTES --}}
+        <section class="simplenpc-section">
+            <div class="simplenpc-section-label">NOTES</div>
+            <textarea name="system.notes" class="simplenpc-notes">{{system.notes}}</textarea>
+        </section>
+
+    </div>
+
+</form>

@@ -1,0 +1,132 @@
+<form class="{{cssClass}} flexcol npc-sheet" autocomplete="off">
+
+    {{!-- HEADER --}}
+    <header class="sheet-header npc-header">
+        <div class="npc-header-top">
+            <div class="npc-name-block">
+                <input type="text" name="name" value="{{actor.name}}"
+                       class="npc-name-input" placeholder="NPC Name"/>
+                <div class="npc-meta-row">
+                    <input type="text" name="system.npcType" value="{{system.npcType}}"
+                           class="npc-meta-input" placeholder="Type (e.g. Native Aquaform)"/>
+                    <span class="npc-meta-sep">·</span>
+                    <input type="text" name="system.tier" value="{{system.tier}}"
+                           class="npc-meta-input npc-tier-input" placeholder="Tier"/>
+                </div>
+            </div>
+            <img class="npc-portrait" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        </div>
+    </header>
+
+    {{!-- BODY --}}
+    <div class="npc-body">
+
+        {{!-- ATTRIBUTES --}}
+        <section class="npc-section npc-attrs-section">
+            <div class="npc-section-label">ATTRIBUTES</div>
+            <div class="npc-attrs-row">
+                {{#each system.attributes as |attr key|}}
+                <div class="npc-attr-block">
+                    <div class="npc-attr-label">{{attr.label}}</div>
+                    <input type="number" name="system.attributes.{{key}}.value"
+                           value="{{attr.value}}" class="npc-attr-value"/>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+
+        {{!-- WOUNDS --}}
+        <section class="npc-section npc-wounds-section">
+            <div class="npc-section-label">WOUNDS</div>
+            <div class="npc-wounds-row">
+
+                <div class="injury-row">
+                    <label>MINOR <span class="npc-wound-penalty">(−1)</span></label>
+                    <div class="injury-dots" data-wound-type="minor">
+                        {{#times system.wounds.minor.max}}
+                        <div class="injury-val {{#if (lte (add index 1) ../system.wounds.minor.value)}}filled{{/if}}"
+                             data-index="{{add index 1}}"></div>
+                        {{/times}}
+                    </div>
+                </div>
+
+                <div class="injury-row">
+                    <label>MAJOR <span class="npc-wound-penalty">(−2)</span></label>
+                    <div class="injury-dots" data-wound-type="major">
+                        {{#times system.wounds.major.max}}
+                        <div class="injury-val {{#if (lte (add index 1) ../system.wounds.major.value)}}filled{{/if}}"
+                             data-index="{{add index 1}}"></div>
+                        {{/times}}
+                    </div>
+                </div>
+
+                <div class="injury-row">
+                    <label>MORTAL <span class="npc-wound-penalty">(−3)</span></label>
+                    <div class="injury-dots" data-wound-type="mortal">
+                        {{#times system.wounds.mortal.max}}
+                        <div class="injury-val {{#if (lte (add index 1) ../system.wounds.mortal.value)}}filled{{/if}}"
+                             data-index="{{add index 1}}"></div>
+                        {{/times}}
+                    </div>
+                </div>
+
+            </div>
+            <div class="injury-actions" style="display:flex;gap:6px;margin-top:8px;">
+                <a class="stun-roll-btn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:5px 8px;background:#1b3f75;color:#e8f0fb;border:1px solid #0d2a52;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;">
+                    <i class="fas fa-bolt" style="font-size:0.85rem;"></i> STUN TEST
+                </a>
+                <a class="trauma-roll-btn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:5px 8px;background:#8b1a1a;color:#fce8e8;border:1px solid #5c0f0f;border-radius:4px;font-family:'Barlow Condensed',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;">
+                    <i class="fas fa-heart-pulse" style="font-size:0.85rem;"></i> TRAUMA ROLL
+                </a>
+            </div>
+        </section>
+
+        {{!-- SKILLS --}}
+        <section class="npc-section npc-skills-section">
+            <div class="npc-section-label">SKILL SETS</div>
+            <div class="npc-skills-list" id="npc-skills-list">
+                {{#each system.skills as |skill index|}}
+                <div class="npc-skill-row" data-index="{{index}}">
+                    <span class="npc-skill-text">{{skill}}</span>
+                    <a class="npc-skill-roll" data-index="{{index}}" title="Roll this skill"><i class="fas fa-dice-d10"></i></a>
+                    <a class="npc-skill-delete" data-index="{{index}}" title="Remove"><i class="fas fa-times"></i></a>
+                </div>
+                {{/each}}
+                <div class="npc-skill-add-row">
+                    <input type="number" id="npc-skill-rank"      class="npc-skill-rank-input"  placeholder="#" min="1" max="9"/>
+                    <input type="text"   id="npc-skill-general"   class="npc-skill-tier-input"  placeholder="General"/>
+                    <input type="text"   id="npc-skill-core"      class="npc-skill-tier-input"  placeholder="Core"/>
+                    <input type="text"   id="npc-skill-specialty" class="npc-skill-tier-input"  placeholder="Specialty"/>
+                    <a class="npc-skill-add-btn control-btn" title="Add skill set"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+        </section>
+
+        {{!-- ATTACK --}}
+        {{#if system.attack}}
+        <section class="npc-section npc-attack-section">
+            <div class="npc-section-label">ATTACK</div>
+            <input type="text" name="system.attack" value="{{system.attack}}" class="npc-attack-input" placeholder="Attack description"/>
+        </section>
+        {{/if}}
+        {{#unless system.attack}}
+        <section class="npc-section npc-attack-section">
+            <div class="npc-section-label">ATTACK</div>
+            <input type="text" name="system.attack" value="" class="npc-attack-input" placeholder="Attack description (optional)"/>
+        </section>
+        {{/unless}}
+
+        {{!-- BIOMODS / NOTES --}}
+        <section class="npc-section">
+            <div class="npc-section-label">BIOMODS</div>
+            <input type="text" name="system.biomods" value="{{system.biomods}}" class="npc-notes-input" placeholder="Biomods and augmentations"/>
+        </section>
+
+        <section class="npc-section">
+            <div class="npc-section-label">NOTES</div>
+            <textarea name="system.description" class="npc-description-input" placeholder="GM notes, motivations, appearance...">{{system.description}}</textarea>
+        </section>
+
+    </div>
+
+</form>

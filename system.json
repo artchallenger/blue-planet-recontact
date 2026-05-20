@@ -1,0 +1,103 @@
+{
+  "id": "blue-planet-recontact",
+  "title": "Blue Planet: Recontact",
+  "version": "1.6.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": [
+    "module/main.js"
+  ],
+  "styles": [
+    "css/blueplanet.css"
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "label": "Character"
+      },
+      "npc": {
+        "label": "NPC"
+      },
+      "creature": {
+        "label": "Creature"
+      },
+      "simplenpc": {
+        "label": "Quick NPC"
+      }
+    },
+    "Item": {
+      "skill": {},
+      "tag": {},
+      "tie": {},
+      "gear": {},
+      "weapon": {},
+      "armor": {},
+      "biomod": {},
+      "ammo": {}
+    }
+  },
+  "packs": [
+    {
+      "name": "bp-weapons",
+      "label": "Blue Planet: Weapons",
+      "path": "packs/bp-weapons",
+      "type": "Item",
+      "system": "blue-planet-recontact"
+    },
+    {
+      "name": "bp-armor",
+      "label": "Blue Planet: Armor",
+      "path": "packs/bp-armor",
+      "type": "Item",
+      "system": "blue-planet-recontact"
+    },
+    {
+      "name": "bp-biomods",
+      "label": "Blue Planet: Biomods",
+      "path": "packs/bp-biomods",
+      "type": "Item",
+      "system": "blue-planet-recontact"
+    },
+    {
+      "name": "bp-gear",
+      "label": "Blue Planet: Gear & Equipment",
+      "path": "packs/bp-gear",
+      "type": "Item",
+      "system": "blue-planet-recontact"
+    },
+    {
+      "name": "bp-ammo",
+      "label": "Blue Planet: Ammunition",
+      "path": "packs/bp-ammo",
+      "type": "Item",
+      "system": "blue-planet-recontact"
+    },
+    {
+      "name": "bp-characters",
+      "label": "Blue Planet: Characters & NPCs",
+      "path": "packs/bp-characters",
+      "type": "Actor",
+      "system": "blue-planet-recontact"
+    },
+    {
+      "name": "bp-creatures",
+      "label": "Blue Planet: Bestiary",
+      "path": "packs/bp-creatures",
+      "type": "Actor",
+      "system": "blue-planet-recontact"
+    }
+  ],
+  "manifest": "https://raw.githubusercontent.com/artchallenger/blue-planet-recontact/main/system.json",
+"download": "https://github.com/artchallenger/blue-planet-recontact/releases/download/1.6.0/blue-planet-recontact.zip"
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "primaryTokenAttribute": "strain.physical",
+  "secondaryTokenAttribute": "wounds.minor"
+}
