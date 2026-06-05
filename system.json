@@ -1,7 +1,7 @@
 {
   "id": "blue-planet-recontact",
   "title": "Blue Planet: Recontact",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -99,7 +99,7 @@
   "primaryTokenAttribute": "strain.physical",
   "secondaryTokenAttribute": "wounds.minor",
   "manifest": "https://raw.githubusercontent.com/artchallenger/blue-planet-recontact/main/system.json",
-  "download": "https://github.com/artchallenger/blue-planet-recontact/releases/download/1.7.6/blue-planet-recontact.zip",
+  "download": "https://github.com/artchallenger/blue-planet-recontact/releases/download/1.7.7/blue-planet-recontact.zip",
   "authors": [
     {
       "name": "artchallenger"
