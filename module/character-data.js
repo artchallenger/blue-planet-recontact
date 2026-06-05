@@ -48,8 +48,9 @@ export class BluePlanetCharacterData extends foundry.abstract.TypeDataModel {
                 stature:         new fields.StringField({ initial: "" }),
                 eyeColor:        new fields.StringField({ initial: "" }),
                 hairColor:       new fields.StringField({ initial: "" }),
-                apparentBiomods: new fields.StringField({ initial: "" }),
-                complexion:      new fields.StringField({ initial: "" })
+apparentBiomods: new fields.StringField({ initial: "" }),
+                complexion:      new fields.StringField({ initial: "" }),
+                biography:       new fields.StringField({ initial: "" })
             }),
             attributes: new fields.SchemaField({
                 cognition:    attributeField("Cognition"),
