@@ -181,6 +181,7 @@ super.activateListeners(html);
             label: "Post to Chat",
             icon: '<i class="fas fa-comment"></i>',
             callback: () => ChatMessage.create({
+              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">${entry.label}</div>
@@ -433,6 +434,7 @@ super.activateListeners(html);
             const tnBreakdown = `5 + ${physVal} Physique − 3 mortal${clottingMod ? ' + 1 Blood Clotting' : ''}${sitMod ? (sitMod > 0 ? ' +' : ' ') + sitMod + ' situational' : ''}${strainBonus ? ' + 2 strain' : ''}`;
 
             await ChatMessage.create({
+              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">Trauma Roll <span style="font-weight:400;font-size:0.85em;">(Physique Test)</span></div>
@@ -521,6 +523,7 @@ super.activateListeners(html);
             const tnBreakdown = `5 + ${psychVal} Psyche − 2 major${sitMod ? (sitMod > 0 ? ' +' : ' ') + sitMod + ' situational' : ''}${strainBonus ? ' + 2 strain' : ''}`;
 
             await ChatMessage.create({
+              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">Stun Test <span style="font-weight:400;font-size:0.85em;">(Psyche Test)</span></div>
@@ -1071,6 +1074,7 @@ super.activateListeners(html);
       : `${lowestDie}`;
 
     await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content: `
         <div class="bp-chat-card">
           <div class="bp-chat-header">${title}${subtitle ? ` <span style="font-weight:400;font-size:0.85em;">(${subtitle})</span>` : ''}</div>
@@ -1149,6 +1153,7 @@ super.activateListeners(html);
     if (sys.features)     rows.push(`<div class="bp-chat-row"><span class="bp-label">FEATURES</span><span class="bp-value">${sys.features}</span></div>`);
     const desc = sys.description ? sys.description.replace(/<[^>]+>/g, ' ').trim() : '';
     ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content: `
         <div class="bp-chat-card">
           <div class="bp-chat-header">${item.name} <span style="font-weight:400;font-size:0.8em;text-transform:uppercase;">(${item.type})</span></div>
@@ -1226,7 +1231,7 @@ super.activateListeners(html);
     if (!item) return;
     const mod    = item.system.modifier;
     const modStr = mod ? ` <span style="color:#1b3f75;font-weight:700;">${mod > 0 ? '+' : ''}${mod}</span>` : '';
-    ChatMessage.create({ content: `<div class="bp-chat-card"><div class="bp-chat-header">${item.name}${modStr}</div>${item.system.description ? `<div class="bp-chat-body">${item.system.description}</div>` : ''}</div>` });
+    ChatMessage.create({ speaker: ChatMessage.getSpeaker({ actor: this.actor }), content: `<div class="bp-chat-card"><div class="bp-chat-header">${item.name}${modStr}</div>${item.system.description ? `<div class="bp-chat-body">${item.system.description}</div>` : ''}</div>` });
   }
 
 /** @override */
@@ -1446,6 +1451,7 @@ async _onDrop(event) {
             const tnBreakdown = `${attrLabel} +${attrValue} ${skillLabel} +${skillRank}${focusBonus ? ' Focus +'+focusBonus : ''}${situationMod ? ' Sit '+(situationMod>0?'+':'')+situationMod : ''}${strainBonus ? ' Strain +2' : ''}${woundPenalty < 0 ? ' Wounds '+woundPenalty : ''}${tagBonus ? ' Tags '+(tagBonus>0?'+':'')+tagBonus : ''}${trackBonus ? ' Track '+(trackBonus>0?'+':'')+trackBonus : ''}${calledShot ? ' Called -'+calledShot : ''}${ammoAttackMod ? ' Ammo '+(ammoAttackMod>0?'+':'')+ammoAttackMod : ''}`;
 
             await ChatMessage.create({
+              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">${weaponName} <span style="font-weight:400;font-size:0.85em;">(${tierLabel} Attack)</span></div>
@@ -1636,6 +1642,7 @@ async _onDrop(event) {
               // Handle special-only ammo
               if (sys.dmgMult === 0 && sys.dmgAdd === 0 && sys.special) {
                 await ChatMessage.create({
+                  speaker: ChatMessage.getSpeaker({ actor: this.actor }),
                   content: `<div class="bp-chat-card">
                     <div class="bp-chat-header">${weaponName} — ${ammoName}</div>
                     <div class="bp-chat-body">
@@ -1650,6 +1657,7 @@ async _onDrop(event) {
             // If special-rules-only ammo (DR 0 and has special), post to chat and skip roll
             if (isVariable && selectedAmmo && selectedAmmo.damage === 0 && selectedAmmo.special) {
               await ChatMessage.create({
+                speaker: ChatMessage.getSpeaker({ actor: this.actor }),
                 content: `
                   <div class="bp-chat-card">
                     <div class="bp-chat-header">${weaponName} — ${selectedAmmo.name}</div>
@@ -1682,6 +1690,7 @@ async _onDrop(event) {
             const tnBreakdown = `DMG ${ammoDamage}${calledBonus ? ' +'+calledBonus+' called' : ''}${focusFireBonus ? ' +'+focusFireBonus+' focus' : ''}${armorReduction ? ' AP-'+armorReduction : ''} − Armor ${effectiveArmor} − Physique ${targetPhysique}${sitMod ? (sitMod>0?' +':' ')+sitMod : ''}`;
 
             await ChatMessage.create({
+              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">${weaponName}${selectedAmmo ? ' — '+selectedAmmo.name : ''} <span style="font-weight:400;font-size:0.85em;">(Damage)</span></div>
@@ -1810,6 +1819,7 @@ Hooks.on("getChatMessageContextOptions", (html, options) => {
       const tnBreakdown = `${data.attrLabel} +${data.attrValue} ${data.skillLabel} +${data.skillRank}${data.focusBonus ? ' Focus +'+data.focusBonus : ''}${data.situationMod ? ' Sit '+(data.situationMod>0?'+':'')+data.situationMod : ''}${data.strainBonus ? ' Strain +2' : ''}${woundPenalty < 0 ? ' Wounds '+woundPenalty : ''}${data.calledShot ? ' Called -'+data.calledShot : ''}${ammoMod ? ' Ammo '+(ammoMod>0?'+':'')+ammoMod : ''}`;
 
       await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         content: `
           <div class="bp-chat-card">
             <div class="bp-chat-header">${data.weaponName} <span style="font-weight:400;font-size:0.85em;">(${tierLabel} Attack — Re-roll)</span></div>
