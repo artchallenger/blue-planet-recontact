@@ -1165,29 +1165,32 @@ super.activateListeners(html);
     });
   }
 
-  _buildEquipmentHTML() {
-    const equipped = this.actor.items.filter(i => i.system.equipped);
-    const gearItems = equipped.filter(i => i.type !== "armor" && i.system.features);
+_buildEquipmentHTML() {
+    const equipped   = this.actor.items.filter(i => i.system.equipped);
+    const checkable  = equipped.filter(i => i.type !== "armor");
     const armorItems = equipped.filter(i => i.type === "armor");
-    if (!gearItems.length && !armorItems.length) return "";
+    if (!checkable.length && !armorItems.length) return "";
 
     let html = `<div class="bp-roll-section" style="border:1px solid #c9d6e3;padding:6px 8px;margin-bottom:10px;background:#f4f7fb;">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;color:#1b3f75;font-size:0.85rem;margin-bottom:6px;">Equipment</div>`;
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;color:#1b3f75;font-size:0.85rem;margin-bottom:6px;">Gear & Biomods</div>`;
 
-    if (gearItems.length) {
+    if (checkable.length) {
       const chips = [];
-      for (const item of gearItems) {
+      for (const item of checkable) {
         let testMod = 0;
-        if (item.system.features && CONFIG.BLUEPLANET?.featureCatalog) {
+        if (item.type === "biomod") {
+          testMod = Number(item.system.testMod) || 0;
+        } else if (item.system.features && CONFIG.BLUEPLANET?.featureCatalog) {
           for (const key of item.system.features.split(',').map(s => s.trim().toLowerCase())) {
             const feat = CONFIG.BLUEPLANET.featureCatalog[key];
             if (feat?.testMod) testMod += feat.testMod;
           }
         }
         if (testMod === 0) continue;
+        const modLabel = testMod > 0 ? `+${testMod}` : `${testMod}`;
         chips.push(`<label class="bp-tag-toggle" style="display:flex;align-items:center;gap:4px;font-size:0.9rem;cursor:pointer;padding:2px 6px;border:1px solid #c9d6e3;border-radius:3px;background:white;">
           <input type="checkbox" class="bp-equip-check" data-modifier="${testMod}" data-name="${item.name}"/>
-          ${item.name}
+          ${item.name} <span style="color:#1b3f75;font-weight:700;font-size:0.8rem;">(${modLabel})</span>
         </label>`);
       }
       if (chips.length) html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px;">${chips.join('')}</div>`;
