@@ -427,10 +427,18 @@
                                     <input class="feature-input" name="system.details.clothing" type="text" value="{{system.details.clothing}}" {{#unless isEditing}}readonly{{/unless}}/>
                                 </div>
                             </div>
-                            <div class="feature-row">
+<div class="feature-row">
                                 <div class="feature-field wide">
                                     <label class="feature-label">APPARENT BIOMODS</label>
                                     <input class="feature-input" name="system.details.apparentBiomods" type="text" value="{{system.details.apparentBiomods}}" {{#unless isEditing}}readonly{{/unless}}/>
+                                </div>
+                            </div>
+                            <div class="feature-row" style="flex:1;">
+                                <div class="feature-field wide" style="flex:1;display:flex;flex-direction:column;">
+                                    <label class="feature-label">BIOGRAPHY</label>
+                                    <textarea class="feature-input" name="system.details.biography"
+                                              style="flex:1;min-height:120px;resize:vertical;padding:4px 6px;line-height:1.4;"
+                                              {{#unless isEditing}}readonly{{/unless}}>{{system.details.biography}}</textarea>
                                 </div>
                             </div>
                         </div>
