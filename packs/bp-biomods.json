@@ -969,5 +969,57 @@
       "strainImpact": 0,
       "testMod": 0
     }
+  },
+  {
+    "_id": "bpb047",
+    "name": "Coolheaded",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "description": "Many law enforcement and military personnel swear by this reflex program. It is an artificial reflex arc that effectively eliminates the useless body spasms that often accompany a sudden fright or start. Unexpected visual, tactile, or auditory stimuli that might otherwise startle the user are automatically dampened, allowing the user\u2019s cognitive center to comprehend the circumstances before triggering a motor response. The effect is that the user gains a +2 bonus to their first initiative test for a given action sequence.",
+      "availability": "Restricted",
+      "cost": "350\u20131,500cs (requires Programmed Reflexes implant)",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "+2 to first initiative test per action sequence; suppresses startle reflex",
+      "installCost": 0,
+      "strainImpact": 0,
+      "testMod": 2
+    }
+  },
+  {
+    "_id": "bpb048",
+    "name": "Gills",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "description": "Similar to those implanted in first-generation squid, these are organically grown gills and support tissues integrated into the user\u2019s neck and back, and connected to their circulatory system. They permit the user to breathe underwater indefinitely, but confer no other benefits with regard to safe diving depth. Gills only function when the user is immersed in water or similar oxygen-containing liquids\u2014if non oxygen bearing liquids are involved, it is still very possible for a character with gills to drown.",
+      "availability": "Uncommon",
+      "cost": "37,000cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Breathe underwater indefinitely; does not increase safe diving depth",
+      "installCost": 37000,
+      "strainImpact": 0,
+      "testMod": 0
+    }
   }
 ]
