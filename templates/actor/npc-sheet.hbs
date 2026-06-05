@@ -25,11 +25,12 @@
         <section class="npc-section npc-attrs-section">
             <div class="npc-section-label">ATTRIBUTES</div>
             <div class="npc-attrs-row">
-                {{#each system.attributes as |attr key|}}
+{{#each system.attributes as |attr key|}}
                 <div class="npc-attr-block">
                     <div class="npc-attr-label">{{attr.label}}</div>
                     <input type="number" name="system.attributes.{{key}}.value"
                            value="{{attr.value}}" class="npc-attr-value"/>
+                    <a class="npc-attr-roll" data-attr="{{key}}" title="Roll {{attr.label}}"><i class="fas fa-dice-d10"></i></a>
                 </div>
                 {{/each}}
             </div>
