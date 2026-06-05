@@ -839,5 +839,135 @@
       "default": 0
     },
     "flags": {}
+  },
+  {
+    "_id": "bpb042",
+    "name": "Cybernetic Eyes",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "description": "A wide variety of enhanced sensory options are available for cybereyes. In addition, individuals with improved cybereyes can change the color of their eyes at will, including colors not found in nature.",
+      "availability": "Rare",
+      "cost": "11,500cs per eye + 1,000cs per enhancement",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Replace eyes with cybernetic implants; enhancements: Capture, Infrared, Light Amplification, Telescopic Vision (+2 distance tests)",
+      "installCost": 11500,
+      "strainImpact": 0,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb043",
+    "name": "Programmed Reflexes",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "description": "This piece of cyberware requires a dedicated NIC in the user\u2019s brain stem. This implant uses programmed routines to turn selected actions into reflexes. The computer analyzes sensory input and thought patterns, initiating preprogrammed reflex responses based on these variables. Only simple, physical actions can be enhanced in this way, and all such artificial responses must be preprogrammed and uploaded to the processor. The reflex patterns programmed into the device may be deactivated by a simple mental command; however, if active, the responses will execute when the proper trigger stimuli are received. At best, this can be embarrassing, at worst it can be very dangerous. For this reason, the implant is uncommon. It\u2019s mainly used by pilots, soldiers, athletes, and others whose lives or livelihoods depend on specific, anticipated, and fixed reactions. To use this implant, a player must provide the game moderator with a list of their programmed reflexes, and the stimulus or thought patterns that initiate them. For instance, a marshal character may choose to program ducking and drawing their weapon if they are threatened with violence, or a pilot might program emergency procedures. Then, when such situations arise in play, the player doesn\u2019t need to spend an action to execute the programmed response. The character makes the response instantly and without error at the beginning of the action round.",
+      "availability": "Restricted",
+      "cost": "65,000cs (programs 350\u20131,500cs each)",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Hardware implant; hosts up to Psyche+3 reflex programs; triggered responses execute without spending an action",
+      "installCost": 65000,
+      "strainImpact": 0,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb044",
+    "name": "Autoload",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "description": "This program was designed with military and law enforcement personnel in mind. The routine prevents those embarrassing moments caused when a firearm runs out of ammunition unexpectedly, or a person forgets to reload a spent weapon. While active, this reflex compels the user to count the rounds/bursts fired, so they are always certain of their ammo status. Additionally, when the user fires the last round from a clip, they are subject to a compulsion that encourages them to reload their firearm before doing anything else.",
+      "availability": "Restricted",
+      "cost": "350\u20131,500cs (requires Programmed Reflexes implant)",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "Compels reload when last round is fired; user always knows their ammo status",
+      "installCost": 0,
+      "strainImpact": 0,
+      "testMod": 0
+    }
+  },
+  {
+    "_id": "bpb045",
+    "name": "Kata",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "description": "This programmed reflex is a favorite among law enforcement personnel, martial artists, bouncers, and anyone else with a need to defend themselves in hand-to hand encounters. This routine makes blocking melee attacks an instinctual response. The program is categorized based on a variety of different attacks and their associated defenses. When visual stimulus convinces the user\u2019s implant that the user is being assaulted, the routine selects the most appropriate from a suite of possible defenses and initiates that response. Because of the variety of attacks and their complementary defenses, this program occupies two of the available slots in the user\u2019s implant\u2014one for unarmed and the other for armed combat. This reflex provides the user with a +1 to hand to-hand maneuver tests.",
+      "availability": "Restricted",
+      "cost": "350\u20131,500cs (requires Programmed Reflexes implant)",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "+1 to hand-to-hand maneuver tests; reflexive melee defense selection",
+      "installCost": 0,
+      "strainImpact": 0,
+      "testMod": 1
+    }
+  },
+  {
+    "_id": "bpb046",
+    "name": "Rib Covers",
+    "type": "biomod",
+    "img": "icons/svg/aura.svg",
+    "items": [],
+    "effects": [],
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+      "default": 0
+    },
+    "flags": {},
+    "system": {
+      "description": "Rib covers, also known as \u201cshells\u201d or \u201cbody bags,\u201d are designed to reduce the risk of damage to internal organs by stopping knives or other foreign objects that might otherwise penetrate the torso and damage internal organs. They consist of a tough biopolymer mesh encasing the ribcage and lower abdomen. The mesh has enough flexibility that it \u201cbreathes\u201d along with the user, but is strong enough to prevent piercing by all but the sharpest weapons. The mesh also helps reduce damage from blunt trauma by dissipating impacts, leading to extensive bruising but less structural damage. In game terms, rib covers provide an armor rating of +1, over and above any other armor the user may be wearing. Professional fighters and soldiers are the only individuals who commonly opt for this mod. Undercover agents and street criminals also occasionally have rib covers implanted. For others, the benefit isn\u2019t usually worth the cost and recovery period.",
+      "availability": "Rare",
+      "cost": "7,500cs",
+      "weight": 0,
+      "features": "",
+      "availableFeatures": "cold, flat, warm, hot, smart, gi, sealed, responsive, sensors, rechargeable, integrated, kinetic, physiological, manipulators, premium, upgraded, damaged, drained, junk, malfunctioning",
+      "function": "+1 armor rating over any worn armor; stops piercing, reduces blunt trauma damage",
+      "installCost": 7500,
+      "strainImpact": 0,
+      "testMod": 0
+    }
   }
 ]
