@@ -112,6 +112,32 @@ Hooks.on("renderDialog", (dialog, html) => {
     }, 100);
 });
 
+// Fix ownership configuration dialog [object Object] display
+Hooks.on("renderDocumentOwnershipConfig", (app, html) => {
+    const labels = {
+        "-1": "Default",
+         "0": "None",
+         "1": "Limited",
+         "2": "Observer",
+         "3": "Owner"
+    };
+    const el = html instanceof HTMLElement ? html : html[0];
+    if (!el) return;
+    el.querySelectorAll("select").forEach(select => {
+        for (const option of select.options) {
+            const label = labels[option.value];
+            if (label) option.text = label;
+            // Fix [object Object] as selected display
+            if (option.selected && (option.text === "[object Object]" || option.text === "")) {
+                option.text = labels[option.value] || option.value;
+            }
+        }
+        // Force refresh the displayed value
+        const currentVal = select.value;
+        select.value = currentVal;
+    });
+});
+
 Hooks.on("renderDialogV2", (dialog, html) => {
     setTimeout(() => {
         const select = html.querySelector("select[name='type']");
