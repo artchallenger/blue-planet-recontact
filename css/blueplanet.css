@@ -1494,7 +1494,14 @@ input[readonly].feature-input {
     padding: 2px 0;
     font-family: 'Barlow Condensed', sans-serif;
 }
-
+.npc-sheet .npc-attr-roll {
+    color: #1b3f75;
+    cursor: pointer;
+    font-size: 0.85rem;
+    opacity: 0.5;
+    line-height: 1;
+}
+.npc-sheet .npc-attr-roll:hover { opacity: 1; }
 /* Wounds */
 .npc-sheet .npc-wounds-row {
     display: flex;
