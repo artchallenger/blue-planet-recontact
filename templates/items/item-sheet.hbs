@@ -1,0 +1,197 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+            
+            {{!-- SHARED PHYSICAL STATS --}}
+            {{!-- We only show these for physical items, hiding them for Skills/Tags --}}
+            {{#if (or (eq item.type "weapon") (eq item.type "armor") (eq item.type "gear") (eq item.type "biomod") (eq item.type "ammo"))}}
+            <div class="grid grid-3col">
+                <div class="resource">
+                    <label class="resource-label">Availability</label>
+                    <input type="text" name="system.availability" value="{{system.availability}}" placeholder="CS"/>
+                </div>
+                
+                {{#if (ne item.type "biomod")}}
+                <div class="resource">
+                    <label class="resource-label">Cost</label>
+                    <input type="text" name="system.cost" value="{{system.cost}}" placeholder="e.g. 15,000cs"/>
+                </div>
+                <div class="resource">
+                    <label class="resource-label">Weight</label>
+                    <input type="text" name="system.weight" value="{{system.weight}}" placeholder="e.g. 2 kg"/>
+                </div>
+                {{/if}}
+            </div>
+            {{/if}}
+
+            {{!-- TAG MODIFIER --}}
+            {{#if (eq item.type "tag")}}
+            <div class="resource">
+                <label class="resource-label">Modifier</label>
+                <input type="number" name="system.modifier" value="{{system.modifier}}" placeholder="0"/>
+            </div>
+            {{/if}}
+        </div>
+    </header>
+
+    {{!-- SHEET BODY --}}
+    <div class="sheet-body">
+        
+{{!-- WEAPON DATA --}}
+        {{#if (eq item.type "weapon")}}
+        
+        {{!-- Top Row: Stats --}}
+        <div class="item-stats-grid">
+            <div class="form-group">
+                <label>Damage</label>
+                <input type="text" name="system.damage" value="{{system.damage}}"/>
+            </div>
+            <div class="form-group">
+                <label>Range</label>
+                <input type="text" name="system.range" value="{{system.range}}"/>
+            </div>
+            <div class="form-group">
+                <label>Payloads (Opt)</label>
+                <input type="text" name="system.payloads" value="{{system.payloads}}" placeholder="e.g. HE:4d10"/>
+            </div>
+        </div>
+
+        {{!-- Bottom Row: Features (Full Width) --}}
+        <div class="form-group stacked" style="margin-top: 10px;">
+
+            {{#if availableFeatureChips.length}}
+            {{!-- AVAILABLE FEATURES WORD CLOUD --}}
+            <div style="margin-bottom:8px;">
+                <label style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.8rem;text-transform:uppercase;color:#1b3f75;">
+                    Active Features <span style="font-weight:400;font-size:0.75rem;color:#888;">(click to toggle)</span>
+                </label>
+                <div class="feature-chip-container" style="margin-top:5px;display:flex;flex-wrap:wrap;gap:6px;">
+                    {{#each availableFeatureChips}}
+                    <span class="feature-chip {{#if this.active}}active{{/if}} feature-toggle-chip"
+                          data-key="{{this.key}}"
+                          title="{{this.description}}"
+                          style="cursor:pointer;">
+                        {{this.label}}
+                    </span>
+                    {{/each}}
+                </div>
+            </div>
+            {{else}}
+            {{!-- Fallback: manual entry if no availableFeatures defined --}}
+            <label>Features <span style="font-size:0.8em;font-weight:normal;font-style:italic;">(Separate with commas)</span></label>
+            <input type="text" name="system.features" value="{{system.features}}" placeholder="Smart, Burst, etc."/>
+            <div class="feature-chip-container" style="margin-top:5px;display:flex;flex-wrap:wrap;gap:5px;">
+                {{#each enrichedFeatures}}
+                <span class="feature-chip {{#if this.found}}active{{else}}missing{{/if}}"
+                      data-key="{{this.key}}"
+                      title="{{#if this.found}}Click for Info{{else}}Not in Catalog{{/if}}">
+                    {{this.label}}
+                </span>
+                {{/each}}
+            </div>
+            {{/if}}
+        </div>
+        {{/if}}
+
+        {{!-- ARMOR DATA --}}
+        {{#if (eq item.type "armor")}}
+        <div class="item-stats-grid">
+            <div class="form-group">
+                <label>Rating</label>
+                <input type="number" name="system.rating" value="{{system.rating}}"/>
+            </div>
+            <div class="form-group">
+                <label>Coverage</label>
+                <input type="text" name="system.coverage" value="{{system.coverage}}"/>
+            </div>
+        </div>
+        {{/if}}
+
+        {{!-- BIOMOD DATA --}}
+        {{#if (eq item.type "biomod")}}
+        <div class="item-stats-grid">
+            <div class="form-group">
+                <label>Install Cost</label>
+                <input type="number" name="system.installCost" value="{{system.installCost}}"/>
+            </div>
+            <div class="form-group">
+                <label>Strain Impact</label>
+                <input type="number" name="system.strainImpact" value="{{system.strainImpact}}"/>
+            </div>
+            <div class="form-group full-width">
+                <label>Function Summary</label>
+                <input type="text" name="system.function" value="{{system.function}}"/>
+            </div>
+        </div>
+        {{/if}}
+        
+        {{!-- AMMO DATA --}}
+        {{#if (eq item.type "ammo")}}
+        <div class="item-stats-grid">
+            <div class="form-group">
+                <label>Weapon Class</label>
+                <input type="text" name="system.weaponClass" value="{{system.weaponClass}}" placeholder="handgun, rifle, grenade..."/>
+            </div>
+            <div class="form-group">
+                <label>Ammo Type</label>
+                <input type="text" name="system.ammoType" value="{{system.ammoType}}"/>
+            </div>
+            <div class="form-group">
+                <label>Availability</label>
+                <input type="text" name="system.availability" value="{{system.availability}}"/>
+            </div>
+            <div class="form-group">
+                <label>Cost (cs/mag)</label>
+                <input type="number" name="system.cost" value="{{system.cost}}"/>
+            </div>
+        </div>
+        <div class="item-stats-grid" style="margin-top:8px;">
+            <div class="form-group">
+                <label>DMG Multiplier</label>
+                <input type="number" step="0.1" name="system.dmgMult" value="{{system.dmgMult}}" placeholder="1"/>
+            </div>
+            <div class="form-group">
+                <label>DMG Bonus</label>
+                <input type="number" name="system.dmgAdd" value="{{system.dmgAdd}}" placeholder="0"/>
+            </div>
+            <div class="form-group">
+                <label>Armor Modifier</label>
+                <input type="number" name="system.armorMod" value="{{system.armorMod}}" placeholder="0"/>
+            </div>
+        </div>
+        <div class="form-group stacked" style="margin-top:8px;">
+            <label>Special Rules</label>
+            <input type="text" name="system.special" value="{{system.special}}" placeholder="Special rules text..."/>
+        </div>
+        {{/if}}
+
+        {{!-- SKILL DATA --}}
+        {{#if (eq item.type "skill")}}
+        <div class="item-stats-grid">
+             <div class="form-group">
+                <label>Attribute</label>
+                <select name="system.attribute">
+                    {{selectOptions "{'cognition':'Cognition', 'psyche':'Psyche', 'physique':'Physique', 'coordination':'Coordination'}" selected=system.attribute}}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Tier</label>
+                <input type="number" name="system.tier" value="{{system.tier}}"/>
+            </div>
+            <div class="form-group">
+                <label>Source</label>
+                <input type="text" name="system.source" value="{{system.source}}"/>
+            </div>
+        </div>
+        {{/if}}
+
+        {{!-- DESCRIPTION (Global) --}}
+        <h2 class="section-header">Description</h2>
+        <div class="description-editor">
+            <textarea name="system.description" style="width:100%;min-height:160px;font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;padding:8px;border:1px solid #d8d2c4;border-radius:3px;background:#f8f6f2;color:#222;resize:vertical;box-sizing:border-box;">{{system.description}}</textarea>
+        </div>
+
+    </div>
+</form>
