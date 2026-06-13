@@ -27,6 +27,16 @@ export class BluePlanetActorSheet extends foundry.appv1.sheets.ActorSheet {
     const isPlayMode = this.actor.getFlag("blue-planet-recontact", "playMode") || false;
     context.isEditing = !isPlayMode;
 
+    // --- GM OWNERSHIP ---
+    context.isGM = game.user.isGM;
+    context.playerUsers = game.users
+        .filter(u => !u.isGM)
+        .map(u => ({
+            id:    u.id,
+            name:  u.name,
+            level: this.actor.ownership[u.id] ?? -1
+        }));
+
     // --- PIPS ---
     const buildPips = (current, max) => {
       const pips = [];
@@ -118,7 +128,10 @@ export class BluePlanetActorSheet extends foundry.appv1.sheets.ActorSheet {
   activateListeners(html) {
 super.activateListeners(html);
 
-// PLAY MODE TOGGLE
+// OWNERSHIP
+    html.find('.ownership-select').change(this._onOwnershipChange.bind(this));
+
+    // PLAY MODE TOGGLE
     html.find('.edit-mode-toggle').click(this._onToggleSheetMode.bind(this));
 
     // STRAIN PIPS
@@ -181,7 +194,6 @@ super.activateListeners(html);
             label: "Post to Chat",
             icon: '<i class="fas fa-comment"></i>',
             callback: () => ChatMessage.create({
-              speaker: ChatMessage.getSpeaker({ actor: this.actor }),
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">${entry.label}</div>
@@ -347,6 +359,13 @@ super.activateListeners(html);
   /* EVENT HANDLERS                               */
   /* -------------------------------------------- */
 
+  async _onOwnershipChange(event) {
+    event.preventDefault();
+    const userId = event.currentTarget.dataset.userId;
+    const level  = Number(event.currentTarget.value);
+    await this.actor.update({ ownership: { ...this.actor.ownership, [userId]: level } });
+  }
+
   async _onToggleSheetMode(event) {
     event.preventDefault();
     const currentMode = this.actor.getFlag("blue-planet-recontact", "playMode") || false;
@@ -435,6 +454,7 @@ super.activateListeners(html);
 
             await ChatMessage.create({
               speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+              rolls: [roll],
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">Trauma Roll <span style="font-weight:400;font-size:0.85em;">(Physique Test)</span></div>
@@ -524,6 +544,7 @@ super.activateListeners(html);
 
             await ChatMessage.create({
               speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+              rolls: [roll],
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">Stun Test <span style="font-weight:400;font-size:0.85em;">(Psyche Test)</span></div>
@@ -768,6 +789,7 @@ super.activateListeners(html);
             const actionValue = finalTN - lowestDie;
 
             await this._postRollMessage({
+              roll,
               title: skillName, subtitle: tierLabel,
               finalTN, attrLabel, attrValue, skillRank, skillLabel,
               focusBonus, focusName: focusName !== "None" ? focusName : null,
@@ -1031,6 +1053,7 @@ super.activateListeners(html);
     const actionValue = finalTN - dieResult;
 
     await this._postRollMessage({
+      roll,
       title: `${attrLabel}${focusName ? ' / ' + focusName : ''} Test`,
       subtitle: null,
       finalTN, attrLabel, attrValue, skillRank: 0, skillLabel: "",
@@ -1055,7 +1078,7 @@ super.activateListeners(html);
     focusBonus, focusName, situationMod, strainType, strainBonus, woundPenalty = 0,
     tagBonus = 0, appliedTags = [], trackBonus = 0, trackLabel = null,
     equipBonus = 0, appliedEquip = [], armorBonus = 0, armorLabel = null,
-    diceResults, lowestDie, diceCount, success, actionValue, rollData }) {
+    diceResults, lowestDie, diceCount, success, actionValue, rollData, roll = null }) {
 
     const specialResult = actionValue >= 5
       ? `<div class="bp-chat-special bp-benefit">▲ BENEFIT — +2 on next relevant test or narrative alteration</div>`
@@ -1075,6 +1098,7 @@ super.activateListeners(html);
 
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      rolls: roll ? [roll] : [],
       content: `
         <div class="bp-chat-card">
           <div class="bp-chat-header">${title}${subtitle ? ` <span style="font-weight:400;font-size:0.85em;">(${subtitle})</span>` : ''}</div>
@@ -1153,7 +1177,6 @@ super.activateListeners(html);
     if (sys.features)     rows.push(`<div class="bp-chat-row"><span class="bp-label">FEATURES</span><span class="bp-value">${sys.features}</span></div>`);
     const desc = sys.description ? sys.description.replace(/<[^>]+>/g, ' ').trim() : '';
     ChatMessage.create({
-      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content: `
         <div class="bp-chat-card">
           <div class="bp-chat-header">${item.name} <span style="font-weight:400;font-size:0.8em;text-transform:uppercase;">(${item.type})</span></div>
@@ -1165,32 +1188,29 @@ super.activateListeners(html);
     });
   }
 
-_buildEquipmentHTML() {
-    const equipped   = this.actor.items.filter(i => i.system.equipped);
-    const checkable  = equipped.filter(i => i.type !== "armor");
+  _buildEquipmentHTML() {
+    const equipped = this.actor.items.filter(i => i.system.equipped);
+    const gearItems = equipped.filter(i => i.type !== "armor" && i.system.features);
     const armorItems = equipped.filter(i => i.type === "armor");
-    if (!checkable.length && !armorItems.length) return "";
+    if (!gearItems.length && !armorItems.length) return "";
 
     let html = `<div class="bp-roll-section" style="border:1px solid #c9d6e3;padding:6px 8px;margin-bottom:10px;background:#f4f7fb;">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;color:#1b3f75;font-size:0.85rem;margin-bottom:6px;">Gear & Biomods</div>`;
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;color:#1b3f75;font-size:0.85rem;margin-bottom:6px;">Equipment</div>`;
 
-    if (checkable.length) {
+    if (gearItems.length) {
       const chips = [];
-      for (const item of checkable) {
+      for (const item of gearItems) {
         let testMod = 0;
-        if (item.type === "biomod") {
-          testMod = Number(item.system.testMod) || 0;
-        } else if (item.system.features && CONFIG.BLUEPLANET?.featureCatalog) {
+        if (item.system.features && CONFIG.BLUEPLANET?.featureCatalog) {
           for (const key of item.system.features.split(',').map(s => s.trim().toLowerCase())) {
             const feat = CONFIG.BLUEPLANET.featureCatalog[key];
             if (feat?.testMod) testMod += feat.testMod;
           }
         }
         if (testMod === 0) continue;
-        const modLabel = testMod > 0 ? `+${testMod}` : `${testMod}`;
         chips.push(`<label class="bp-tag-toggle" style="display:flex;align-items:center;gap:4px;font-size:0.9rem;cursor:pointer;padding:2px 6px;border:1px solid #c9d6e3;border-radius:3px;background:white;">
           <input type="checkbox" class="bp-equip-check" data-modifier="${testMod}" data-name="${item.name}"/>
-          ${item.name} <span style="color:#1b3f75;font-weight:700;font-size:0.8rem;">(${modLabel})</span>
+          ${item.name}
         </label>`);
       }
       if (chips.length) html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px;">${chips.join('')}</div>`;
@@ -1455,6 +1475,7 @@ async _onDrop(event) {
 
             await ChatMessage.create({
               speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+              rolls: [roll],
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">${weaponName} <span style="font-weight:400;font-size:0.85em;">(${tierLabel} Attack)</span></div>
@@ -1694,6 +1715,7 @@ async _onDrop(event) {
 
             await ChatMessage.create({
               speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+              rolls: [roll],
               content: `
                 <div class="bp-chat-card">
                   <div class="bp-chat-header">${weaponName}${selectedAmmo ? ' — '+selectedAmmo.name : ''} <span style="font-weight:400;font-size:0.85em;">(Damage)</span></div>
@@ -1788,6 +1810,7 @@ Hooks.on("getChatMessageContextOptions", (html, options) => {
       const actionValue = finalTN - lowestDie;
 
       await sheet._postRollMessage({
+        roll,
         title: `${skillName} (Re-roll)`, subtitle: tierLabel,
         finalTN, attrLabel, attrValue, skillRank, skillLabel,
         focusBonus: data.focusBonus, focusName: null,
@@ -1823,6 +1846,7 @@ Hooks.on("getChatMessageContextOptions", (html, options) => {
 
       await ChatMessage.create({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        rolls: [roll],
         content: `
           <div class="bp-chat-card">
             <div class="bp-chat-header">${data.weaponName} <span style="font-weight:400;font-size:0.85em;">(${tierLabel} Attack — Re-roll)</span></div>
@@ -1847,6 +1871,7 @@ Hooks.on("getChatMessageContextOptions", (html, options) => {
       const actionValue = finalTN - dieResult;
 
       await sheet._postRollMessage({
+        roll,
         title: `${data.attrLabel}${data.focusName ? ' / ' + data.focusName : ''} Test (Re-roll)`,
         subtitle: null,
         finalTN, attrLabel: data.attrLabel, attrValue: data.attrValue, skillRank: 0, skillLabel: "",

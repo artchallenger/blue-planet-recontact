@@ -36,6 +36,9 @@ export class BluePlanetNPCSheet extends foundry.appv1.sheets.ActorSheet {
         // WOUND PIPS
         html.find('.injury-dots .injury-val').click(this._onNPCWoundClick.bind(this));
 
+        // ATTRIBUTE ROLL
+        html.find('.npc-attr-roll').click(this._onAttrRoll.bind(this));
+
         // SKILL ADD
         html.find('.npc-skill-add-btn').click(this._onSkillAdd.bind(this));
         html.find('.npc-skill-tier-input, .npc-skill-rank-input').on('keydown', (e) => {
@@ -44,9 +47,6 @@ export class BluePlanetNPCSheet extends foundry.appv1.sheets.ActorSheet {
 
         // SKILL DELETE
         html.find('.npc-skill-delete').click(this._onSkillDelete.bind(this));
-
-// ATTRIBUTE ROLL
-        html.find('.npc-attr-roll').click(this._onAttrRoll.bind(this));
 
         // SKILL ROLL
         html.find('.npc-skill-roll').click(this._onSkillRoll.bind(this));
@@ -69,6 +69,94 @@ export class BluePlanetNPCSheet extends foundry.appv1.sheets.ActorSheet {
         const current   = this.actor.system.wounds[type].value;
         const newVal    = current === idx ? idx - 1 : idx;
         await this.actor.update({ [`system.wounds.${type}.value`]: newVal });
+    }
+
+    /* -------------------------------------------- */
+    /* ATTRIBUTE ROLL                               */
+    /* -------------------------------------------- */
+
+    async _onAttrRoll(event) {
+        event.preventDefault();
+        const attrKey   = event.currentTarget.dataset.attr;
+        const attr      = this.actor.system.attributes[attrKey];
+        const attrVal   = Number(attr?.value) || 0;
+        const attrLabel = attr?.label || attrKey;
+        const wounds    = this.actor.system.wounds;
+        const woundPenalty = -(
+            wounds.minor.value +
+            wounds.major.value * 2 +
+            wounds.mortal.value * 3
+        );
+        const baseTN = 5 + attrVal + woundPenalty;
+
+        const strainHTML = this._buildStrainHTML();
+
+        new Dialog({
+            title: `${this.actor.name} — ${attrLabel} Test`,
+            content: `
+                <form class="bp-roll-dialog">
+                    <p style="margin:0 0 8px;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;">
+                        <strong>${this.actor.name}</strong> — ${attrLabel} (${attrVal >= 0 ? '+' : ''}${attrVal})
+                        ${woundPenalty < 0 ? `<span style="color:#c9302c;"> — Wounds: ${woundPenalty}</span>` : ''}
+                    </p>
+                    <p style="margin:0 0 8px;font-size:0.85rem;color:#555;">
+                        TN: 5 + ${attrVal}${woundPenalty < 0 ? ' ' + woundPenalty + ' wounds' : ''} = <strong>${baseTN}</strong>
+                    </p>
+                    <div class="form-group">
+                        <label>Situational Modifier</label>
+                        <input type="number" id="sit-mod" value="0"/>
+                    </div>
+                    ${strainHTML}
+                </form>`,
+            buttons: {
+                roll: {
+                    label: "ROLL",
+                    callback: async (html) => {
+                        const sitMod      = Number(html.find('#sit-mod').val()) || 0;
+                        const spendMental   = html.find('#strain-mental').is(':checked');
+                        const spendPhysical = html.find('#strain-physical').is(':checked');
+                        const strainBonus   = (spendMental || spendPhysical) ? 2 : 0;
+                        const strainType    = spendMental ? "mental" : spendPhysical ? "physical" : null;
+
+                        if (strainType) {
+                            const cur = this.actor.system.strain?.[strainType]?.value ?? 0;
+                            await this.actor.update({ [`system.strain.${strainType}.value`]: cur + 1 });
+                        }
+
+                        const finalTN = baseTN + sitMod + strainBonus;
+                        const roll    = new Roll("1d10");
+                        await roll.evaluate();
+                        const die     = roll.dice[0].results[0].result;
+                        const success = die <= finalTN;
+                        const av      = finalTN - die;
+
+                        const outcome = av >= 5
+                            ? `<div class="bp-chat-special bp-benefit">▲ BENEFIT</div>`
+                            : av === 0 ? `<div class="bp-chat-special bp-complication">▼ COMPLICATION</div>`
+                            : av <= -5 ? `<div class="bp-chat-special bp-consequence">▼ CONSEQUENCE</div>` : "";
+
+                        const tnBreakdown = `5 + ${attrVal} ${attrLabel}${woundPenalty < 0 ? ' ' + woundPenalty + ' wounds' : ''}${sitMod ? (sitMod > 0 ? ' +' : ' ') + sitMod + ' situational' : ''}${strainBonus ? ' +2 strain' : ''}`;
+
+                        await ChatMessage.create({
+                            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                            rolls: [roll],
+                            content: `
+                                <div class="bp-chat-card">
+                                    <div class="bp-chat-header">${this.actor.name} <span style="font-weight:400;font-size:0.85em;">(${attrLabel})</span></div>
+                                    <div class="bp-chat-body">
+                                        <div class="bp-chat-row"><span class="bp-label">TN</span><span class="bp-value">${finalTN} <span class="bp-tn-hint" data-tooltip="${tnBreakdown}">ⓘ</span></span></div>
+                                        <div class="bp-chat-row"><span class="bp-label">DICE</span><span class="bp-value">${die}</span></div>
+                                        ${strainType ? `<div class="bp-chat-row"><span class="bp-label">STRAIN</span><span class="bp-value">${strainType.charAt(0).toUpperCase()+strainType.slice(1)} spent (+2 TN)</span></div>` : ''}
+                                        <div class="bp-chat-result ${success ? 'bp-success' : 'bp-failure'}">${success ? '● SUCCESS' : '✕ FAILURE'}<span class="bp-av">AV ${av >= 0 ? '+' : ''}${av}</span></div>
+                                        ${outcome}
+                                    </div>
+                                </div>`
+                        });
+                    }
+                }
+            },
+            default: "roll"
+        }).render(true);
     }
 
     /* -------------------------------------------- */
@@ -111,76 +199,7 @@ export class BluePlanetNPCSheet extends foundry.appv1.sheets.ActorSheet {
         skills.splice(idx, 1);
         await this.actor.update({ 'system.skills': skills });
     }
-/* -------------------------------------------- */
-    /* ATTRIBUTE ROLL                               */
-    /* -------------------------------------------- */
 
-    async _onAttrRoll(event) {
-        event.preventDefault();
-        const attrKey   = event.currentTarget.dataset.attr;
-        const attr      = this.actor.system.attributes[attrKey];
-        const attrVal   = Number(attr?.value) || 0;
-        const attrLabel = attr?.label || attrKey;
-        const wounds    = this.actor.system.wounds;
-        const woundPenalty = -(
-            wounds.minor.value +
-            wounds.major.value * 2 +
-            wounds.mortal.value * 3
-        );
-        const baseTN = 5 + attrVal + woundPenalty;
-
-        new Dialog({
-            title: `${this.actor.name} — ${attrLabel} Test`,
-            content: `
-                <form class="bp-roll-dialog">
-                    <p style="margin:0 0 8px;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;">
-                        <strong>${this.actor.name}</strong> — ${attrLabel} (${attrVal >= 0 ? '+' : ''}${attrVal})
-                        ${woundPenalty < 0 ? `<span style="color:#c9302c;"> — Wounds: ${woundPenalty}</span>` : ''}
-                    </p>
-                    <p style="margin:0 0 8px;font-size:0.85rem;color:#555;">
-                        TN: 5 + ${attrVal}${woundPenalty < 0 ? ' ' + woundPenalty + ' wounds' : ''} = <strong>${baseTN}</strong>
-                    </p>
-                    <div class="form-group">
-                        <label>Situational Modifier</label>
-                        <input type="number" id="sit-mod" value="0"/>
-                    </div>
-                </form>`,
-            buttons: {
-                roll: {
-                    label: "ROLL",
-                    callback: async (html) => {
-                        const sitMod  = Number(html.find('#sit-mod').val()) || 0;
-                        const finalTN = baseTN + sitMod;
-                        const roll    = new Roll("1d10");
-                        await roll.evaluate();
-                        const die     = roll.dice[0].results[0].result;
-                        const success = die <= finalTN;
-                        const av      = finalTN - die;
-
-                        const outcome = av >= 5
-                            ? `<div class="bp-chat-special bp-benefit">▲ BENEFIT</div>`
-                            : av === 0 ? `<div class="bp-chat-special bp-complication">▼ COMPLICATION</div>`
-                            : av <= -5 ? `<div class="bp-chat-special bp-consequence">▼ CONSEQUENCE</div>` : "";
-
-                        await ChatMessage.create({
-                            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-                            content: `
-                                <div class="bp-chat-card">
-                                    <div class="bp-chat-header">${this.actor.name} <span style="font-weight:400;font-size:0.85em;">(${attrLabel})</span></div>
-                                    <div class="bp-chat-body">
-                                        <div class="bp-chat-row"><span class="bp-label">TN</span><span class="bp-value">${finalTN}</span></div>
-                                        <div class="bp-chat-row"><span class="bp-label">DICE</span><span class="bp-value">${die}</span></div>
-                                        <div class="bp-chat-result ${success ? 'bp-success' : 'bp-failure'}">${success ? '● SUCCESS' : '✕ FAILURE'}<span class="bp-av">AV ${av >= 0 ? '+' : ''}${av}</span></div>
-                                        ${outcome}
-                                    </div>
-                                </div>`
-                        });
-                    }
-                }
-            },
-            default: "roll"
-        }).render(true);
-    }
     /* -------------------------------------------- */
     /* SKILL SET ROLL                               */
     /* -------------------------------------------- */
@@ -276,6 +295,7 @@ export class BluePlanetNPCSheet extends foundry.appv1.sheets.ActorSheet {
 
                         await ChatMessage.create({
                             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                            rolls: [roll],
                             content: `
                                 <div class="bp-chat-card">
                                     <div class="bp-chat-header">${this.actor.name} <span style="font-weight:400;font-size:0.85em;">(${tierName})</span></div>
@@ -334,6 +354,7 @@ export class BluePlanetNPCSheet extends foundry.appv1.sheets.ActorSheet {
 
                         await ChatMessage.create({
                             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                            rolls: [roll],
                             content: `
                                 <div class="bp-chat-card">
                                     <div class="bp-chat-header">Trauma Roll — ${this.actor.name}</div>
@@ -392,6 +413,7 @@ export class BluePlanetNPCSheet extends foundry.appv1.sheets.ActorSheet {
 
                         await ChatMessage.create({
                             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                            rolls: [roll],
                             content: `
                                 <div class="bp-chat-card">
                                     <div class="bp-chat-header">Stun Test — ${this.actor.name}</div>

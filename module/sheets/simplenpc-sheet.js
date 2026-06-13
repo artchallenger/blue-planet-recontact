@@ -137,6 +137,7 @@ export class BluePlanetSimpleNPCSheet extends foundry.appv1.sheets.ActorSheet {
 
                         await ChatMessage.create({
                             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+                            rolls: [roll],
                             content: `
                                 <div class="bp-chat-card">
                                     <div class="bp-chat-header">${this.actor.name} <span style="font-weight:400;font-size:0.85em;">(${label})</span></div>
