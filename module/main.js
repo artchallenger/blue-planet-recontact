@@ -196,7 +196,7 @@ class BluePlanetCombat extends Combat {
                             const die      = roll.dice[0].results[0].result;
                             const av       = tn - die;
                             const label    = attrKey === "coordination" ? "Coordination" : "Cognition";
-                            await this._postInitiativeChat(actor, label, attrVal, tn, die, av, sitMod);
+                            await this._postInitiativeChat(actor, label, attrVal, tn, die, av, sitMod, roll);
                             resolve(av);
                         }
                     },
@@ -217,7 +217,7 @@ class BluePlanetCombat extends Combat {
         const die      = roll.dice[0].results[0].result;
         const av       = tn - die;
         const label    = attrKey.charAt(0).toUpperCase() + attrKey.slice(1);
-        await this._postInitiativeChat(actor, label, attrVal, tn, die, av);
+        await this._postInitiativeChat(actor, label, attrVal, tn, die, av, 0, roll);
         return av;
     }
 
@@ -231,15 +231,16 @@ class BluePlanetCombat extends Combat {
         await roll.evaluate();
         const die     = roll.dice[0].results[0].result;
         const av      = attrTN - die;
-        await this._postInitiativeChat(actor, "Attribute", attrVal, attrTN, die, av);
+        await this._postInitiativeChat(actor, "Attribute", attrVal, attrTN, die, av, 0, roll);
         return av;
     }
 
     /** Post initiative roll result to chat. */
-    async _postInitiativeChat(actor, attrLabel, attrVal, tn, die, av, sitMod = 0) {
+    async _postInitiativeChat(actor, attrLabel, attrVal, tn, die, av, sitMod = 0, roll = null) {
         const modStr = sitMod ? ` ${sitMod > 0 ? '+' : ''}${sitMod} situational` : '';
         await ChatMessage.create({
             speaker: ChatMessage.getSpeaker({ actor }),
+            rolls: roll ? [roll] : [],
             content: `
                 <div class="bp-chat-card">
                     <div class="bp-chat-header">${actor.name}
