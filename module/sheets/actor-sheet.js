@@ -26,6 +26,7 @@ export class BluePlanetActorSheet extends foundry.appv1.sheets.ActorSheet {
     // --- PLAY MODE ---
     const isPlayMode = this.actor.getFlag("blue-planet-recontact", "playMode") || false;
     context.isEditing = !isPlayMode;
+    context.habitatMode = this.actor.system.habitatMode || "primary";
 
     // --- GM OWNERSHIP ---
     context.isGM = game.user.isGM;
@@ -124,11 +125,36 @@ export class BluePlanetActorSheet extends foundry.appv1.sheets.ActorSheet {
     return context;
   }
 
+  /** @override — ensure altValue fields are always captured in form submissions */
+  _getSubmitData(updateData = {}) {
+    const data = super._getSubmitData(updateData);
+    for (const attr of ["coordination", "physique"]) {
+      const key = `system.attributes.${attr}.altValue`;
+      const input = this.element?.find(`input[name="${key}"]`)?.[0];
+      if (input) data[key] = Number(input.value) || 0;
+    }
+    return data;
+  }
+
   /** @override */
   activateListeners(html) {
+    // Register BEFORE super so our handler fires before Foundry's _onChangeInput
+    // stopImmediatePropagation prevents Foundry's handler from overwriting altValue
+    html.find('input[name*="altValue"]').on('change', (event) => {
+      event.stopImmediatePropagation();
+      const field = event.currentTarget.name;
+      const value = Number(event.currentTarget.value) || 0;
+      this.actor.update({ [field]: value });
+    });
+
 super.activateListeners(html);
 
-// OWNERSHIP
+// HABITAT TOGGLE — works in both play and edit mode
+    html.find('.habitat-pip').click(this._onHabitatToggle.bind(this));
+
+
+
+    // OWNERSHIP
     html.find('.ownership-select').change(this._onOwnershipChange.bind(this));
 
     // PLAY MODE TOGGLE
@@ -359,6 +385,18 @@ super.activateListeners(html);
   /* EVENT HANDLERS                               */
   /* -------------------------------------------- */
 
+  async _onAltValueChange(event) {
+    const field = event.currentTarget.name;
+    const value = Number(event.currentTarget.value) || 0;
+    await this.actor.update({ [field]: value });
+  }
+
+  async _onHabitatToggle(event) {
+    event.preventDefault();
+    const mode = event.currentTarget.dataset.mode || "primary";
+    await this.actor.update({ "system.habitatMode": mode });
+  }
+
   async _onOwnershipChange(event) {
     event.preventDefault();
     const userId = event.currentTarget.dataset.userId;
@@ -375,7 +413,125 @@ super.activateListeners(html);
   _onItemCreate(event) {
     event.preventDefault();
     const type = event.currentTarget.dataset.type;
+    const PACK_MAP = {
+      weapon: "blue-planet-recontact.bp-weapons",
+      armor:  "blue-planet-recontact.bp-armor",
+      biomod: "blue-planet-recontact.bp-biomods",
+      gear:   "blue-planet-recontact.bp-gear",
+      ammo:   "blue-planet-recontact.bp-ammo"
+    };
+    const packId = PACK_MAP[type];
+    if (packId) return this._openCompendiumPicker(type, packId);
     return this.actor.createEmbeddedDocuments("Item", [{ name: `New ${type}`, type }]);
+  }
+
+  async _openCompendiumPicker(type, packId) {
+    const pack = game.packs.get(packId);
+    if (!pack) return ui.notifications.warn(`Compendium ${packId} not found.`);
+
+    const docs = await pack.getDocuments();
+    const actor = this.actor;
+
+    const getDetail = (d) => {
+      const sys = d.system;
+      if (type === "weapon") return sys.damage ? `DMG ${sys.damage}` : "";
+      if (type === "armor")  return sys.rating ? `Rating ${sys.rating}` : "";
+      if (type === "biomod") return sys.function ? sys.function.slice(0, 60) : "";
+      if (type === "gear")   return sys.description ? sys.description.replace(/<[^>]+>/g,"").slice(0, 60) : "";
+      if (type === "ammo")   return sys.special ? sys.special.slice(0, 60) : "";
+      return "";
+    };
+
+    const buildRows = (filter = "") => {
+      const lower = filter.toLowerCase();
+      const filtered = docs.reduce((acc, d, i) => {
+        if (!lower || d.name.toLowerCase().includes(lower)) acc.push({ d, i });
+        return acc;
+      }, []);
+      if (!filtered.length) return `<div style="padding:12px;color:#888;font-style:italic;">No items match.</div>`;
+      return filtered.map(({ d, i }) => {
+        const detail = getDetail(d);
+        return `<div class="bp-picker-item" data-doc-idx="${i}">
+          <span class="bp-picker-name">${d.name}</span>
+          ${detail ? `<span class="bp-picker-detail">${detail}</span>` : ""}
+        </div>`;
+      }).join("");
+    };
+
+    const addItem = async (idx) => {
+      const doc = docs[idx];
+      if (!doc) { ui.notifications.warn(`Item not found at index ${idx}.`); return; }
+      try {
+        const itemData = doc.toObject();
+        delete itemData._id;
+        await actor.createEmbeddedDocuments("Item", [itemData]);
+      } catch(e) {
+        console.error("BP | Add item failed:", e);
+        ui.notifications.error(`Could not add ${doc.name} — see console.`);
+      }
+    };
+
+    const typLabel = type.charAt(0).toUpperCase() + type.slice(1);
+    let selectedId = null;
+
+    new Dialog({
+      title: `Add ${typLabel}`,
+      content: `
+        <div class="bp-compendium-picker">
+          <input type="text" id="bp-picker-search" placeholder="Search ${typLabel}s…"
+                 style="width:100%;box-sizing:border-box;margin-bottom:8px;padding:6px 10px;
+                        font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;
+                        border:1px solid #c9d6e3;border-radius:4px;"/>
+          <div id="bp-picker-list" style="max-height:320px;overflow-y:auto;
+               border:1px solid #d8d2c4;border-radius:4px;background:#fff;">
+            ${buildRows()}
+          </div>
+          <div style="margin-top:6px;font-size:0.75rem;color:#999;font-style:italic;">
+            Click to select · Double-click to add immediately
+          </div>
+        </div>`,
+      render: (html) => {
+        const attachHandlers = () => {
+          html.find('.bp-picker-item').off('click dblclick');
+
+          html.find('.bp-picker-item').on('click', function() {
+            html.find('.bp-picker-item').removeClass('selected');
+            $(this).addClass('selected');
+            selectedId = parseInt($(this).attr('data-doc-idx'));
+          });
+
+          html.find('.bp-picker-item').on('dblclick', async function() {
+            const id = parseInt($(this).attr('data-doc-idx'));
+            if (id) {
+              await addItem(id);
+              html.closest('.dialog').find('.dialog-button[data-button="cancel"]').click();
+            }
+          });
+        };
+
+        attachHandlers();
+
+        html.find('#bp-picker-search').on('input', function() {
+          html.find('#bp-picker-list').html(buildRows(this.value));
+          selectedId = null;
+          attachHandlers();
+        });
+      },
+      buttons: {
+        add: {
+          label: "Add to Sheet",
+          callback: async (html) => {
+            if (selectedId === null || selectedId === undefined || isNaN(selectedId)) {
+              ui.notifications.warn("Select an item first.");
+              return false;
+            }
+            await addItem(selectedId);
+          }
+        },
+        cancel: { label: "Cancel" }
+      },
+      default: "add"
+    }).render(true);
   }
 
 
@@ -681,9 +837,12 @@ super.activateListeners(html);
     const woundPenalty = this._getWoundPenalty();
 
     const buildAttrOptions = () => {
+      const hMode = this.actor.system.habitatMode || "primary";
       let html = "";
       for (const [key, attr] of Object.entries(this.actor.system.attributes)) {
-        html += `<option value="${key}">${attr.label} (${attr.value})</option>`;
+        const isDual = (key === "coordination" || key === "physique");
+        const val    = (isDual && hMode === "secondary") ? (Number(attr.altValue) || 0) : (Number(attr.value) || 0);
+        html += `<option value="${key}">${attr.label} (${val >= 0 ? '+' : ''}${val})</option>`;
       }
       return html;
     };
@@ -830,7 +989,11 @@ super.activateListeners(html);
     if (!attrData) return;
 
     const attrLabel    = attrData.label || attrKey;
-    const attrValue    = Number(attrData.value) || 0;
+    const habitatMode  = this.actor.system.habitatMode || "primary";
+    const isDualAttr   = (attrKey === "coordination" || attrKey === "physique");
+    const attrValue    = (isDualAttr && habitatMode === "secondary")
+        ? (Number(attrData.altValue) || 0)
+        : (Number(attrData.value) || 0);
     const woundPenalty = this._getWoundPenalty();
 
     const focuses = [];
@@ -951,7 +1114,11 @@ super.activateListeners(html);
     if (!focusData?.name) return;
 
     const attrLabel    = attrData.label || attrKey;
-    const attrValue    = Number(attrData.value) || 0;
+    const habitatModeFocus = this.actor.system.habitatMode || "primary";
+    const isDualFocus      = (attrKey === "coordination" || attrKey === "physique");
+    const attrValue    = (isDualFocus && habitatModeFocus === "secondary")
+        ? (Number(attrData.altValue) || 0)
+        : (Number(attrData.value) || 0);
     const focusRank    = Number(focusData.rank) || 0;
     const focusName    = focusData.name;
     const woundPenalty = this._getWoundPenalty();
@@ -1282,6 +1449,79 @@ async _onDrop(event) {
     return false;
   }
 
+  /* -------------------------------------------- */
+  /* TARGET INFO — reads targeted token            */
+  /* -------------------------------------------- */
+
+  _getTargetInfo(weapon) {
+    const target = game.user.targets.first();
+    if (!target) return null;
+    const targetActor = target.actor;
+    if (!targetActor) return null;
+
+    // Armor — find equipped armor on target
+    const equippedArmor = targetActor.items?.find(i => i.type === "armor" && i.system.equipped);
+    const armorRating = Number(equippedArmor?.system?.rating) || 0;
+    const armorName   = equippedArmor?.name ?? "None";
+
+    // Physique — use altValue (secondary) for cetaceans
+    const physAttr = targetActor.system?.attributes?.physique;
+    const habitatMode = targetActor.system?.habitatMode ?? "primary";
+    const physique = (habitatMode === "secondary")
+      ? (Number(physAttr?.altValue) || 0)
+      : (Number(physAttr?.value) || 0);
+
+    // Range
+    let rangeM = null;
+    let rangeMod = 0;
+    let rangeCategory = null;
+    let outOfRange = false;
+
+    const attackerToken = this.actor.getActiveTokens()?.[0];
+    if (attackerToken && weapon) {
+      const rangeStr    = weapon.system.range || "";
+      const rangeMatch  = rangeStr.match(/(\d+)/);
+      const effectiveRange = rangeMatch ? Number(rangeMatch[1]) : null;
+
+      if (effectiveRange) {
+        try {
+          rangeM = Math.round(canvas.grid.measureDistance(attackerToken.document, target.document));
+        } catch(e) {
+          try {
+            const dx = target.center.x - attackerToken.center.x;
+            const dy = target.center.y - attackerToken.center.y;
+            rangeM = Math.round((Math.sqrt(dx*dx + dy*dy) / canvas.grid.size) * canvas.scene.grid.distance);
+          } catch(e2) { /* no canvas — range unavailable */ }
+        }
+
+        if (rangeM !== null) {
+          // Check for self-propelled ammo (no range penalty)
+          const loadedAmmo = weapon.system.loadedAmmo
+            ? this.actor.items.get(weapon.system.loadedAmmo) : null;
+          const selfPropelled = loadedAmmo?.system?.ammoType === "self-propelled"
+            || (weapon.system.features || "").toLowerCase().includes("self-propelled");
+
+          if (selfPropelled) {
+            rangeCategory = "Self-Propelled";
+            rangeMod = 0;
+          } else if (rangeM <= effectiveRange / 2) {
+            rangeCategory = "Short"; rangeMod = 2;
+          } else if (rangeM <= effectiveRange) {
+            rangeCategory = "Effective"; rangeMod = 0;
+          } else if (rangeM <= effectiveRange * 2) {
+            rangeCategory = "Long"; rangeMod = -2;
+          } else if (rangeM <= effectiveRange * 4) {
+            rangeCategory = "Extreme"; rangeMod = -4;
+          } else {
+            rangeCategory = "Out of Range"; rangeMod = 0; outOfRange = true;
+          }
+        }
+      }
+    }
+
+    return { name: targetActor.name, armorRating, armorName, physique, rangeM, rangeMod, rangeCategory, outOfRange };
+  }
+
   async _onRollWeaponAttack(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -1294,6 +1534,7 @@ async _onDrop(event) {
     const weaponName   = item.name;
     const woundPenalty = this._getWoundPenalty();
     const activeFeatures = (item.system.features || '').split(',').map(s => s.trim().toLowerCase()).filter(s => s);
+    const targetInfo   = this._getTargetInfo(item);
     const hasBurst = activeFeatures.includes('burst') || activeFeatures.includes('full');
     const hasFull  = activeFeatures.includes('full');
 
@@ -1303,9 +1544,12 @@ async _onDrop(event) {
     const ammoName       = loadedAmmoItem?.name ?? "";
 
     const buildAttrOptions = () => {
+      const hMode = this.actor.system.habitatMode || "primary";
       let html = "";
       for (const [key, attr] of Object.entries(this.actor.system.attributes)) {
-        html += `<option value="${key}">${attr.label} (${attr.value})</option>`;
+        const isDual = (key === "coordination" || key === "physique");
+        const val    = (isDual && hMode === "secondary") ? (Number(attr.altValue) || 0) : (Number(attr.value) || 0);
+        html += `<option value="${key}">${attr.label} (${val >= 0 ? '+' : ''}${val})</option>`;
       }
       return html;
     };
@@ -1357,6 +1601,19 @@ async _onDrop(event) {
           <label>Situational Modifier</label>
           <input type="number" id="situational-mod" value="0"/>
         </div>
+        ${targetInfo ? `
+        <div class="bp-roll-section" style="border:1px solid #c9d6e3;padding:6px 8px;margin-bottom:10px;background:#eef3fb;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;color:#1b3f75;font-size:0.85rem;margin-bottom:4px;">
+            <i class="fas fa-crosshairs" style="margin-right:5px;"></i>TARGET: ${targetInfo.name}
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;">
+            <span style="color:#555;">Armor: <strong>${targetInfo.armorName} (${targetInfo.armorRating})</strong></span>
+            ${targetInfo.rangeM !== null ? `<span style="color:${targetInfo.outOfRange ? '#c9302c' : targetInfo.rangeMod < 0 ? '#c97030' : '#4a7c59'};">
+              Range: <strong>${targetInfo.rangeM}m — ${targetInfo.rangeCategory}
+              ${targetInfo.outOfRange ? '(cannot shoot)' : targetInfo.rangeMod !== 0 ? `(${targetInfo.rangeMod > 0 ? '+' : ''}${targetInfo.rangeMod} TN)` : ''}
+              </strong></span>` : ''}
+          </div>
+        </div>` : ''}
         ${hasBurst ? `
         <div class="bp-roll-section" style="border:1px solid #c9d6e3;padding:6px 8px;margin-bottom:10px;background:#f4f7fb;">
           <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;color:#1b3f75;font-size:0.85rem;margin-bottom:6px;">Fire Mode</div>
@@ -1455,7 +1712,8 @@ async _onDrop(event) {
               await this.actor.update({ [`system.strain.${strainType}.value`]: cur + 1 });
             }
 
-            const finalTN = attrValue + skillRank + focusBonus + situationMod + strainBonus + woundPenalty + tagBonus + trackBonus + equipBonus + armorBonus - calledShot + ammoAttackMod;
+            const rangeMod = (!targetInfo || targetInfo.outOfRange) ? 0 : (targetInfo?.rangeMod ?? 0);
+            const finalTN = attrValue + skillRank + focusBonus + situationMod + strainBonus + woundPenalty + tagBonus + trackBonus + equipBonus + armorBonus - calledShot + ammoAttackMod + rangeMod;
             const roll = new Roll(`${diceCount}d10`);
             await roll.evaluate();
 
@@ -1485,6 +1743,7 @@ async _onDrop(event) {
                     ${ammoAttackMod ? `<div class="bp-chat-row"><span class="bp-label">AMMO</span><span class="bp-value">${ammoName} (${ammoAttackMod > 0 ? '+' : ''}${ammoAttackMod} to hit)</span></div>` : ""}
                     ${focusName && focusName !== "None" ? `<div class="bp-chat-row"><span class="bp-label">FOCUS</span><span class="bp-value">${focusName}</span></div>` : ""}
                     ${strainType ? `<div class="bp-chat-row"><span class="bp-label">STRAIN</span><span class="bp-value">${strainType.charAt(0).toUpperCase()+strainType.slice(1)} spent</span></div>` : ""}
+                    ${rangeMod !== 0 ? `<div class="bp-chat-row"><span class="bp-label">RANGE</span><span class="bp-value">${targetInfo.rangeM}m — ${targetInfo.rangeCategory} (${rangeMod > 0 ? '+' : ''}${rangeMod} TN)</span></div>` : ""}
                     ${calledShotNote}
                     ${fireMode !== 'single' ? `<div class="bp-chat-row"><span class="bp-label">FIRE MODE</span><span class="bp-value">${fireMode === 'full' ? 'Full Auto' : 'Burst'} — ${focusFire ? 'Focus Fire (+2 damage)' : 'Split Target'}</span></div>` : ""}
                     <div class="bp-chat-result ${success ? 'bp-success' : 'bp-failure'}">${success ? '● SUCCESS' : '✕ FAILURE'}<span class="bp-av">AV ${actionValue >= 0 ? '+' : ''}${actionValue}</span></div>
@@ -1506,6 +1765,7 @@ async _onDrop(event) {
 
     const el         = event.currentTarget;
     const itemId     = el.dataset.itemId;
+    const damageTargetInfo = this._getTargetInfo(this.actor.items.get(itemId));
     const weaponName = el.dataset.name;
     const rawDamage  = el.dataset.damage || "0";
     const isVariable = rawDamage.toLowerCase() === "variable";
@@ -1564,6 +1824,9 @@ async _onDrop(event) {
       for (let i = 0; i <= 10; i++) opts += `<option value="${i}" ${i === defaultVal ? 'selected' : ''}>${i}</option>`;
       return `<div class="form-group"><label>${label}</label><select id="${id}">${opts}</select></div>`;
     };
+    const targetArmorDefault   = damageTargetInfo?.armorRating  ?? 0;
+    const targetPhysiqueDefault = damageTargetInfo?.physique     ?? 0;
+    const targetLabel = damageTargetInfo ? ` — vs ${damageTargetInfo.name}` : '';
 
     // Build ammo selector
     const buildAmmoSelect = () => {
@@ -1596,6 +1859,17 @@ async _onDrop(event) {
           <strong>${weaponName}</strong> — Damage Roll${isVariable ? '' : ' (Base: '+baseDamage+')'}
           ${hasArmorPiercing ? '<span style="color:#2d6da6;font-size:0.85rem;"> — Armor-Piercing (-'+armorPierceVal+' armor)</span>' : ''}
         </p>
+        ${damageTargetInfo ? `
+        <div class="bp-roll-section" style="border:1px solid #c9d6e3;padding:6px 8px;margin-bottom:10px;background:#eef3fb;">
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;color:#1b3f75;font-size:0.85rem;margin-bottom:4px;">
+            <i class="fas fa-crosshairs" style="margin-right:5px;"></i>TARGET: ${damageTargetInfo.name}
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;">
+            <span style="color:#555;">Armor: <strong>${damageTargetInfo.armorName} (${damageTargetInfo.armorRating})</strong></span>
+            <span style="color:#555;">Physique: <strong>${damageTargetInfo.physique >= 0 ? '+' : ''}${damageTargetInfo.physique}</strong></span>
+          </div>
+          <div style="font-size:0.75rem;color:#888;margin-top:3px;font-style:italic;">Values auto-filled below — adjust if needed.</div>
+        </div>` : ''}
         ${buildAmmoSelect()}
         ${buildDropdown('called-shot-bonus', 'Called Shot Bonus')}
         ${hasBurst ? `
@@ -1606,8 +1880,14 @@ async _onDrop(event) {
             <option value="2">+2 (Focus Fire)</option>
           </select>
         </div>` : ''}
-        ${buildDropdown('target-armor', 'Target Armor Rating')}
-        ${buildDropdown('target-physique', 'Target Physique')}
+        <div class="form-group">
+          <label>Target Armor Rating${targetLabel}</label>
+          <input type="number" id="target-armor" value="${targetArmorDefault}" min="0" max="20"/>
+        </div>
+        <div class="form-group">
+          <label>Target Physique${targetLabel}</label>
+          <input type="number" id="target-physique" value="${targetPhysiqueDefault}" min="-10" max="50"/>
+        </div>
         <div class="form-group">
           <label>Situational Modifier</label>
           <input type="number" id="damage-sit-mod" value="0"/>
@@ -1780,46 +2060,70 @@ Hooks.on("getChatMessageContextOptions", (html, options) => {
   };
 
   const doReroll = async (li, strainType) => {
-    const data  = getData(li);
-    const actor = getActor(li);
-    if (!data || !actor) return;
+    try {
+      const data  = getData(li);
+      const actor = getActor(li);
+      if (!data || !actor) return;
 
-    const cur = actor.system.strain[strainType].value;
-    await actor.update({ [`system.strain.${strainType}.value`]: cur + 1 });
+      const cur = actor.system.strain[strainType].value;
+      await actor.update({ [`system.strain.${strainType}.value`]: cur + 1 });
 
-    const sheet        = actor.sheet;
-    const woundPenalty = data.woundPenalty ?? 0;
+      const woundPenalty = data.woundPenalty ?? 0;
 
-    if (data.type === "skill") {
-      const skillSet   = actor.system.skillSets[data.skillKey];
-      const skillRank  = Number(skillSet?.rank) || 0;
-      const skillLabel = skillSet?.label ?? "";
-      const attrValue  = Number(actor.system.attributes[data.attrKey].value) || 0;
-      const attrLabel  = actor.system.attributes[data.attrKey].label;
-      const diceCount  = data.tier;
-      const tierLabel  = data.tier === 1 ? "General" : data.tier === 2 ? "Core" : "Specialty";
-      const tierKey    = data.tier === 1 ? "general" : data.tier === 2 ? "core" : "specialty";
-      const skillName  = skillSet?.[tierKey] ?? "Skill";
-      const finalTN    = attrValue + skillRank + data.focusBonus + data.situationMod + data.strainBonus + woundPenalty;
+      const _postRerollMessage = async (opts) => {
+        const { title, subtitle, finalTN, attrLabel, attrValue = 0, skillRank = 0, skillLabel = "",
+          diceResults, lowestDie, diceCount, success, actionValue, roll,
+          focusName = null, strainBonus = 0, situationMod = 0 } = opts;
+        const specialResult = actionValue >= 5
+          ? `<div class="bp-chat-special bp-benefit">▲ BENEFIT</div>`
+          : actionValue === 0 ? `<div class="bp-chat-special bp-complication">▼ COMPLICATION</div>`
+          : actionValue <= -5 ? `<div class="bp-chat-special bp-consequence">▼ CONSEQUENCE</div>` : "";
+        const diceDisplay = diceCount > 1
+          ? `${diceCount}d10 [${diceResults.join(", ")}] — lowest: ${lowestDie}`
+          : `${lowestDie}`;
+        await ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor }),
+          rolls: roll ? [roll] : [],
+          content: `
+            <div class="bp-chat-card">
+              <div class="bp-chat-header">${title}${subtitle ? ` <span style="font-weight:400;font-size:0.85em;">(${subtitle})</span>` : ''}</div>
+              <div class="bp-chat-body">
+                <div class="bp-chat-row"><span class="bp-label">TN</span><span class="bp-value">${finalTN}</span></div>
+                <div class="bp-chat-row"><span class="bp-label">DICE</span><span class="bp-value">${diceDisplay}</span></div>
+                <div class="bp-chat-row"><span class="bp-label">STRAIN</span><span class="bp-value">${strainType.charAt(0).toUpperCase()+strainType.slice(1)} spent (re-roll)</span></div>
+                <div class="bp-chat-result ${success ? 'bp-success' : 'bp-failure'}">${success ? '● SUCCESS' : '✕ FAILURE'}<span class="bp-av">AV ${actionValue >= 0 ? '+' : ''}${actionValue}</span></div>
+                ${specialResult}
+              </div>
+            </div>`,
+          flags: { "blue-planet-recontact": { rollData: data } }
+        });
+      };
 
-      const roll        = new Roll(`${diceCount}d10`);
-      await roll.evaluate();
-      const diceResults = roll.dice[0].results.map(r => r.result);
-      const lowestDie   = Math.min(...diceResults);
-      const success     = lowestDie <= finalTN;
-      const actionValue = finalTN - lowestDie;
+      if (data.type === "skill") {
+        const skillSet   = actor.system.skillSets[data.skillKey];
+        const skillRank  = Number(skillSet?.rank) || 0;
+        const skillLabel = skillSet?.label ?? "";
+        const attrValue  = Number(actor.system.attributes[data.attrKey]?.value) || 0;
+        const attrLabel  = actor.system.attributes[data.attrKey]?.label ?? "";
+        const diceCount  = data.tier;
+        const tierLabel  = data.tier === 1 ? "General" : data.tier === 2 ? "Core" : "Specialty";
+        const tierKey    = data.tier === 1 ? "general" : data.tier === 2 ? "core" : "specialty";
+        const skillName  = skillSet?.[tierKey] ?? "Skill";
+        const finalTN    = attrValue + skillRank + (data.focusBonus||0) + (data.situationMod||0) + (data.strainBonus||0) + woundPenalty;
 
-      await sheet._postRollMessage({
-        roll,
-        title: `${skillName} (Re-roll)`, subtitle: tierLabel,
-        finalTN, attrLabel, attrValue, skillRank, skillLabel,
-        focusBonus: data.focusBonus, focusName: null,
-        situationMod: data.situationMod, strainType,
-        strainBonus: data.strainBonus, woundPenalty,
-        diceResults, lowestDie, diceCount, success, actionValue,
-        rollData: data
-      });
-    } else if (data.type === "weaponAttack") {
+        const roll        = new Roll(`${diceCount}d10`);
+        await roll.evaluate();
+        const diceResults = roll.dice[0].results.map(r => r.result);
+        const lowestDie   = Math.min(...diceResults);
+        const success     = lowestDie <= finalTN;
+        const actionValue = finalTN - lowestDie;
+
+        await _postRerollMessage({ roll, title: `${skillName} (Re-roll)`, subtitle: tierLabel,
+          finalTN, attrLabel, attrValue, skillRank, skillLabel,
+          diceResults, lowestDie, diceCount, success, actionValue,
+          strainBonus: data.strainBonus, situationMod: data.situationMod });
+
+      } else if (data.type === "weaponAttack") {
       const ammoMod     = data.ammoAttackMod ?? 0;
       const ammoName    = data.ammoName ?? "";
       const finalTN     = data.attrValue + data.skillRank + data.focusBonus + data.situationMod
@@ -1845,7 +2149,7 @@ Hooks.on("getChatMessageContextOptions", (html, options) => {
       const tnBreakdown = `${data.attrLabel} +${data.attrValue} ${data.skillLabel} +${data.skillRank}${data.focusBonus ? ' Focus +'+data.focusBonus : ''}${data.situationMod ? ' Sit '+(data.situationMod>0?'+':'')+data.situationMod : ''}${data.strainBonus ? ' Strain +2' : ''}${woundPenalty < 0 ? ' Wounds '+woundPenalty : ''}${data.calledShot ? ' Called -'+data.calledShot : ''}${ammoMod ? ' Ammo '+(ammoMod>0?'+':'')+ammoMod : ''}`;
 
       await ChatMessage.create({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        speaker: ChatMessage.getSpeaker({ actor }),
         rolls: [roll],
         content: `
           <div class="bp-chat-card">
@@ -1862,26 +2166,23 @@ Hooks.on("getChatMessageContextOptions", (html, options) => {
           </div>`,
         flags: { "blue-planet-recontact": { rollData: data } }
       });
-    } else {
-      const finalTN     = 5 + data.attrValue + data.focusBonus + data.situationMod + data.strainBonus + woundPenalty;
-      const roll        = new Roll("1d10");
-      await roll.evaluate();
-      const dieResult   = roll.dice[0].results[0].result;
-      const success     = dieResult <= finalTN;
-      const actionValue = finalTN - dieResult;
+      } else {
+        const finalTN     = 5 + (data.attrValue||0) + (data.focusBonus||0) + (data.situationMod||0) + (data.strainBonus||0) + woundPenalty;
+        const roll        = new Roll("1d10");
+        await roll.evaluate();
+        const dieResult   = roll.dice[0].results[0].result;
+        const success     = dieResult <= finalTN;
+        const actionValue = finalTN - dieResult;
+        const title       = `${data.attrLabel || "Attribute"}${data.focusName ? ' / ' + data.focusName : ''} Test (Re-roll)`;
 
-      await sheet._postRollMessage({
-        roll,
-        title: `${data.attrLabel}${data.focusName ? ' / ' + data.focusName : ''} Test (Re-roll)`,
-        subtitle: null,
-        finalTN, attrLabel: data.attrLabel, attrValue: data.attrValue, skillRank: 0, skillLabel: "",
-        focusBonus: data.focusBonus, focusName: data.focusName,
-        situationMod: data.situationMod, strainType,
-        strainBonus: data.strainBonus, woundPenalty,
-        diceResults: [dieResult], lowestDie: dieResult, diceCount: 1,
-        success, actionValue,
-        rollData: data
-      });
+        await _postRerollMessage({ roll, title, subtitle: null,
+          finalTN, attrLabel: data.attrLabel, attrValue: data.attrValue,
+          diceResults: [dieResult], lowestDie: dieResult, diceCount: 1,
+          success, actionValue });
+      }
+    } catch(err) {
+      console.error("BP | Re-roll failed:", err);
+      ui.notifications?.error("Re-roll failed — check browser console for details.");
     }
   };
 
