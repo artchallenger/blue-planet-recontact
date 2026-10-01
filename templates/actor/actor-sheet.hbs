@@ -99,7 +99,13 @@
                 <div class="profile-sidebar">
                     
                     {{!-- ATTRIBUTES --}}
-                    <div class="section-header"><h2>ATTRIBUTES</h2></div>
+                    <div class="section-header" style="display:flex;align-items:center;justify-content:space-between;">
+                        <h2>ATTRIBUTES</h2>
+                        <div class="habitat-pips">
+                            <div class="habitat-pip {{#if (eq system.habitatMode 'primary')}}filled{{/if}}" data-mode="primary" title="Water / General" role="button">W</div>
+                            <div class="habitat-pip {{#if (eq system.habitatMode 'secondary')}}filled{{/if}}" data-mode="secondary" title="Land / Fine" role="button">L</div>
+                        </div>
+                    </div>
                     
                     <div class="attributes-list">
                         {{!-- COGNITION --}}
@@ -136,9 +142,12 @@
 
                         {{!-- COORDINATION --}}
                         <div class="attribute-group">
-                            <div class="attr-header">
+                            <div class="attr-header attr-header-dual">
                                 <span class="attr-label rollable-attribute" data-key="coordination">COORDINATION</span>
-                                <input class="attr-input" name="system.attributes.coordination.value" type="text" value="{{system.attributes.coordination.value}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                                <div class="dual-attr-stack">
+                                    <input class="attr-input {{#if (eq system.habitatMode 'primary')}}attr-habitat-active{{else}}attr-habitat-inactive{{/if}}" name="system.attributes.coordination.value" type="text" value="{{system.attributes.coordination.value}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}} title="W — Primary (Water/General)"/>
+                                    <input class="attr-input {{#if (eq system.habitatMode 'secondary')}}attr-habitat-active{{else}}attr-habitat-inactive{{/if}}" name="system.attributes.coordination.altValue" type="text" value="{{system.attributes.coordination.altValue}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}} title="L — Secondary (Land/Fine)"/>
+                                </div>
                             </div>
                             <div class="focus-attr">
                                 <input class="focus-name" name="system.attributes.coordination.focus1.name" data-attrkey="coordination" data-focusindex="1" type="text" value="{{system.attributes.coordination.focus1.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
@@ -152,9 +161,12 @@
 
                         {{!-- PHYSIQUE --}}
                         <div class="attribute-group">
-                            <div class="attr-header">
+                            <div class="attr-header attr-header-dual">
                                 <span class="attr-label rollable-attribute" data-key="physique">PHYSIQUE</span>
-                                <input class="attr-input" name="system.attributes.physique.value" type="text" value="{{system.attributes.physique.value}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}}/>
+                                <div class="dual-attr-stack">
+                                    <input class="attr-input {{#if (eq system.habitatMode 'primary')}}attr-habitat-active{{else}}attr-habitat-inactive{{/if}}" name="system.attributes.physique.value" type="text" value="{{system.attributes.physique.value}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}} title="W — Primary (Water/General)"/>
+                                    <input class="attr-input {{#if (eq system.habitatMode 'secondary')}}attr-habitat-active{{else}}attr-habitat-inactive{{/if}}" name="system.attributes.physique.altValue" type="text" value="{{system.attributes.physique.altValue}}" data-dtype="Number" {{#unless isEditing}}readonly{{/unless}} title="L — Secondary (Land/Fine)"/>
+                                </div>
                             </div>
                             <div class="focus-attr">
                                 <input class="focus-name" name="system.attributes.physique.focus1.name" data-attrkey="physique" data-focusindex="1" type="text" value="{{system.attributes.physique.focus1.name}}" placeholder="{{#if isEditing}}Focus Name{{/if}}" {{#unless isEditing}}readonly{{/unless}}/>
@@ -562,7 +574,8 @@
                         <span class="inv-col small">AVAIL</span>
                         <span class="inv-col med">DAMAGE</span>
                         <span class="inv-col med">RANGE</span>
-                        <span class="inv-col med">COST</span>
+                        <span class="inv-col small">COST</span>
+                        <span class="inv-col med">AMMUNITION</span>
                         <span class="inv-col ctrl"></span>
                     </div>
                     
@@ -602,17 +615,20 @@
                         </div>
 
                         <div class="inv-col med">{{item.system.range}}</div>
+                        <div class="inv-col small">{{item.system.cost}}</div>
                         <div class="inv-col med">
-                            {{#if ../ammo.length}}
-                            <select class="weapon-ammo-select" data-item-id="{{item._id}}" data-loaded="{{item.system.loadedAmmo}}" style="font-size:0.75rem;width:100%;color:#1b3f75;">
-                                <option value="">— Ammo —</option>
-                                {{#each ../ammo as |a|}}
-                                <option value="{{a._id}}">{{a.name}}</option>
-                                {{/each}}
-                            </select>
-                            {{else}}
-                            {{item.system.cost}}
-                            {{/if}}
+                            {{#unless (eq item.system.range "Close")}}
+                                {{#if ../ammo.length}}
+                                <select class="weapon-ammo-select" data-item-id="{{item._id}}" data-loaded="{{item.system.loadedAmmo}}" style="font-size:0.75rem;width:100%;color:#1b3f75;">
+                                    <option value="">— Ammo —</option>
+                                    {{#each ../ammo as |a|}}
+                                    <option value="{{a._id}}">{{a.name}}</option>
+                                    {{/each}}
+                                </select>
+                                {{else}}
+                                <span style="color:#aaa;font-size:0.8rem;font-style:italic;">no ammo</span>
+                                {{/if}}
+                            {{/unless}}
                         </div>
                         
                         <div class="inv-col ctrl">
@@ -675,6 +691,7 @@
                         <span class="inv-col name">NAME</span>
                         <span class="inv-col small">TL</span>
                         <span class="inv-col med">RATING</span>
+                        <span class="inv-col small">COST</span>
                         <span class="inv-col wide">COVERAGE</span>
                         <span class="inv-col ctrl"></span>
                     </div>
@@ -685,6 +702,7 @@
                         </div>
                         <div class="inv-col small">{{item.system.techLevel}}</div>
                         <div class="inv-col med">{{item.system.rating}}</div>
+                        <div class="inv-col small">{{item.system.cost}}</div>
                         <div class="inv-col wide">{{item.system.coverage}}</div>
                         <div class="inv-col ctrl">
                             <a class="equipped-toggle {{#if item.system.equipped}}filled{{/if}}" data-item-id="{{item._id}}" title="Equipped"></a>
@@ -739,6 +757,7 @@
                         <span class="inv-col name">NAME</span>
                         <span class="inv-col small">QTY</span>
                         <span class="inv-col small">WT</span>
+                        <span class="inv-col small">COST</span>
                         <span class="inv-col wide">DESCRIPTION</span>
                         <span class="inv-col ctrl"></span>
                     </div>
@@ -749,6 +768,7 @@
                         </div>
                         <div class="inv-col small">{{item.system.quantity}}</div>
                         <div class="inv-col small">{{item.system.weight}}</div>
+                        <div class="inv-col small">{{item.system.cost}}</div>
                         <div class="inv-col wide" style="font-style:italic; font-size:0.8rem;">{{item.system.description}}</div>
                         <div class="inv-col ctrl">
                             <a class="equipped-toggle {{#if item.system.equipped}}filled{{/if}}" data-item-id="{{item._id}}" title="Equipped"></a>
