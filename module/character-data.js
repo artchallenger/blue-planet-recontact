@@ -8,10 +8,11 @@ export class BluePlanetCharacterData extends foundry.abstract.TypeDataModel {
         });
 
         const attributeField = (label) => new fields.SchemaField({
-            value: new fields.NumberField({ initial: 0, integer: true }),
-            label: new fields.StringField({ initial: label }),
-            focus1: focusField(),
-            focus2: focusField()
+            value:    new fields.NumberField({ initial: 0, integer: true }),
+            altValue: new fields.NumberField({ initial: 0, integer: true }),
+            label:    new fields.StringField({ initial: label }),
+            focus1:   focusField(),
+            focus2:   focusField()
         });
 
         const skillSetField = (label) => new fields.SchemaField({
@@ -88,6 +89,7 @@ apparentBiomods: new fields.StringField({ initial: "" }),
                 physical: new fields.SchemaField({ value: new fields.NumberField({ initial: 0 }), max: new fields.NumberField({ initial: 6 }) }),
                 mental:   new fields.SchemaField({ value: new fields.NumberField({ initial: 0 }), max: new fields.NumberField({ initial: 4 }) })
             }),
+            habitatMode: new fields.StringField({ initial: "primary" }),
             wounds: new fields.SchemaField({
                 minor:  new fields.SchemaField({ value: new fields.NumberField({ initial: 0 }), max: new fields.NumberField({ initial: 5 }) }),
                 major:  new fields.SchemaField({ value: new fields.NumberField({ initial: 0 }), max: new fields.NumberField({ initial: 4 }) }),
